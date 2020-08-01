@@ -22,28 +22,28 @@ enum AppStatus: String {
 }
 
 class DashBoardViewController: BaseViewController {
-  
-  @IBOutlet weak var appointmentTableView: UITableView!{
     
-    didSet{
-      appointmentTableView.register(UINib(nibName: "DashboardTableViewCell", bundle: nil), forCellReuseIdentifier: "DashboardCell")
-      appointmentTableView!.tableFooterView = UIView()
-      appointmentTableView.separatorColor = UIColor.clear
+    @IBOutlet weak var appointmentTableView: UITableView!{
+        
+        didSet{
+            appointmentTableView.register(UINib(nibName: "DashboardTableViewCell", bundle: nil), forCellReuseIdentifier: "DashboardCell")
+            appointmentTableView!.tableFooterView = UIView()
+            appointmentTableView.separatorColor = UIColor.clear
+        }
     }
-  }
-  @IBOutlet weak var calendarView: CTDayWeekCalender!
-  
+    @IBOutlet weak var calendarView: CTDayWeekCalender!
+    
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var calendarVw: FSCalendar!
     lazy var viewModel : AppointmentViewModel = {
-    return AppointmentViewModel()
-  }()
+        return AppointmentViewModel()
+    }()
     
-  let today = Date()
-
-  private var appointmentData = [AppointmentsListData]()
-  
-  let defaults = UserDefaults.standard
+    let today = Date()
+    
+    private var appointmentData = [AppointmentsListData]()
+    
+    let defaults = UserDefaults.standard
     public var isAddAppointement: Bool = false
     var indexTravel = Int()
     var indexStopTravel = Int()
@@ -54,118 +54,117 @@ class DashBoardViewController: BaseViewController {
     
     var selectedClockStartIndexArr = [Int]()
     var selectedClockStopIndexArr = [Int]()
-
+    
     let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
     var arrObjTravel = [Dictionary<String, AnyObject>]()
     var arrObjClock = [Dictionary<String, AnyObject>]()
-
+    
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
-
+    
     var selectedDate : String?
     var todayStr = String()
-  //MARK:- ViewController LifeCycleT
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    titleString = "My Appointments"
-    viewModel.delegate = self
-  
-    let nc = NotificationCenter.default
-    nc.addObserver(self, selector: #selector(addSessionSuccess), name: Notification.Name("UserLoggedIn"), object: nil)
-    
-
-    for _ in 0...100{
-        ConstantObj.Data.names.append(d1)
-        ConstantObj.Data.clock.append(d1)
+    //MARK:- ViewController LifeCycleT
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        titleString = "My Appointments"
+        viewModel.delegate = self
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(addSessionSuccess), name: Notification.Name("UserLoggedIn"), object: nil)
+        
+        
+        for _ in 0...100{
+            ConstantObj.Data.names.append(d1)
+            ConstantObj.Data.clock.append(d1)
+        }
+        
+        self.calendarVw.select(Date())
+        
+        self.calendarVw.scope = .week
+        
+        // For UITest
+        self.calendarVw.accessibilityIdentifier = "calendar"
+        todayStr = dateFormatter.string(from: today)
+        getAppointmentsList()
+        
     }
-    
-    self.calendarVw.select(Date())
-    
-    self.calendarVw.scope = .week
-    
-    // For UITest
-    self.calendarVw.accessibilityIdentifier = "calendar"
-    todayStr = dateFormatter.string(from: today)
-    getAppointmentsList()
-    
-  }
     override func viewWillAppear(_ animated: Bool) {
-          if  UserDefaults.standard.value(forKey: "ConstantObj") as? [Dictionary<String, AnyObject>] != nil {
-              arrObjTravel = UserDefaults.standard.value(forKey: "ConstantObj") as! [Dictionary<String, AnyObject>]
-              ConstantObj.Data.names = arrObjTravel
-          }
-          if  UserDefaults.standard.value(forKey: "ConstantObjClock") as? [Dictionary<String, AnyObject>] != nil {
-              arrObjClock = UserDefaults.standard.value(forKey: "ConstantObjClock") as! [Dictionary<String, AnyObject>]
-              ConstantObj.Data.clock = arrObjClock
-          }
-
+        if  UserDefaults.standard.value(forKey: "ConstantObj") as? [Dictionary<String, AnyObject>] != nil {
+            arrObjTravel = UserDefaults.standard.value(forKey: "ConstantObj") as! [Dictionary<String, AnyObject>]
+            ConstantObj.Data.names = arrObjTravel
+        }
+        if  UserDefaults.standard.value(forKey: "ConstantObjClock") as? [Dictionary<String, AnyObject>] != nil {
+            arrObjClock = UserDefaults.standard.value(forKey: "ConstantObjClock") as! [Dictionary<String, AnyObject>]
+            ConstantObj.Data.clock = arrObjClock
+        }
+        
         self.appointmentTableView.reloadData()
     }
-  
-  @objc private func addSessionSuccess(notification: NSNotification){
     
-    getAppointmentsList()
-  }
-  
-  
-  //MARK:- UIButton Action Methodes
-  @IBAction func addSessionAction(_ sender: Any) {
-    
-    let submittedquotevc = UIStoryboard.dashboardStoryboard().instantiateViewController(withIdentifier: "SideMenuController")
-    self.navigationController?.pushViewController(submittedquotevc, animated: true)
-  }
-  
-  @IBAction func calenderAction(_ sender: CTDayWeekCalender) {
-    
-    self.appointmentData.removeAll()
-    
-    getAppointmentsList()
-    
-  }
-  
-  
-  func getAppointmentsList(){
-    
-    var providerID: Int = 0
-    
-    if let _providerID = UserProfile.shared.currentUser?.providerID,let practiceID = UserProfile.shared.currentUser?.practiceID{
-      
-      if let role = UserProfile.shared.currentUser?.role {
+    @objc private func addSessionSuccess(notification: NSNotification){
         
-        if role == "Admin"{
-           providerID = 0
-        }else{
-          providerID = _providerID
-        }
-      }
-      
-//        let request = AppointmentsListRequest(clientName: "", appType: "", statusName: "", providerName:"" , locationName: "", fromDate: calendarView.dateString, toDate: calendarView.dateString, providerID: String(providerID), practiceID: String(practiceID))
-        let request = AppointmentsListRequest(clientName: "", appType: "", statusName: "", providerName:"" , locationName: "", fromDate: selectedDate ?? todayStr, toDate: selectedDate ?? todayStr, providerID: String(providerID), practiceID: String(practiceID))
-
-      viewModel.getAppointmentListData(request)
+        getAppointmentsList()
     }
     
-  }
-  
-  func convertDateFormater(_ date: String) -> String{
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    guard let date = dateFormatter.date(from: date) else { return ""}
-    dateFormatter.dateFormat = "hh:mm a"
-    return  dateFormatter.string(from: date)
-  }
-  
-  func convertDateFormater2(_ date: String) -> String{
-     let dateFormatter = DateFormatter()
-     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-     guard let date = dateFormatter.date(from: date) else { return ""}
-     dateFormatter.dateFormat = "MM-dd-yyyy"
-     return  dateFormatter.string(from: date)
-   }
-
+    
+    //MARK:- UIButton Action Methodes
+    @IBAction func addSessionAction(_ sender: Any) {
+        
+        let submittedquotevc = UIStoryboard.dashboardStoryboard().instantiateViewController(withIdentifier: "SideMenuController")
+        self.navigationController?.pushViewController(submittedquotevc, animated: true)
+    }
+    
+    @IBAction func calenderAction(_ sender: CTDayWeekCalender) {
+        
+        self.appointmentData.removeAll()
+        
+        getAppointmentsList()
+        
+    }
+    
+    
+    func getAppointmentsList(){
+        
+        var providerID: Int = 0
+        
+        if let _providerID = UserProfile.shared.currentUser?.providerID,let practiceID = UserProfile.shared.currentUser?.practiceID{
+            
+            if let role = UserProfile.shared.currentUser?.role {
+                
+                if role == "Admin"{
+                    providerID = 0
+                }else{
+                    providerID = _providerID
+                }
+            }
+            
+            let request = AppointmentsListRequest(clientName: "", appType: "", statusName: "", providerName:"" , locationName: "", fromDate: selectedDate ?? todayStr, toDate: selectedDate ?? todayStr, providerID: String(providerID), practiceID: String(practiceID))
+            
+            viewModel.getAppointmentListData(request)
+        }
+        
+    }
+    
+    func convertDateFormater(_ date: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        guard let date = dateFormatter.date(from: date) else { return ""}
+        dateFormatter.dateFormat = "hh:mm a"
+        return  dateFormatter.string(from: date)
+    }
+    
+    func convertDateFormater2(_ date: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        guard let date = dateFormatter.date(from: date) else { return ""}
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        return  dateFormatter.string(from: date)
+    }
+    
 }
 
 extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
@@ -187,7 +186,6 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
             if let filterPathData = appInfo?.patInfo?.filter({$0.auths == appData?.auth}){
                 
                 if filterPathData.isEmpty {
-                    print(filterPathData)
                 }else{
                     if let name = appInfo?.appInfo?[0].name{
                         cell.labelActivity.text = name
@@ -261,7 +259,6 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
                     }
                     catch
                     {
-                        print(error)
                     }
                 }
                 
@@ -280,7 +277,6 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
                     }
                     catch
                     {
-                        print(error)
                     }
                 }
                 
@@ -343,7 +339,6 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
                     
                 else{
                     vc.activity = appData?.activity ?? ""
-                    print(vc.activity)
                 }
             }
         }
@@ -379,7 +374,6 @@ extension DashBoardViewController: AppointmentDelegate{
     }
     
     func appointmentListData(_ appointmentData: [AppointmentsListData]) {
-        print(appointmentData.count)
         
         self.appointmentData = appointmentData
         for _ in 0..<appointmentData.count{
@@ -478,7 +472,6 @@ extension DashBoardViewController: FSCalendarDelegate, FSCalendarDataSource{
     }
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
-        print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
     
     

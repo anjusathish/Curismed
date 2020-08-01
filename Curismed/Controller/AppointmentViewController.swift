@@ -37,12 +37,12 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     @IBOutlet weak var imageViewSignature: UIImageView!
     @IBOutlet weak var travelGif: UIImageView!
     @IBOutlet weak var clockGif: UIImageView!
-
+    
     @IBOutlet weak var travelStartStackView: UIStackView!
     
     @IBOutlet weak var travelBtn: UIButton!
     @IBOutlet weak var clockBtn: UIButton!
-
+    
     @IBOutlet weak var addSignBtn: UIButton!
     
     @IBOutlet weak var updateBtn: UIButton!
@@ -62,7 +62,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     public var status: String?
     var clockInTime: String = ""
     var clockOutTime: String = ""
-
+    
     private var arrayStatus:[String] = ["Confirm","Rendered","No Show","Cancelled by Provider","Cancelled by Client","Hold"]
     let defaults = UserDefaults.standard
     
@@ -94,8 +94,8 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     var indexx = 0
     var arrObj = [Dictionary<String, AnyObject>]()
     var arrObjClock = [Dictionary<String, AnyObject>]()
-
-
+    
+    
     //MARK:- ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +129,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                     addSignBtn.isUserInteractionEnabled = true
                     txtStatus.isUserInteractionEnabled = true
                     showCurrentLocationView.isUserInteractionEnabled = true
-
+                    
                 }
                 else if status == "Rendered"{
                     travelStartStackView.isHidden = true
@@ -154,11 +154,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
             showCurrentLocationView.isUserInteractionEnabled = false
             txtAddress.rightImage = nil
         }
-//        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.openDiapPad(_:)))
-////        txtMobileNumber.superView.addGestureRecognizer(gesture)
-//        self.txtMobileNumber.addGestureRecognizer(gesture)
-        
-//        self.txtMobileNumber.addTarget(self, action: #selector(openDiapPad), for: .allTouchEvents)
         self.txtMobileNumber.isUserInteractionEnabled = false
         txtClientName.text = appointmentDataList?.patientName
         txtAddress.text = appointmentData?.address
@@ -167,7 +162,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         txtService.text = activityLabel
         txtStatus.text = appointmentDataList?.status
         
-
+        
         let convertDateFormat = convertDateFormater((appointmentDataList?.startDate)!)
         txrRenderDate.text = convertDateFormat
         
@@ -212,7 +207,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
             }
         }
@@ -234,11 +228,10 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
             }
         }
-
+        
         if arrObjClock.count != 0 {
             if (ConstantObj.Data.clock[indexx]["isHidden"] as! Bool) == true {
                 self.txtClockIn.text = "In"
@@ -257,7 +250,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
             }
         }
@@ -279,7 +271,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
             }
         }
@@ -295,12 +286,12 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         vc.address = appointmentData?.address ?? "Current Location"
         self.present(navController, animated:true, completion: nil)
     }
-
+    
     @objc func openDiapPad() {
         guard let number = URL(string: "tel://" + "4151231234") else { return }
         UIApplication.shared.open(number)
     }
-
+    
     
     
     func userInteration(isEnable: Bool){
@@ -315,7 +306,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
         latitudeStr = "\(locValue.latitude)"
         longitudeStr = "\(locValue.longitude)"
     }
@@ -418,9 +408,8 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
-
+                
                 self.thirtySecTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector:#selector(self.getCurrentLocationAPI), userInfo: nil, repeats: true)
                 self.thirtySecTimer.fire()
                 self.clockBtn.isUserInteractionEnabled = false
@@ -446,11 +435,11 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     
     
     @IBAction func buttonClockIn(_ sender: Any) {
-
+        
         let currentTime = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
-
+        
         if (ConstantObj.Data.clock[indexx]["isHidden"] as! Bool) == true {
             let alert = UIAlertController.init(title: nil, message: "Do you want to Clock In?", preferredStyle: .alert)
             alert.addAction(UIAlertAction.init(title: "Clock In", style: .default, handler: { (action) in
@@ -465,7 +454,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
                 }
                 catch
                 {
-                    print(error)
                 }
                 self.travelBtn.isUserInteractionEnabled = false
                 self.clockInTime = dateFormatter.string(from: currentTime)
@@ -526,16 +514,13 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         dateFormatter.dateFormat = "HH:mm:ss"
         
         let fromTime = dateFormatter.string(from: date!)
-        //txtStartTime.text = fromTime
-        
-        
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "hh:mm a"
         let date1 = dateFormatter1.date(from: _endTime)
         dateFormatter1.dateFormat = "HH:mm:ss"
         
         let toTime = dateFormatter.string(from: date1!)
-
+        
         let convertStartDate = convertDateFormater2(_startDate)
         
         if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID{
@@ -569,29 +554,19 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
             return
         }
         
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
         let date = dateFormatter.date(from: _startTime)
         dateFormatter.dateFormat = "HH:mm:ss"
         
         let fromTime = dateFormatter.string(from: date!)
-        //txtStartTime.text = fromTime
-        
-        
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "hh:mm a"
         let date1 = dateFormatter1.date(from: _endTime)
         dateFormatter1.dateFormat = "HH:mm:ss"
         
         let toTime = dateFormatter.string(from: date1!)
-        //   txtEndTime.text = toTime
-        
-        
-        
-        
         let convertStartDate = convertDateFormater2(_startDate)
-        
         let costartTime = convertStartDate + " " + fromTime
         let cotoTime = convertStartDate + " " + toTime
         
@@ -627,18 +602,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         
         
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 extension AppointmentViewController: UITextFieldDelegate{
     
@@ -708,7 +671,7 @@ extension AppointmentViewController: UITextFieldDelegate{
             return false
         }
         else if textField == txtService{
-
+            
             showDropDown(sender: txtService, content: activityArray.map({$0.label}))
             
             return false
@@ -720,12 +683,8 @@ extension AppointmentViewController: UITextFieldDelegate{
 extension AppointmentViewController: SignatureDelegateMethode {
     
     func getSignatureImage(_ signatureImage: UIImage) {
-        
-        print(signatureImage)
         imageViewSignature.image = signatureImage
-        
         base64String = convertImageToBase64String(img: signatureImage)
-        
     }
     
 }
@@ -777,24 +736,24 @@ extension AppointmentViewController: AppointmentDelegate{
     
 }
 extension AppointmentViewController: SwiftyGifDelegate {
-  
-  func gifURLDidFinish(sender: UIImageView) {
-    print("gifURLDidFinish")
-  }
-  
-  func gifURLDidFail(sender: UIImageView) {
-    print("gifURLDidFail")
-  }
-  
-  func gifDidStart(sender: UIImageView) {
-    print("gifDidStart")
-  }
-  
-  func gifDidLoop(sender: UIImageView) {
     
-  }
-  
-  func gifDidStop(sender: UIImageView) {
-    print("gifDidStop")
-  }
+    func gifURLDidFinish(sender: UIImageView) {
+        print("gifURLDidFinish")
+    }
+    
+    func gifURLDidFail(sender: UIImageView) {
+        print("gifURLDidFail")
+    }
+    
+    func gifDidStart(sender: UIImageView) {
+        print("gifDidStart")
+    }
+    
+    func gifDidLoop(sender: UIImageView) {
+        
+    }
+    
+    func gifDidStop(sender: UIImageView) {
+        print("gifDidStop")
+    }
 }

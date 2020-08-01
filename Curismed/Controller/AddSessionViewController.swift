@@ -59,9 +59,6 @@ class AddSessionViewController: BaseViewController {
     //MARK:- ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        // txtViewNotes.text = "dakjfs"
         titleString = "Add Session"
         viewModel.delegate = self
         print(authNo)
@@ -194,8 +191,6 @@ class AddSessionViewController: BaseViewController {
                                     if let statusfinal = stausValue.last
                                     {
                                         DispatchQueue.main.async {
-                                            //  let successMessage: String = json["message"] as! String
-                                            // self.displayServerSuccess(withMessage: )
                                             let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
                                             
                                             ConstantObj.Data.names.append(d1)

@@ -51,10 +51,8 @@ class CurrentLocationViewController: BaseViewController, MKMapViewDelegate, CLLo
     {
         print("Error \(error)")
     }
-   
+    
     @IBAction func backAction(_ sender: Any) {
-       /** let dashBoard =  UIStoryboard.dashboardStoryboard().instantiateViewController(withIdentifier:"DashboardVC") as! DashBoardViewController
-        self.navigationController?.pushViewController(dashBoard, animated: true)*/
         self.dismiss(animated: true, completion: nil)
     }
     @objc func backActions() {

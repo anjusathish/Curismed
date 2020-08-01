@@ -9,75 +9,71 @@
 import UIKit
 
 protocol SignatureDelegateMethode {
-  func getSignatureImage(_ signatureImage: UIImage)
+    func getSignatureImage(_ signatureImage: UIImage)
 }
 
 
 class AddSignatureViewController: UIViewController {
-  
-  @IBOutlet weak var signatureView: YPDrawSignatureView!
-  var delegate: SignatureDelegateMethode?
-  
-  let window = UIApplication.shared.windows.first
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
-    self.contentSizeInPopup = CGSize(width: window!.frame.width, height: window!.frame.height - 200)
-    signatureView.delegate = self
+    @IBOutlet weak var signatureView: YPDrawSignatureView!
+    var delegate: SignatureDelegateMethode?
     
-    if let _signatureImage = self.signatureView.getCroppedSignature() {
-      print(_signatureImage)
+    let window = UIApplication.shared.windows.first
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        self.contentSizeInPopup = CGSize(width: window!.frame.width, height: window!.frame.height - 200)
+        signatureView.delegate = self
+        
+        if self.signatureView.getCroppedSignature() != nil {
+        }
+        
+        
     }
     
-    
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    if let signatureImage = self.signatureView.getSignature(scale: 10) {
-      print(signatureImage)
+    override func viewWillAppear(_ animated: Bool) {
+        if self.signatureView.getSignature(scale: 10) != nil {
+        }
     }
-  }
-  
-  // Function for clearing the content of signature view
-  @IBAction func clearSignature(_ sender: UIButton) {
-    self.signatureView.clear()
-  }
-  
-  @IBAction func closeAction(_ sender: UIButton){
-    self.dismiss(animated: true, completion: nil)
-  }
-  
-  // Function for saving signature
-  @IBAction func saveSignature(_ sender: UIButton) {
     
-    if let signatureImage = self.signatureView.getSignature(scale: 10) {
-      
-      UIImageWriteToSavedPhotosAlbum(signatureImage, nil, nil, nil)
-      
-      self.signatureView.clear()
-      
-      self.dismiss(animated: true, completion: nil)
+    // Function for clearing the content of signature view
+    @IBAction func clearSignature(_ sender: UIButton) {
+        self.signatureView.clear()
     }
-  }
-  
+    
+    @IBAction func closeAction(_ sender: UIButton){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // Function for saving signature
+    @IBAction func saveSignature(_ sender: UIButton) {
+        
+        if let signatureImage = self.signatureView.getSignature(scale: 10) {
+            
+            UIImageWriteToSavedPhotosAlbum(signatureImage, nil, nil, nil)
+            
+            self.signatureView.clear()
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
 
 //MRAK:- YPSignatureDelegate Methodes
 extension AddSignatureViewController: YPSignatureDelegate{
-  
-  func didStart(_ view : YPDrawSignatureView) {
-    print("Started Drawing")
-  }
-  
-  func didFinish(_ view : YPDrawSignatureView) {
     
-    if let _getSignatureImage = view.getCroppedSignature() {
-      
-      delegate?.getSignatureImage(_getSignatureImage)
+    func didStart(_ view : YPDrawSignatureView) {
     }
     
-    print("Finished Drawing")
-  }
+    func didFinish(_ view : YPDrawSignatureView) {
+        
+        if let _getSignatureImage = view.getCroppedSignature() {
+            
+            delegate?.getSignatureImage(_getSignatureImage)
+        }
+        
+    }
 }
