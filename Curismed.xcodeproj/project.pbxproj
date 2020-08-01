@@ -1,0 +1,1161 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92A8A220714D8FC299481BBE /* Pods_Curismed_CurismedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */; };
+		A60456C4D61EA65DAB99D7A5 /* Pods_Curismed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */; };
+		BAC6A4A72482B99700FC6DEC /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */; };
+		BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD923DA2481783A00AC4D24 /* CoreLocation.framework */; };
+		CAED5115B9FEEEAAA88286D2 /* Pods_CurismedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */; };
+		E14C088D245EFCCE0081F58E /* AddSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */; };
+		E14C088E245EFD360081F58E /* AddSessionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4591A245EE546004C3C2D /* AddSessionTypeViewController.swift */; };
+		E14C088F245EFDB50081F58E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45912245E9EE7004C3C2D /* BaseViewController.swift */; };
+		E14C0891245F08590081F58E /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C0890245F08590081F58E /* AppointmentViewController.swift */; };
+		E14C0893245F08B00081F58E /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14C0892245F08B00081F58E /* Appointment.storyboard */; };
+		E14C0895245F1DA60081F58E /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14C0894245F1DA60081F58E /* Help.storyboard */; };
+		E14C0897245F1DD00081F58E /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14C0896245F1DD00081F58E /* AboutUs.storyboard */; };
+		E14C0899245F1E150081F58E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C0898245F1E150081F58E /* AboutUsViewController.swift */; };
+		E14C089B245F1E230081F58E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C089A245F1E230081F58E /* HelpViewController.swift */; };
+		E1574C182466ECCE00558116 /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1574C172466ECCE00558116 /* YPDrawSignatureView.swift */; };
+		E1574C1A2466F04700558116 /* AddSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1574C192466F04700558116 /* AddSignatureViewController.swift */; };
+		E15C49B3246D9072008F1B2B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C49B2246D9072008F1B2B /* UserProfile.swift */; };
+		E1B592C72477B79F00E31283 /* motorcycle.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1B592C62477B79F00E31283 /* motorcycle.gif */; };
+		E1B592C92477CE0C00E31283 /* ClickAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1B592C82477CE0C00E31283 /* ClickAnimation.gif */; };
+		E1C54E77245FF97900338359 /* CTDayWeekCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C54E76245FF97900338359 /* CTDayWeekCalender.swift */; };
+		E1C54E79245FFA5100338359 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C54E78245FFA5100338359 /* StringExtension.swift */; };
+		E1C54E83245FFDA900338359 /* GradientColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C54E82245FFDA900338359 /* GradientColour.swift */; };
+		E1E458C5245D8490004C3C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458C4245D8490004C3C2D /* AppDelegate.swift */; };
+		E1E458C7245D8490004C3C2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458C6245D8490004C3C2D /* SceneDelegate.swift */; };
+		E1E458C9245D8490004C3C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458C8245D8490004C3C2D /* ViewController.swift */; };
+		E1E458CC245D8490004C3C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E458CA245D8490004C3C2D /* Main.storyboard */; };
+		E1E458CE245D8499004C3C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E458CD245D8499004C3C2D /* Assets.xcassets */; };
+		E1E458D1245D8499004C3C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E458CF245D8499004C3C2D /* LaunchScreen.storyboard */; };
+		E1E458DC245D849A004C3C2D /* CurismedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458DB245D849A004C3C2D /* CurismedTests.swift */; };
+		E1E458E7245D849A004C3C2D /* CurismedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458E6245D849A004C3C2D /* CurismedUITests.swift */; };
+		E1E458F5245D876A004C3C2D /* Curismed_Logo_Animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1E458F4245D876A004C3C2D /* Curismed_Logo_Animation.gif */; };
+		E1E458F7245D8E15004C3C2D /* Amromed-logo_Final_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = E1E458F6245D8E15004C3C2D /* Amromed-logo_Final_2.gif */; };
+		E1E458F9245E75E2004C3C2D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E458F8245E75E2004C3C2D /* Onboarding.storyboard */; };
+		E1E458FB245E763D004C3C2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458FA245E763D004C3C2D /* LoginViewController.swift */; };
+		E1E458FE245E7797004C3C2D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458FD245E7797004C3C2D /* StoryboardExtension.swift */; };
+		E1E45900245E7C8E004C3C2D /* CTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E458FF245E7C8E004C3C2D /* CTView.swift */; };
+		E1E45905245E88DE004C3C2D /* CTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45904245E88DD004C3C2D /* CTTextField.swift */; };
+		E1E45907245E8995004C3C2D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45906245E8995004C3C2D /* ColorExtension.swift */; };
+		E1E45909245E9676004C3C2D /* CTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45908245E9676004C3C2D /* CTButton.swift */; };
+		E1E4590B245E9CA0004C3C2D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4590A245E9CA0004C3C2D /* ForgotPasswordViewController.swift */; };
+		E1E4590D245E9CC4004C3C2D /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4590C245E9CC4004C3C2D /* DashBoardViewController.swift */; };
+		E1E4590F245E9CD3004C3C2D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4590E245E9CD3004C3C2D /* MenuViewController.swift */; };
+		E1E45911245E9CE8004C3C2D /* DashBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E45910245E9CE8004C3C2D /* DashBoard.storyboard */; };
+		E1E45915245EB3D5004C3C2D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45914245EB3D4004C3C2D /* MenuTableViewCell.swift */; };
+		E1E45918245EC122004C3C2D /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45916245EC121004C3C2D /* DashboardTableViewCell.swift */; };
+		E1E45919245EC122004C3C2D /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E45917245EC121004C3C2D /* DashboardTableViewCell.xib */; };
+		E1F601E0246194AA00C0BA5E /* OnBoardingServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601DF246194A900C0BA5E /* OnBoardingServiceHelper.swift */; };
+		E1F601E2246194B700C0BA5E /* OnBoardingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601E1246194B600C0BA5E /* OnBoardingServiceManager.swift */; };
+		E1F601E42461951E00C0BA5E /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601E32461951E00C0BA5E /* Rechability.swift */; };
+		E1F601E82461952F00C0BA5E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F601E62461952F00C0BA5E /* MBProgressHUD.m */; };
+		E1F601EA2461961E00C0BA5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601E92461961E00C0BA5E /* Constants.swift */; };
+		E1F601EC2461969B00C0BA5E /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601EB2461969B00C0BA5E /* ServiceHelper.swift */; };
+		E1F601EE2461971B00C0BA5E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601ED2461971B00C0BA5E /* LoginViewModel.swift */; };
+		E1F601F02461973800C0BA5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601EF2461973800C0BA5E /* User.swift */; };
+		E1F601F22461A01900C0BA5E /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601F12461A01900C0BA5E /* ForgotPasswordViewModel.swift */; };
+		E1F601F42461A6C900C0BA5E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601F32461A6C900C0BA5E /* PickerViewController.swift */; };
+		E1F601F62461A8B200C0BA5E /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601F52461A8B200C0BA5E /* CustomPicker.swift */; };
+		E1F601F82461A99200C0BA5E /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F601F72461A99200C0BA5E /* ViewExtension.swift */; };
+		E1F6020E2461AA5200C0BA5E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E1F601FC2461AA5200C0BA5E /* LICENSE */; };
+		E1F6020F2461AA5200C0BA5E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E1F601FD2461AA5200C0BA5E /* README.md */; };
+		E1F602102461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F601FF2461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.m */; };
+		E1F602112461AA5200C0BA5E /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602012461AA5200C0BA5E /* STPopupNavigationBar.m */; };
+		E1F602122461AA5200C0BA5E /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602032461AA5200C0BA5E /* STPopupLeftBarItem.m */; };
+		E1F602132461AA5200C0BA5E /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602042461AA5200C0BA5E /* UIViewController+STPopup.m */; };
+		E1F602142461AA5200C0BA5E /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602052461AA5200C0BA5E /* STPopupControllerTransitioningFade.m */; };
+		E1F602152461AA5200C0BA5E /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602062461AA5200C0BA5E /* STPopupController.m */; };
+		E1F602162461AA5200C0BA5E /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F602072461AA5200C0BA5E /* UIResponder+STPopup.m */; };
+		E1F602182461C04600C0BA5E /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F602172461C04600C0BA5E /* Appointment.swift */; };
+		E1F6021C2461C1AD00C0BA5E /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6021B2461C1AD00C0BA5E /* AppointmentViewModel.swift */; };
+		E1F602212461C29400C0BA5E /* AppointmentServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F602202461C29400C0BA5E /* AppointmentServiceHelper.swift */; };
+		E1F602232461C2CE00C0BA5E /* AppointmentServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F602222461C2CE00C0BA5E /* AppointmentServiceManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1E458D8245D849A004C3C2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E458B9245D8490004C3C2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E458C0245D8490004C3C2D;
+			remoteInfo = Curismed;
+		};
+		E1E458E3245D849A004C3C2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E458B9245D8490004C3C2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1E458C0245D8490004C3C2D;
+			remoteInfo = Curismed;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed-CurismedUITests.debug.xcconfig"; path = "Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurismedTests.debug.xcconfig"; path = "Target Support Files/Pods-CurismedTests/Pods-CurismedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed_CurismedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed.release.xcconfig"; path = "Target Support Files/Pods-Curismed/Pods-Curismed.release.xcconfig"; sourceTree = "<group>"; };
+		7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurismedTests.release.xcconfig"; path = "Target Support Files/Pods-CurismedTests/Pods-CurismedTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed-CurismedUITests.release.xcconfig"; path = "Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurismedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		BAD923DA2481783A00AC4D24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed.debug.xcconfig"; path = "Target Support Files/Pods-Curismed/Pods-Curismed.debug.xcconfig"; sourceTree = "<group>"; };
+		E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionViewController.swift; sourceTree = "<group>"; };
+		E14C0890245F08590081F58E /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		E14C0892245F08B00081F58E /* Appointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
+		E14C0894245F1DA60081F58E /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		E14C0896245F1DD00081F58E /* AboutUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
+		E14C0898245F1E150081F58E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		E14C089A245F1E230081F58E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		E1574C172466ECCE00558116 /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
+		E1574C192466F04700558116 /* AddSignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSignatureViewController.swift; sourceTree = "<group>"; };
+		E15C49B2246D9072008F1B2B /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		E1B592C62477B79F00E31283 /* motorcycle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = motorcycle.gif; sourceTree = "<group>"; };
+		E1B592C82477CE0C00E31283 /* ClickAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ClickAnimation.gif; sourceTree = "<group>"; };
+		E1C54E76245FF97900338359 /* CTDayWeekCalender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTDayWeekCalender.swift; sourceTree = "<group>"; };
+		E1C54E78245FFA5100338359 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E1C54E82245FFDA900338359 /* GradientColour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientColour.swift; sourceTree = "<group>"; };
+		E1E458C1245D8490004C3C2D /* Curismed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curismed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458C4245D8490004C3C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1E458C6245D8490004C3C2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E1E458C8245D8490004C3C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1E458CB245D8490004C3C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1E458CD245D8499004C3C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1E458D0245D8499004C3C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1E458D2245D8499004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E458D7245D849A004C3C2D /* CurismedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurismedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458DB245D849A004C3C2D /* CurismedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurismedTests.swift; sourceTree = "<group>"; };
+		E1E458DD245D849A004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurismedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458E6245D849A004C3C2D /* CurismedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurismedUITests.swift; sourceTree = "<group>"; };
+		E1E458E8245D849A004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E458F4245D876A004C3C2D /* Curismed_Logo_Animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Curismed_Logo_Animation.gif; sourceTree = "<group>"; };
+		E1E458F6245D8E15004C3C2D /* Amromed-logo_Final_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Amromed-logo_Final_2.gif"; sourceTree = "<group>"; };
+		E1E458F8245E75E2004C3C2D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		E1E458FA245E763D004C3C2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E1E458FD245E7797004C3C2D /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		E1E458FF245E7C8E004C3C2D /* CTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTView.swift; sourceTree = "<group>"; };
+		E1E45904245E88DD004C3C2D /* CTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTTextField.swift; sourceTree = "<group>"; };
+		E1E45906245E8995004C3C2D /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		E1E45908245E9676004C3C2D /* CTButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTButton.swift; sourceTree = "<group>"; };
+		E1E4590A245E9CA0004C3C2D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		E1E4590C245E9CC4004C3C2D /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		E1E4590E245E9CD3004C3C2D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E1E45910245E9CE8004C3C2D /* DashBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoard.storyboard; sourceTree = "<group>"; };
+		E1E45912245E9EE7004C3C2D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E1E45914245EB3D4004C3C2D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		E1E45916245EC121004C3C2D /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		E1E45917245EC121004C3C2D /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		E1E4591A245EE546004C3C2D /* AddSessionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionTypeViewController.swift; sourceTree = "<group>"; };
+		E1F601DF246194A900C0BA5E /* OnBoardingServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingServiceHelper.swift; sourceTree = "<group>"; };
+		E1F601E1246194B600C0BA5E /* OnBoardingServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingServiceManager.swift; sourceTree = "<group>"; };
+		E1F601E32461951E00C0BA5E /* Rechability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		E1F601E52461952E00C0BA5E /* Curismed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Curismed-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1F601E62461952F00C0BA5E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E1F601E72461952F00C0BA5E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E1F601E92461961E00C0BA5E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E1F601EB2461969B00C0BA5E /* ServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
+		E1F601ED2461971B00C0BA5E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E1F601EF2461973800C0BA5E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E1F601F12461A01900C0BA5E /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		E1F601F32461A6C900C0BA5E /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		E1F601F52461A8B200C0BA5E /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		E1F601F72461A99200C0BA5E /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		E1F601FC2461AA5200C0BA5E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E1F601FD2461AA5200C0BA5E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E1F601FF2461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
+		E1F602002461AA5200C0BA5E /* STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopup.h; sourceTree = "<group>"; };
+		E1F602012461AA5200C0BA5E /* STPopupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupNavigationBar.m; sourceTree = "<group>"; };
+		E1F602022461AA5200C0BA5E /* UIResponder+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+STPopup.h"; sourceTree = "<group>"; };
+		E1F602032461AA5200C0BA5E /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupLeftBarItem.m; sourceTree = "<group>"; };
+		E1F602042461AA5200C0BA5E /* UIViewController+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STPopup.m"; sourceTree = "<group>"; };
+		E1F602052461AA5200C0BA5E /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
+		E1F602062461AA5200C0BA5E /* STPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupController.m; sourceTree = "<group>"; };
+		E1F602072461AA5200C0BA5E /* UIResponder+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+STPopup.m"; sourceTree = "<group>"; };
+		E1F602082461AA5200C0BA5E /* STPopupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupNavigationBar.h; sourceTree = "<group>"; };
+		E1F602092461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
+		E1F6020A2461AA5200C0BA5E /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
+		E1F6020B2461AA5200C0BA5E /* UIViewController+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STPopup.h"; sourceTree = "<group>"; };
+		E1F6020C2461AA5200C0BA5E /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupLeftBarItem.h; sourceTree = "<group>"; };
+		E1F6020D2461AA5200C0BA5E /* STPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupController.h; sourceTree = "<group>"; };
+		E1F602172461C04600C0BA5E /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		E1F6021B2461C1AD00C0BA5E /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
+		E1F602202461C29400C0BA5E /* AppointmentServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceHelper.swift; sourceTree = "<group>"; };
+		E1F602222461C2CE00C0BA5E /* AppointmentServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1E458BE245D8490004C3C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */,
+				A60456C4D61EA65DAB99D7A5 /* Pods_Curismed.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458D4245D849A004C3C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAED5115B9FEEEAAA88286D2 /* Pods_CurismedTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458DF245D849A004C3C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A8A220714D8FC299481BBE /* Pods_Curismed_CurismedUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F3ABA5CCAB5E87562D37583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAD923DA2481783A00AC4D24 /* CoreLocation.framework */,
+				2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */,
+				2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */,
+				900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D00BEDDEB6D674C66D275163 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */,
+				4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */,
+				053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */,
+				7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */,
+				1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */,
+				7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E16BF57824604FEF0090739B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458C8245D8490004C3C2D /* ViewController.swift */,
+				E1E45912245E9EE7004C3C2D /* BaseViewController.swift */,
+				E1E458FA245E763D004C3C2D /* LoginViewController.swift */,
+				E1E4590A245E9CA0004C3C2D /* ForgotPasswordViewController.swift */,
+				E1E4590C245E9CC4004C3C2D /* DashBoardViewController.swift */,
+				E1E4590E245E9CD3004C3C2D /* MenuViewController.swift */,
+				E1E4591A245EE546004C3C2D /* AddSessionTypeViewController.swift */,
+				E1B592CA247829EC00E31283 /* New Group */,
+				E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */,
+				E14C0890245F08590081F58E /* AppointmentViewController.swift */,
+				E14C0898245F1E150081F58E /* AboutUsViewController.swift */,
+				E14C089A245F1E230081F58E /* HelpViewController.swift */,
+				E1F601F32461A6C900C0BA5E /* PickerViewController.swift */,
+				E1574C192466F04700558116 /* AddSignatureViewController.swift */,
+				BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E16BF5792460501D0090739B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601F72461A99200C0BA5E /* ViewExtension.swift */,
+				E1C54E78245FFA5100338359 /* StringExtension.swift */,
+				E1E45906245E8995004C3C2D /* ColorExtension.swift */,
+				E1E458FD245E7797004C3C2D /* StoryboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E16BF57A246050420090739B /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458FF245E7C8E004C3C2D /* CTView.swift */,
+				E1E45904245E88DD004C3C2D /* CTTextField.swift */,
+				E1C54E76245FF97900338359 /* CTDayWeekCalender.swift */,
+				E1E45908245E9676004C3C2D /* CTButton.swift */,
+				E1C54E82245FFDA900338359 /* GradientColour.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		E16BF57D246050890090739B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1E45916245EC121004C3C2D /* DashboardTableViewCell.swift */,
+				E1E45917245EC121004C3C2D /* DashboardTableViewCell.xib */,
+				E1E45914245EB3D4004C3C2D /* MenuTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E16BF57E246050B10090739B /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458CF245D8499004C3C2D /* LaunchScreen.storyboard */,
+				E1E458CA245D8490004C3C2D /* Main.storyboard */,
+				E1E458F8245E75E2004C3C2D /* Onboarding.storyboard */,
+				E1E45910245E9CE8004C3C2D /* DashBoard.storyboard */,
+				E14C0892245F08B00081F58E /* Appointment.storyboard */,
+				E14C0894245F1DA60081F58E /* Help.storyboard */,
+				E14C0896245F1DD00081F58E /* AboutUs.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		E1B592CA247829EC00E31283 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		E1E458B8245D8490004C3C2D = {
+			isa = PBXGroup;
+			children = (
+				E1E458C3245D8490004C3C2D /* Curismed */,
+				E1E458DA245D849A004C3C2D /* CurismedTests */,
+				E1E458E5245D849A004C3C2D /* CurismedUITests */,
+				E1E458C2245D8490004C3C2D /* Products */,
+				D00BEDDEB6D674C66D275163 /* Pods */,
+				8F3ABA5CCAB5E87562D37583 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E1E458C2245D8490004C3C2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458C1245D8490004C3C2D /* Curismed.app */,
+				E1E458D7245D849A004C3C2D /* CurismedTests.xctest */,
+				E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1E458C3245D8490004C3C2D /* Curismed */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458C4245D8490004C3C2D /* AppDelegate.swift */,
+				E1E458C6245D8490004C3C2D /* SceneDelegate.swift */,
+				E1F601EB2461969B00C0BA5E /* ServiceHelper.swift */,
+				E15C49B2246D9072008F1B2B /* UserProfile.swift */,
+				E1F6021D2461C1D800C0BA5E /* ServiceHelper */,
+				E1F6021E2461C1F100C0BA5E /* ServiceManager */,
+				E1F6021F2461C22600C0BA5E /* OtherClass */,
+				E1F602192461C0DA00C0BA5E /* Model */,
+				E1F6021A2461C0E900C0BA5E /* ViewModel */,
+				E16BF57824604FEF0090739B /* Controller */,
+				E16BF57D246050890090739B /* TableViewCell */,
+				E16BF5792460501D0090739B /* Extension */,
+				E16BF57A246050420090739B /* CustomClass */,
+				E16BF57E246050B10090739B /* StoryBoard */,
+				E1E458CD245D8499004C3C2D /* Assets.xcassets */,
+				E1E458D2245D8499004C3C2D /* Info.plist */,
+				E1E458F4245D876A004C3C2D /* Curismed_Logo_Animation.gif */,
+				E1E458F6245D8E15004C3C2D /* Amromed-logo_Final_2.gif */,
+				E1B592C62477B79F00E31283 /* motorcycle.gif */,
+				E1B592C82477CE0C00E31283 /* ClickAnimation.gif */,
+				E1F601E52461952E00C0BA5E /* Curismed-Bridging-Header.h */,
+			);
+			path = Curismed;
+			sourceTree = "<group>";
+		};
+		E1E458DA245D849A004C3C2D /* CurismedTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458DB245D849A004C3C2D /* CurismedTests.swift */,
+				E1E458DD245D849A004C3C2D /* Info.plist */,
+			);
+			path = CurismedTests;
+			sourceTree = "<group>";
+		};
+		E1E458E5245D849A004C3C2D /* CurismedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1E458E6245D849A004C3C2D /* CurismedUITests.swift */,
+				E1E458E8245D849A004C3C2D /* Info.plist */,
+			);
+			path = CurismedUITests;
+			sourceTree = "<group>";
+		};
+		E1F601FB2461AA5200C0BA5E /* STPopup */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601FC2461AA5200C0BA5E /* LICENSE */,
+				E1F601FD2461AA5200C0BA5E /* README.md */,
+				E1F601FE2461AA5200C0BA5E /* STPopup */,
+			);
+			path = STPopup;
+			sourceTree = "<group>";
+		};
+		E1F601FE2461AA5200C0BA5E /* STPopup */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601FF2461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.m */,
+				E1F602002461AA5200C0BA5E /* STPopup.h */,
+				E1F602012461AA5200C0BA5E /* STPopupNavigationBar.m */,
+				E1F602022461AA5200C0BA5E /* UIResponder+STPopup.h */,
+				E1F602032461AA5200C0BA5E /* STPopupLeftBarItem.m */,
+				E1F602042461AA5200C0BA5E /* UIViewController+STPopup.m */,
+				E1F602052461AA5200C0BA5E /* STPopupControllerTransitioningFade.m */,
+				E1F602062461AA5200C0BA5E /* STPopupController.m */,
+				E1F602072461AA5200C0BA5E /* UIResponder+STPopup.m */,
+				E1F602082461AA5200C0BA5E /* STPopupNavigationBar.h */,
+				E1F602092461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.h */,
+				E1F6020A2461AA5200C0BA5E /* STPopupControllerTransitioningFade.h */,
+				E1F6020B2461AA5200C0BA5E /* UIViewController+STPopup.h */,
+				E1F6020C2461AA5200C0BA5E /* STPopupLeftBarItem.h */,
+				E1F6020D2461AA5200C0BA5E /* STPopupController.h */,
+			);
+			path = STPopup;
+			sourceTree = "<group>";
+		};
+		E1F602192461C0DA00C0BA5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601EF2461973800C0BA5E /* User.swift */,
+				E1F602172461C04600C0BA5E /* Appointment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1F6021A2461C0E900C0BA5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601ED2461971B00C0BA5E /* LoginViewModel.swift */,
+				E1F601F12461A01900C0BA5E /* ForgotPasswordViewModel.swift */,
+				E1F6021B2461C1AD00C0BA5E /* AppointmentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1F6021D2461C1D800C0BA5E /* ServiceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601DF246194A900C0BA5E /* OnBoardingServiceHelper.swift */,
+				E1F602202461C29400C0BA5E /* AppointmentServiceHelper.swift */,
+			);
+			path = ServiceHelper;
+			sourceTree = "<group>";
+		};
+		E1F6021E2461C1F100C0BA5E /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601E1246194B600C0BA5E /* OnBoardingServiceManager.swift */,
+				E1F602222461C2CE00C0BA5E /* AppointmentServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		E1F6021F2461C22600C0BA5E /* OtherClass */ = {
+			isa = PBXGroup;
+			children = (
+				E1F601FB2461AA5200C0BA5E /* STPopup */,
+				E1F601E72461952F00C0BA5E /* MBProgressHUD.h */,
+				E1F601E62461952F00C0BA5E /* MBProgressHUD.m */,
+				E1574C172466ECCE00558116 /* YPDrawSignatureView.swift */,
+				E1F601E32461951E00C0BA5E /* Rechability.swift */,
+				E1F601E92461961E00C0BA5E /* Constants.swift */,
+				E1F601F52461A8B200C0BA5E /* CustomPicker.swift */,
+			);
+			path = OtherClass;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1E458C0245D8490004C3C2D /* Curismed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "Curismed" */;
+			buildPhases = (
+				23E5D820F9C3C450583EBC37 /* [CP] Check Pods Manifest.lock */,
+				E1E458BD245D8490004C3C2D /* Sources */,
+				E1E458BE245D8490004C3C2D /* Frameworks */,
+				E1E458BF245D8490004C3C2D /* Resources */,
+				7C72D8031603D489FDB476B6 /* [CP] Embed Pods Frameworks */,
+				0DFE097CAB79A15F632BF2C9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Curismed;
+			productName = Curismed;
+			productReference = E1E458C1245D8490004C3C2D /* Curismed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1E458D6245D849A004C3C2D /* CurismedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedTests" */;
+			buildPhases = (
+				21E5681C0A55287F29D0B09C /* [CP] Check Pods Manifest.lock */,
+				E1E458D3245D849A004C3C2D /* Sources */,
+				E1E458D4245D849A004C3C2D /* Frameworks */,
+				E1E458D5245D849A004C3C2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1E458D9245D849A004C3C2D /* PBXTargetDependency */,
+			);
+			name = CurismedTests;
+			productName = CurismedTests;
+			productReference = E1E458D7245D849A004C3C2D /* CurismedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1E458E1245D849A004C3C2D /* CurismedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedUITests" */;
+			buildPhases = (
+				07A1211E0F0BCAEC219F8A91 /* [CP] Check Pods Manifest.lock */,
+				E1E458DE245D849A004C3C2D /* Sources */,
+				E1E458DF245D849A004C3C2D /* Frameworks */,
+				E1E458E0245D849A004C3C2D /* Resources */,
+				7E3C58190CF5FD9C0E483288 /* [CP] Embed Pods Frameworks */,
+				A4F6A6ED596B39707BFAC04D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1E458E4245D849A004C3C2D /* PBXTargetDependency */,
+			);
+			name = CurismedUITests;
+			productName = CurismedUITests;
+			productReference = E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1E458B9245D8490004C3C2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Praveen;
+				TargetAttributes = {
+					E1E458C0245D8490004C3C2D = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
+					E1E458D6245D849A004C3C2D = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = E1E458C0245D8490004C3C2D;
+					};
+					E1E458E1245D849A004C3C2D = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = E1E458C0245D8490004C3C2D;
+					};
+				};
+			};
+			buildConfigurationList = E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "Curismed" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1E458B8245D8490004C3C2D;
+			productRefGroup = E1E458C2245D8490004C3C2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1E458C0245D8490004C3C2D /* Curismed */,
+				E1E458D6245D849A004C3C2D /* CurismedTests */,
+				E1E458E1245D849A004C3C2D /* CurismedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1E458BF245D8490004C3C2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E458D1245D8499004C3C2D /* LaunchScreen.storyboard in Resources */,
+				E1E458CE245D8499004C3C2D /* Assets.xcassets in Resources */,
+				E14C0893245F08B00081F58E /* Appointment.storyboard in Resources */,
+				E1E458F5245D876A004C3C2D /* Curismed_Logo_Animation.gif in Resources */,
+				E1F6020F2461AA5200C0BA5E /* README.md in Resources */,
+				E14C0897245F1DD00081F58E /* AboutUs.storyboard in Resources */,
+				E1E458F9245E75E2004C3C2D /* Onboarding.storyboard in Resources */,
+				E1F6020E2461AA5200C0BA5E /* LICENSE in Resources */,
+				E1E45911245E9CE8004C3C2D /* DashBoard.storyboard in Resources */,
+				E1E458F7245D8E15004C3C2D /* Amromed-logo_Final_2.gif in Resources */,
+				E14C0895245F1DA60081F58E /* Help.storyboard in Resources */,
+				E1B592C92477CE0C00E31283 /* ClickAnimation.gif in Resources */,
+				E1B592C72477B79F00E31283 /* motorcycle.gif in Resources */,
+				E1E45919245EC122004C3C2D /* DashboardTableViewCell.xib in Resources */,
+				E1E458CC245D8490004C3C2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458D5245D849A004C3C2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458E0245D849A004C3C2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07A1211E0F0BCAEC219F8A91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Curismed-CurismedUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DFE097CAB79A15F632BF2C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21E5681C0A55287F29D0B09C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CurismedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23E5D820F9C3C450583EBC37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Curismed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C72D8031603D489FDB476B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3C58190CF5FD9C0E483288 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F6A6ED596B39707BFAC04D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1E458BD245D8490004C3C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E458FB245E763D004C3C2D /* LoginViewController.swift in Sources */,
+				E1F601E2246194B700C0BA5E /* OnBoardingServiceManager.swift in Sources */,
+				E15C49B3246D9072008F1B2B /* UserProfile.swift in Sources */,
+				E1F602162461AA5200C0BA5E /* UIResponder+STPopup.m in Sources */,
+				E1F601F62461A8B200C0BA5E /* CustomPicker.swift in Sources */,
+				E1F601E42461951E00C0BA5E /* Rechability.swift in Sources */,
+				E1C54E77245FF97900338359 /* CTDayWeekCalender.swift in Sources */,
+				E1F602132461AA5200C0BA5E /* UIViewController+STPopup.m in Sources */,
+				E1F601F02461973800C0BA5E /* User.swift in Sources */,
+				E1E45915245EB3D5004C3C2D /* MenuTableViewCell.swift in Sources */,
+				E1E45900245E7C8E004C3C2D /* CTView.swift in Sources */,
+				E1E45909245E9676004C3C2D /* CTButton.swift in Sources */,
+				E1F601F22461A01900C0BA5E /* ForgotPasswordViewModel.swift in Sources */,
+				E14C0899245F1E150081F58E /* AboutUsViewController.swift in Sources */,
+				E1F601EE2461971B00C0BA5E /* LoginViewModel.swift in Sources */,
+				E1E458C9245D8490004C3C2D /* ViewController.swift in Sources */,
+				E1E45907245E8995004C3C2D /* ColorExtension.swift in Sources */,
+				E14C0891245F08590081F58E /* AppointmentViewController.swift in Sources */,
+				E1F601EA2461961E00C0BA5E /* Constants.swift in Sources */,
+				E1C54E83245FFDA900338359 /* GradientColour.swift in Sources */,
+				E14C088E245EFD360081F58E /* AddSessionTypeViewController.swift in Sources */,
+				E1F602212461C29400C0BA5E /* AppointmentServiceHelper.swift in Sources */,
+				E1F601E82461952F00C0BA5E /* MBProgressHUD.m in Sources */,
+				E1F601F42461A6C900C0BA5E /* PickerViewController.swift in Sources */,
+				E1F601EC2461969B00C0BA5E /* ServiceHelper.swift in Sources */,
+				E14C088F245EFDB50081F58E /* BaseViewController.swift in Sources */,
+				E1F6021C2461C1AD00C0BA5E /* AppointmentViewModel.swift in Sources */,
+				E14C088D245EFCCE0081F58E /* AddSessionViewController.swift in Sources */,
+				E1E458C5245D8490004C3C2D /* AppDelegate.swift in Sources */,
+				E1F601F82461A99200C0BA5E /* ViewExtension.swift in Sources */,
+				E1E4590B245E9CA0004C3C2D /* ForgotPasswordViewController.swift in Sources */,
+				BAC6A4A72482B99700FC6DEC /* CurrentLocationViewController.swift in Sources */,
+				E1E45918245EC122004C3C2D /* DashboardTableViewCell.swift in Sources */,
+				E1F602122461AA5200C0BA5E /* STPopupLeftBarItem.m in Sources */,
+				E1F602102461AA5200C0BA5E /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				E1F602232461C2CE00C0BA5E /* AppointmentServiceManager.swift in Sources */,
+				E1E4590F245E9CD3004C3C2D /* MenuViewController.swift in Sources */,
+				E1F602142461AA5200C0BA5E /* STPopupControllerTransitioningFade.m in Sources */,
+				E1E458FE245E7797004C3C2D /* StoryboardExtension.swift in Sources */,
+				E1F602182461C04600C0BA5E /* Appointment.swift in Sources */,
+				E1E4590D245E9CC4004C3C2D /* DashBoardViewController.swift in Sources */,
+				E1E45905245E88DE004C3C2D /* CTTextField.swift in Sources */,
+				E1F601E0246194AA00C0BA5E /* OnBoardingServiceHelper.swift in Sources */,
+				E1E458C7245D8490004C3C2D /* SceneDelegate.swift in Sources */,
+				E1574C1A2466F04700558116 /* AddSignatureViewController.swift in Sources */,
+				E1C54E79245FFA5100338359 /* StringExtension.swift in Sources */,
+				E1F602152461AA5200C0BA5E /* STPopupController.m in Sources */,
+				E1F602112461AA5200C0BA5E /* STPopupNavigationBar.m in Sources */,
+				E14C089B245F1E230081F58E /* HelpViewController.swift in Sources */,
+				E1574C182466ECCE00558116 /* YPDrawSignatureView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458D3245D849A004C3C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E458DC245D849A004C3C2D /* CurismedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E458DE245D849A004C3C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E458E7245D849A004C3C2D /* CurismedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1E458D9245D849A004C3C2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1E458C0245D8490004C3C2D /* Curismed */;
+			targetProxy = E1E458D8245D849A004C3C2D /* PBXContainerItemProxy */;
+		};
+		E1E458E4245D849A004C3C2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1E458C0245D8490004C3C2D /* Curismed */;
+			targetProxy = E1E458E3245D849A004C3C2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1E458CA245D8490004C3C2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1E458CB245D8490004C3C2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E1E458CF245D8499004C3C2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1E458D0245D8499004C3C2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1E458E9245D849A004C3C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1E458EA245D849A004C3C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1E458EC245D849A004C3C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.7;
+				DEVELOPMENT_TEAM = A8SY5DGLFG;
+				INFOPLIST_FILE = Curismed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sts.demo4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "STS Demo 4";
+				SWIFT_OBJC_BRIDGING_HEADER = "Curismed/Curismed-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E1E458ED245D849A004C3C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.7;
+				DEVELOPMENT_TEAM = A8SY5DGLFG;
+				INFOPLIST_FILE = Curismed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sts.demo4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "STS Demo 4";
+				SWIFT_OBJC_BRIDGING_HEADER = "Curismed/Curismed-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E1E458EF245D849A004C3C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CurismedTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Praveen.CurismedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curismed.app/Curismed";
+			};
+			name = Debug;
+		};
+		E1E458F0245D849A004C3C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CurismedTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Praveen.CurismedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curismed.app/Curismed";
+			};
+			name = Release;
+		};
+		E1E458F2245D849A004C3C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CurismedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Praveen.CurismedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Curismed;
+			};
+			name = Debug;
+		};
+		E1E458F3245D849A004C3C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CurismedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Praveen.CurismedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Curismed;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "Curismed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E458E9245D849A004C3C2D /* Debug */,
+				E1E458EA245D849A004C3C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "Curismed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E458EC245D849A004C3C2D /* Debug */,
+				E1E458ED245D849A004C3C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E458EF245D849A004C3C2D /* Debug */,
+				E1E458F0245D849A004C3C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E458F2245D849A004C3C2D /* Debug */,
+				E1E458F3245D849A004C3C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1E458B9245D8490004C3C2D /* Project object */;
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About Us View Controller-->
+        <scene sceneID="Oka-wB-Hu9">
+            <objects>
+                <viewController storyboardIdentifier="AboutUs" id="owy-Ta-tI7" customClass="AboutUsViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EgL-0z-08F" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lda-sb-2Ig">
+                                <rect key="frame" x="60" y="100" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="iid-kS-Stv"/>
+                                    <constraint firstAttribute="height" constant="50" id="pK9-Nx-r2X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proficient in ABA billing services across the country." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N4-9G-g5u">
+                                <rect key="frame" x="40" y="190" width="240" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqW-KO-rel">
+                                <rect key="frame" x="100" y="524.5" width="120" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvk-iH-GEs">
+                                <rect key="frame" x="75" y="526.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="hnq-Bc-rKC"/>
+                                    <constraint firstAttribute="height" constant="20" id="qjC-aE-afQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LqW-KO-rel" firstAttribute="leading" secondItem="bvk-iH-GEs" secondAttribute="trailing" constant="5" id="3jr-ao-EWn"/>
+                            <constraint firstItem="lda-sb-2Ig" firstAttribute="centerX" secondItem="EgL-0z-08F" secondAttribute="centerX" id="6Or-Uv-upc"/>
+                            <constraint firstItem="2N4-9G-g5u" firstAttribute="leading" secondItem="0Qz-Re-qu7" secondAttribute="leading" constant="40" id="G7g-Rv-IpT"/>
+                            <constraint firstItem="bvk-iH-GEs" firstAttribute="centerY" secondItem="LqW-KO-rel" secondAttribute="centerY" id="Kyi-et-7rF"/>
+                            <constraint firstItem="2N4-9G-g5u" firstAttribute="top" secondItem="lda-sb-2Ig" secondAttribute="bottom" constant="40" id="Zgy-Wu-eC7"/>
+                            <constraint firstItem="LqW-KO-rel" firstAttribute="centerX" secondItem="EgL-0z-08F" secondAttribute="centerX" id="eRf-fR-Yzw"/>
+                            <constraint firstItem="0Qz-Re-qu7" firstAttribute="bottom" secondItem="LqW-KO-rel" secondAttribute="bottom" constant="20" id="jga-jn-cP5"/>
+                            <constraint firstItem="lda-sb-2Ig" firstAttribute="top" secondItem="EgL-0z-08F" secondAttribute="top" constant="100" id="rWA-e9-Vwq"/>
+                            <constraint firstItem="0Qz-Re-qu7" firstAttribute="trailing" secondItem="2N4-9G-g5u" secondAttribute="trailing" constant="40" id="yvf-7U-nXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Qz-Re-qu7"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.83137254900000002" green="0.91372549020000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.63137254899999995" green="0.74117647060000003" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbT-fu-qHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="109.85915492957747"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CurismedLogo" width="100" height="25"/>
+    </resources>
+</document>

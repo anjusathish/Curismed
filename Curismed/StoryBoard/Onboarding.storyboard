@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZe-TF-oZ5">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="2bc-eG-Buz">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="B4Q-5l-bVp" customClass="LoginViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="W6e-u9-Aaa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYO-pS-AA5" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.83137254900000002" green="0.91372549020000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="l44-6L-KQ9">
+                                <rect key="frame" x="60" y="70" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uID-OD-G1c"/>
+                                    <constraint firstAttribute="width" constant="200" id="xzc-Sd-qr4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFK-lm-FEO" customClass="CTView" customModule="Curismed" customModuleProvider="target">
+                                <rect key="frame" x="20" y="236.5" width="280" height="255"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-Ha-Foa">
+                                        <rect key="frame" x="72" y="45" width="136" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-Qq-mwO" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="87.5" width="240" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3qe-Uu-o0M"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.23921568630000001" green="0.37254901959999998" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Client"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="B4Q-5l-bVp" id="r8P-nh-XWb"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-jd-SFY" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="142.5" width="240" height="40"/>
+                                        <color key="tintColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="L5m-14-hU0"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="passwordIcon"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="B4Q-5l-bVp" id="Ca6-iO-DgA"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-Lb-z57" customClass="CTButton" customModule="Curismed" customModuleProvider="target">
+                                        <rect key="frame" x="117.5" y="200" width="45" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Ila-qN-vAJ"/>
+                                            <constraint firstAttribute="width" secondItem="La0-Lb-z57" secondAttribute="height" multiplier="1:1" id="nx6-vC-EeP"/>
+                                        </constraints>
+                                        <state key="normal" image="LoginArrow"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginAction:" destination="B4Q-5l-bVp" eventType="touchUpInside" id="ZOT-mr-iYF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="La0-Lb-z57" firstAttribute="centerX" secondItem="IFK-lm-FEO" secondAttribute="centerX" id="0RL-Y3-EGb"/>
+                                    <constraint firstAttribute="bottom" secondItem="La0-Lb-z57" secondAttribute="bottom" constant="10" id="1mc-hU-lPO"/>
+                                    <constraint firstItem="kIA-Ha-Foa" firstAttribute="top" secondItem="IFK-lm-FEO" secondAttribute="top" constant="45" id="2Xt-2O-zHA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pdi-Qq-mwO" secondAttribute="trailing" constant="20" id="6p8-Ax-3yk"/>
+                                    <constraint firstItem="NZA-jd-SFY" firstAttribute="top" secondItem="Pdi-Qq-mwO" secondAttribute="bottom" constant="15" id="DYi-Fy-Gcf"/>
+                                    <constraint firstAttribute="trailing" secondItem="NZA-jd-SFY" secondAttribute="trailing" constant="20" id="Jhh-sO-Y2p"/>
+                                    <constraint firstItem="Pdi-Qq-mwO" firstAttribute="leading" secondItem="IFK-lm-FEO" secondAttribute="leading" constant="20" id="VMk-J2-dJJ"/>
+                                    <constraint firstItem="NZA-jd-SFY" firstAttribute="leading" secondItem="IFK-lm-FEO" secondAttribute="leading" constant="20" id="VOG-Wa-emh"/>
+                                    <constraint firstAttribute="height" constant="255" id="WBe-dT-eYq"/>
+                                    <constraint firstItem="Pdi-Qq-mwO" firstAttribute="top" secondItem="kIA-Ha-Foa" secondAttribute="bottom" constant="15" id="d6A-Sa-imC"/>
+                                    <constraint firstItem="kIA-Ha-Foa" firstAttribute="centerX" secondItem="IFK-lm-FEO" secondAttribute="centerX" id="sSw-bW-2oK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-Cq-ApW">
+                                <rect key="frame" x="120" y="189" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aW5-4s-Ydh"/>
+                                    <constraint firstAttribute="width" secondItem="L8F-Cq-ApW" secondAttribute="height" multiplier="1:1" id="wPn-6X-LQd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwD-ej-zxw">
+                                <rect key="frame" x="79.5" y="500" width="161" height="38"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Forgot Password ?">
+                                    <color key="titleColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t1g-Zq-xhf" kind="show" id="OoS-WW-gu6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IFK-lm-FEO" firstAttribute="centerY" secondItem="Ik9-Dr-b4X" secondAttribute="centerY" constant="80" id="2Qr-as-oEl"/>
+                            <constraint firstItem="yYO-pS-AA5" firstAttribute="trailing" secondItem="Ik9-Dr-b4X" secondAttribute="trailing" id="E8n-zJ-DSv"/>
+                            <constraint firstItem="l44-6L-KQ9" firstAttribute="centerX" secondItem="W6e-u9-Aaa" secondAttribute="centerX" id="EG2-62-zg9"/>
+                            <constraint firstItem="Ik9-Dr-b4X" firstAttribute="trailing" secondItem="IFK-lm-FEO" secondAttribute="trailing" constant="20" id="NbC-4P-2e5"/>
+                            <constraint firstItem="L8F-Cq-ApW" firstAttribute="centerX" secondItem="W6e-u9-Aaa" secondAttribute="centerX" id="RIg-7q-Sd3"/>
+                            <constraint firstItem="yYO-pS-AA5" firstAttribute="top" secondItem="W6e-u9-Aaa" secondAttribute="top" id="RkK-Kb-sao"/>
+                            <constraint firstItem="Ik9-Dr-b4X" firstAttribute="bottom" secondItem="IwD-ej-zxw" secondAttribute="bottom" constant="30" id="TF0-g5-1I8"/>
+                            <constraint firstItem="yYO-pS-AA5" firstAttribute="height" secondItem="W6e-u9-Aaa" secondAttribute="height" multiplier="350:568" id="TWo-th-S91"/>
+                            <constraint firstItem="yYO-pS-AA5" firstAttribute="leading" secondItem="Ik9-Dr-b4X" secondAttribute="leading" id="WG4-RH-28v"/>
+                            <constraint firstItem="l44-6L-KQ9" firstAttribute="top" secondItem="Ik9-Dr-b4X" secondAttribute="top" constant="70" id="bTH-5l-Dlv"/>
+                            <constraint firstItem="IwD-ej-zxw" firstAttribute="centerX" secondItem="W6e-u9-Aaa" secondAttribute="centerX" id="fj8-Qn-ejr"/>
+                            <constraint firstItem="IFK-lm-FEO" firstAttribute="leading" secondItem="Ik9-Dr-b4X" secondAttribute="leading" constant="20" id="gW9-02-MWT"/>
+                            <constraint firstItem="IFK-lm-FEO" firstAttribute="top" secondItem="L8F-Cq-ApW" secondAttribute="bottom" constant="-32.333333333333371" id="v5k-Du-O0I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ik9-Dr-b4X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="48q-66-Ch5"/>
+                    <connections>
+                        <outlet property="textName" destination="Pdi-Qq-mwO" id="IzG-ay-WH2"/>
+                        <outlet property="textPassword" destination="NZA-jd-SFY" id="MFa-Qp-yjk"/>
+                        <outlet property="viewBackGroundImage" destination="yYO-pS-AA5" id="BpL-VM-VXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgx-dQ-5A0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.25" y="35.91549295774648"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="V6i-cx-yAp">
+            <objects>
+                <viewController id="t1g-Zq-xhf" customClass="ForgotPasswordViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSC-gp-wvw" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-AF-4dY" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                <rect key="frame" x="20" y="171.5" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MCM-gI-p9n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.23921568630000001" green="0.37254901959999998" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Client"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="t1g-Zq-xhf" id="BUZ-rw-Wkx"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emw-lm-GJe">
+                                <rect key="frame" x="40" y="261.5" width="240" height="45"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="O00-OA-okI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonSubmit:" destination="t1g-Zq-xhf" eventType="touchUpInside" id="xVT-oU-e4N"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KCH-g7-3XH">
+                                <rect key="frame" x="60" y="71.5" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WCp-Pa-cYq"/>
+                                    <constraint firstAttribute="height" constant="50" id="vvr-EQ-THq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="emw-lm-GJe" firstAttribute="leading" secondItem="x9P-xL-L1Y" secondAttribute="leading" constant="40" id="GQ3-IK-JoS"/>
+                            <constraint firstItem="x9P-xL-L1Y" firstAttribute="trailing" secondItem="emw-lm-GJe" secondAttribute="trailing" constant="40" id="IOw-VT-95f"/>
+                            <constraint firstItem="emw-lm-GJe" firstAttribute="top" secondItem="gzK-AF-4dY" secondAttribute="bottom" constant="50" id="Iip-Fd-Fyh"/>
+                            <constraint firstItem="KCH-g7-3XH" firstAttribute="centerX" secondItem="zSC-gp-wvw" secondAttribute="centerX" id="K7T-kg-fyK"/>
+                            <constraint firstItem="emw-lm-GJe" firstAttribute="centerX" secondItem="zSC-gp-wvw" secondAttribute="centerX" id="Ke3-yi-jHH"/>
+                            <constraint firstItem="gzK-AF-4dY" firstAttribute="top" secondItem="KCH-g7-3XH" secondAttribute="bottom" constant="50" id="bpQ-3C-Moh"/>
+                            <constraint firstItem="gzK-AF-4dY" firstAttribute="leading" secondItem="x9P-xL-L1Y" secondAttribute="leading" constant="20" id="f07-qj-l1i"/>
+                            <constraint firstItem="emw-lm-GJe" firstAttribute="centerY" secondItem="zSC-gp-wvw" secondAttribute="centerY" id="iTd-2T-O0Y"/>
+                            <constraint firstItem="x9P-xL-L1Y" firstAttribute="trailing" secondItem="gzK-AF-4dY" secondAttribute="trailing" constant="20" id="nKs-Fc-ciX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x9P-xL-L1Y"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.83137254900000002" green="0.91372549020000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.63137254899999995" green="0.74117647060000003" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aq2-a5-zM4"/>
+                    <connections>
+                        <outlet property="txtUserName" destination="gzK-AF-4dY" id="4Qv-5K-3BQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZS-EK-uxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856.25" y="36.971830985915496"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="asH-j2-GPL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="RZe-TF-oZ5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hbW-pO-cZi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B4Q-5l-bVp" kind="relationship" relationship="rootViewController" id="K2V-Ur-Te2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVs-8Z-CPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.375" y="36.971830985915496"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Client" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="CurismedLogo" width="100" height="25"/>
+        <image name="LoginArrow" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Logo" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="passwordIcon" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
+</document>

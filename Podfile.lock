@@ -1,0 +1,56 @@
+PODS:
+  - BEMCheckBox (1.4.1)
+  - DropDown (2.3.13)
+  - FSCalendar (2.8.1)
+  - GoogleMaps/Base (3.8.0)
+  - GooglePlaces (3.8.0):
+    - GoogleMaps/Base (= 3.8.0)
+  - IQKeyboardManagerSwift (6.5.5)
+  - SideMenuSwift (2.0.5)
+  - SwiftGifOrigin (1.7.0)
+  - SwiftKeychainWrapper (3.4.0)
+  - SwiftyGif (5.2.0)
+  - TTGSnackbar (1.10.2)
+
+DEPENDENCIES:
+  - BEMCheckBox
+  - DropDown
+  - FSCalendar (~> 2.8)
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - SideMenuSwift
+  - SwiftGifOrigin
+  - SwiftKeychainWrapper
+  - SwiftyGif
+  - TTGSnackbar
+
+SPEC REPOS:
+  trunk:
+    - BEMCheckBox
+    - DropDown
+    - FSCalendar
+    - GoogleMaps
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - SideMenuSwift
+    - SwiftGifOrigin
+    - SwiftKeychainWrapper
+    - SwiftyGif
+    - TTGSnackbar
+
+SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
+  TTGSnackbar: fc26ad27ae180f4045b03ba19defdc57238e9215
+
+PODFILE CHECKSUM: c68483d51d19e69a038ec50a77b5defe1b896f2e
+
+COCOAPODS: 1.9.2
