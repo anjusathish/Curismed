@@ -466,7 +466,7 @@ extension DashBoardViewController: FSCalendarDelegate, FSCalendarDataSource{
         
         selectedDate = self.dateFormatter.string(from: date)
         
-        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+        _ = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)

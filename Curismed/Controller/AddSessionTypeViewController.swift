@@ -242,7 +242,7 @@ class AddSessionTypeViewController: BaseViewController {
           
         case .authorization:
 //            self.authNo = self.arrayClientName[0].patInfo.filter({$0.authsVal == item}).map({$0.auths}).first!
-            var allAuthNos = self.arrayClientName.filter({$0.patientName == self.patientName})[0].patInfo.map({$0.auths})
+            let allAuthNos = self.arrayClientName.filter({$0.patientName == self.patientName})[0].patInfo.map({$0.auths})
             self.authNo = allAuthNos[index]
         case .activity:
           
@@ -318,15 +318,7 @@ extension AddSessionTypeViewController: UITextFieldDelegate{
             
         case txtLocation:
             
-            var arrayIntLocation: [String] = []
-            
-            
-            //      arrayIntLocation.append(contentsOf: self.arrayClientName[0].locInfo.filter({$0.home == 1}).map({$0.home}))
-            //      arrayIntLocation.append(contentsOf: self.arrayClientName[0].locInfo.filter({$0.office == 1}).map({$0.office}))
-            //      arrayIntLocation.append(contentsOf: self.arrayClientName[0].locInfo.filter({$0.school == 1}).map({$0.school}))
-            //      arrayIntLocation.append(contentsOf: self.arrayClientName[0].locInfo.filter({$0.community == 1}).map({$0.community}))
-            
-            //  arrayStringLocation.first(where: { $0["home"] == "abbey"})
+            let arrayIntLocation: [String] = []
             if patientName != ""
             {
                 let home = self.arrayClientName.filter({$0.patientName == patientName})[0].locInfo.map({$0.home}).first

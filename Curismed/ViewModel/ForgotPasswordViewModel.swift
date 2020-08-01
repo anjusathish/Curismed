@@ -28,7 +28,7 @@ class ForgotPasswordViewModel{
       
       DispatchQueue.main.async {
         switch result{
-        case .success(let _):
+        case .success( _):
           self.delegate?.forgotpasswordSuccess(message: "success")
         case .failure(let message):
           self.delegate?.forgotpasswordFailure(message: "\(message)")

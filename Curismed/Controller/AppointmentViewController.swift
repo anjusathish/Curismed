@@ -180,9 +180,6 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         let fromTime = dateFormatter.string(from: date)
         txtStartTime.text = fromTime
         
-        let currentDatWithTime = date
-        
-        
         guard let todateAsString = appointmentDataList?.renderedEndDate else { return  }
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateFormat = "yyyy-MM-dd HH:mm:ss"
