@@ -23,14 +23,14 @@ struct AddRegisterRequest {
 
 // MARK: - AddNewSessionRequest
 struct AddNewSessionRequest: Codable {
-  let appType, patientName, addNewSessionRequestDescription, statusApp: String?
-  let startDate, endDate, patientID, providerName: String?
-  let providerID, authNo, activity, pos: String?
-  let repeatSunday, repeatMonday, repeatTuesday, repeatWednesday: Int?
-  let repeatThursday, repeatFriday, repeatSaturday: Int?
-  let repeatFrequency: String?
-  let repeatCountOccurrance: Int?
-  let practiceID: String?
+  let appType, patientName, addNewSessionRequestDescription, statusApp: String
+  let startDate, endDate, patientID, providerName: String
+  let providerID, authNo, activity, pos: String
+  let repeatSunday, repeatMonday, repeatTuesday, repeatWednesday: Int
+  let repeatThursday, repeatFriday, repeatSaturday: Int
+  let repeatFrequency: String
+  let repeatCountOccurrance: Int
+  let practiceID: String
   
   enum CodingKeys: String, CodingKey {
     case appType = "app_type"

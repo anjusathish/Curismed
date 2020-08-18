@@ -153,7 +153,18 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
             travelStartStackView.isHidden = true
             showCurrentLocationView.isUserInteractionEnabled = false
             txtAddress.rightImage = nil
+            
+            if status == "Rendered"{
+                travelStartStackView.isHidden = true
+                userInteration(isEnable: false)
+                addSignBtn.isUserInteractionEnabled = true
+                txtStatus.isUserInteractionEnabled = true
+                showCurrentLocationView.isUserInteractionEnabled = false
+                txtAddress.rightImage = nil
+            }
         }
+       
+        
         self.txtMobileNumber.isUserInteractionEnabled = false
         txtClientName.text = appointmentDataList?.patientName
         txtAddress.text = appointmentData?.address
@@ -302,6 +313,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         txtEndTime.isUserInteractionEnabled = isEnable
         txtBreakTime.isUserInteractionEnabled = isEnable
         txtNotes.isUserInteractionEnabled = isEnable
+        txtService.isUserInteractionEnabled = isEnable
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
