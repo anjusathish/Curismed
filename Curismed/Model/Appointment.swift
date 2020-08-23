@@ -212,7 +212,7 @@ struct APatInfo: Codable {
 
 // MARK: - Activity
 struct AActivity: Codable {
-  let key: Int?
+  let key: String?
   let label: String
 }
 

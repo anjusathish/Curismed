@@ -323,7 +323,9 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
         vc.arrObj = arrObjTravel
         vc.activity = appData?.activity ?? ""
         vc.arrObjClock = arrObjClock
-        
+        if appData?.appType == "non-billable"{
+            vc.activityLabel = appInfo?.patInfo?[0].activities?[0].label ?? ""
+        }
         if let filterPathData = appInfo?.patInfo?.filter({$0.auths == appData?.auth}){
             if filterPathData.isEmpty{
             }
