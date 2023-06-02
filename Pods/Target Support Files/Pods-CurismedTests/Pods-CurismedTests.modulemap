@@ -1,0 +1,6 @@
+framework module Pods_CurismedTests {
+  umbrella header "Pods-CurismedTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
