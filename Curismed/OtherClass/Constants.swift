@@ -30,8 +30,7 @@ enum GrantType : String {
 }
 
 struct API {
-  
-  static let baseURL = "app.curismed.com"
+  static let baseURL = "app.therapypms.com"
   static let stateBaseURL = "gosigmaway.com"
   static let scheme = "https"
   static let stateScheme = "http"

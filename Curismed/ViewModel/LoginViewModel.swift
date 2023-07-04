@@ -14,9 +14,8 @@ protocol LoginDelegate {
 }
 
 struct LoginRequest : Codable {
-  let username : String
-  let password : String
-  let _token :String
+  let email: String
+  let password: String
 }
 
 class LoginViewModel {
@@ -32,7 +31,7 @@ class LoginViewModel {
           
         case .success(let response):
           
-          UserProfile.shared.currentUser = response.data
+          UserProfile.shared.currentUser = response
           self.delegate?.loginSuccessfull()
           
         case .failure(let message): self.delegate?.failure(message: "\(message)")

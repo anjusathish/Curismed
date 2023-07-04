@@ -55,6 +55,49 @@ struct AddNewSessionRequest: Codable {
   }
 }
 
+struct AddBillableAppointmentRequest: Codable {
+    let billable, clientID, authorizationID, activityID: Int?
+    let providerID, location, daily: Int?
+    let fromTime, formTimeSession, toTimeSession, status, endDate: String?
+    let chkrecurrence: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case billable
+        case clientID = "client_id"
+        case authorizationID = "authorization_id"
+        case activityID = "activity_id"
+        case providerID = "provider_id"
+        case location
+        case fromTime = "from_time"
+        case formTimeSession = "form_time_session"
+        case toTimeSession = "to_time_session"
+        case status, chkrecurrence, daily
+        case endDate = "end_date"
+    }
+}
+
+struct AddNonBillableAppointmentRequest: Codable {
+    let billable: Int?
+    let providerMulID: [Int]?
+    let location: Int?
+    let fromTime, formTimeSession, toTimeSession, status: String?
+    let chkrecurrence, daily: Int?
+    let endDate: String?
+    let dayName: [String]?
+    
+    enum CodingKeys: String, CodingKey {
+        case billable
+        case providerMulID = "provider_mul_id"
+        case location
+        case fromTime = "from_time"
+        case formTimeSession = "form_time_session"
+        case toTimeSession = "to_time_session"
+        case status, chkrecurrence, daily
+        case endDate = "end_date"
+        case dayName = "day_name"
+    }
+}
+
 // MARK: - AddNewSessionResponse
 struct AddNewSessionResponse: Codable {
   let status: Int
@@ -119,40 +162,40 @@ struct AppointmentsListRequest: Codable {
 
 
 // MARK: - AppointmentsListResponse
-struct AppointmentsListResponse: Codable {
-  let status: Int?
-  let message: String?
-  let data: [AppointmentsListData]?
-}
-
-// MARK: - Datum
-struct AppointmentsListData: Codable {
-  let appID: Int?
-  let patientName, phoneMobile, phoneHome, address: String?
-  let appointment: [AppointmentInfo]?
-  
-  enum CodingKeys: String, CodingKey {
-    case appID
-    case patientName = "patient_name"
-    case phoneMobile = "phone_mobile"
-    case phoneHome = "phone_home"
-    case address, appointment
-  }
-}
-
-// MARK: - Appointment
-struct AppointmentInfo: Codable {
-  let patInfo: [APatInfo]?
-  let locInfo: [ALOCInfo]?
-  let appInfo: [AppInfo]?
-  
-  enum CodingKeys: String, CodingKey {
-    case patInfo = "pat_info"
-    case locInfo = "loc_info"
-    case appInfo = "app_info"
-  }
-}
-
+//struct AppointmentsListResponse: Codable {
+//  let status: Int?
+//  let message: String?
+//  let data: [AppointmentsListData]?
+//}
+//
+//// MARK: - Datum
+//struct AppointmentsListData: Codable {
+//  let appID: Int?
+//  let patientName, phoneMobile, phoneHome, address: String?
+//  let appointment: [AppointmentInfo]?
+//
+//  enum CodingKeys: String, CodingKey {
+//    case appID
+//    case patientName = "patient_name"
+//    case phoneMobile = "phone_mobile"
+//    case phoneHome = "phone_home"
+//    case address, appointment
+//  }
+//}
+//
+//// MARK: - Appointment
+//struct AppointmentInfo: Codable {
+//  let patInfo: [APatInfo]?
+//  let locInfo: [ALOCInfo]?
+//  let appInfo: [AppInfo]?
+//
+//  enum CodingKeys: String, CodingKey {
+//    case patInfo = "pat_info"
+//    case locInfo = "loc_info"
+//    case appInfo = "app_info"
+//  }
+//}
+//
 // MARK: - AppInfo
 struct AppInfo: Codable {
   let id: Int?
@@ -163,7 +206,7 @@ struct AppInfo: Codable {
   let  provider, desc, status: String
   let patientID, providerID, isDeleted, isPayroll: Int?
   let createdAt, updatedAt,otherLOC,name: String?
-  
+
   enum CodingKeys: String, CodingKey {
     case id
     case appType = "app_type"
@@ -194,7 +237,7 @@ struct ALOCInfo: Codable {
   let id, patientID, home, office: Int?
   let school, community: Int?
   let createdAt, updatedAt: String?
-  
+
   enum CodingKeys: String, CodingKey {
     case id
     case patientID = "patient_id"
@@ -217,6 +260,81 @@ struct AActivity: Codable {
 }
 
 
+// MARK: - AppointmentsListRequest
+struct AppointmentsListResponse: Codable {
+    let status, message, retrievedAt: String?
+    let appointments: Appointments?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case retrievedAt = "retrieved_at"
+        case appointments
+    }
+}
+
+// MARK: - Appointments
+struct Appointments: Codable {
+    let currentPage: Int?
+    let data: [AppointmentsListData]?
+    let firstPageURL: String?
+    let from, lastPage: Int?
+    let lastPageURL: String?
+    let links: [Link]?
+    let nextPageURL: String?
+    let path: String?
+    let perPage: Int?
+    let prevPageURL: String?
+    let to, total: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case currentPage = "current_page"
+        case data
+        case firstPageURL = "first_page_url"
+        case from
+        case lastPage = "last_page"
+        case lastPageURL = "last_page_url"
+        case links
+        case nextPageURL = "next_page_url"
+        case path
+        case perPage = "per_page"
+        case prevPageURL = "prev_page_url"
+        case to, total
+    }
+}
+
+// MARK: - Datum
+struct AppointmentsListData: Codable {
+    let sessionID: Int?
+    let billable: String?
+    let patientID, authID, serviceID, insuranceID: Int?
+    let providerID, sessionTimeDuration: Int?
+    let sessionStartDateTimeUTC, sessionEndDateTimeUTC, cptCode, sessionStatus: String?
+    let sessionCreatedDateTimeUTC, sessionLastUpdatedDateTimeUTC: String?
+
+    enum CodingKeys: String, CodingKey {
+        case sessionID = "session_id"
+        case billable
+        case patientID = "patient_id"
+        case authID = "auth_id"
+        case serviceID = "service_id"
+        case insuranceID = "insurance_id"
+        case providerID = "provider_id"
+        case sessionTimeDuration = "session_time_duration"
+        case sessionStartDateTimeUTC = "session_start_date_time_UTC"
+        case sessionEndDateTimeUTC = "session_end_date_time_UTC"
+        case cptCode = "cpt_code"
+        case sessionStatus = "session_status"
+        case sessionCreatedDateTimeUTC = "session_created_date_time_UTC"
+        case sessionLastUpdatedDateTimeUTC = "session_last_updated_date_time_UTC"
+    }
+}
+
+// MARK: - Link
+struct Link: Codable {
+    let url: String?
+    let label: String?
+    let active: Bool?
+}
 
 
 
@@ -439,4 +557,132 @@ struct AppointmentUpdateClockRequest: Codable {
     case providerName = "provider_name"
     case location = "loc"
 }
+}
+
+// MARK: - PatientListModel
+struct PatientListModel: Codable {
+    let status, message: String?
+    let CommonData: [CommonData]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case CommonData = "patient_data"
+    }
+}
+
+// MARK: - PatientDatum
+struct CommonData: Codable {
+    let id: Int?
+    let text: String?
+}
+
+// MARK: - PatientListModel
+struct ProviderListModel: Codable {
+    let status, message: String?
+    let providerData: [CommonData]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case providerData = "provider_data"
+    }
+}
+
+// MARK: - PointOfServiceModel
+struct PointOfServiceModel: Codable {
+    let status, message: String?
+    let pointOfService: [PointOfService]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case pointOfService = "point_of_service"
+    }
+}
+
+// MARK: - PointOfService
+struct PointOfService: Codable {
+    let id: Int?
+    let posName, posCode: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case posName = "pos_name"
+        case posCode = "pos_code"
+    }
+}
+
+// MARK: - AppointmentStatusModel
+struct AppointmentStatusModel: Codable {
+    let status, message: String?
+    let statusList: [String]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case statusList = "status_list"
+    }
+}
+
+struct AuthByClientIdRequest: Codable {
+    let client_id: Int
+}
+
+struct ActivityByAuthIdRequest: Codable {
+    let authorization_id: Int
+}
+
+// MARK: - AuthorizationModel
+struct AuthorizationModel: Codable {
+    let status, message: String?
+    let authorizationsData: [AuthorizationsDatum]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case authorizationsData = "authorizations_data"
+    }
+}
+
+// MARK: - AuthorizationsDatum
+struct AuthorizationsDatum: Codable {
+    let id, isValid: Int?
+    let text: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case isValid = "is_valid"
+        case text
+    }
+}
+
+// MARK: - ActivityServiceModel
+struct ActivityServiceModel: Codable {
+    let status, message: String?
+    let serviceData: [CommonData]?
+
+    enum CodingKeys: String, CodingKey {
+        case status, message
+        case serviceData = "service_data"
+    }
+}
+
+struct AppointmentModel: Codable {
+    let status, message: String?
+}
+
+// MARK: - UpdateAppointmentRequest
+struct UpdateAppointmentRequest: Codable {
+    let appID, clientID, authorizationID, activityID: Int?
+    let providerID, location: Int?
+    let fromTime, formTimeSession, toTimeSession, status: String?
+
+    enum CodingKeys: String, CodingKey {
+        case appID = "app_id"
+        case clientID = "client_id"
+        case authorizationID = "authorization_id"
+        case activityID = "activity_id"
+        case providerID = "provider_id"
+        case location
+        case fromTime = "from_time"
+        case formTimeSession = "form_time_session"
+        case toTimeSession = "to_time_session"
+        case status
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1886D9A52A532D6600888709 /* AddAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886D9A42A532D6600888709 /* AddAppointmentVC.swift */; };
 		92A8A220714D8FC299481BBE /* Pods_Curismed_CurismedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */; };
 		A60456C4D61EA65DAB99D7A5 /* Pods_Curismed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */; };
 		BAC6A4A72482B99700FC6DEC /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */; };
@@ -99,6 +100,7 @@
 
 /* Begin PBXFileReference section */
 		053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed-CurismedUITests.debug.xcconfig"; path = "Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1886D9A42A532D6600888709 /* AddAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentVC.swift; sourceTree = "<group>"; };
 		1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurismedTests.debug.xcconfig"; path = "Target Support Files/Pods-CurismedTests/Pods-CurismedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed_CurismedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +126,7 @@
 		E1C54E76245FF97900338359 /* CTDayWeekCalender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTDayWeekCalender.swift; sourceTree = "<group>"; };
 		E1C54E78245FFA5100338359 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E1C54E82245FFDA900338359 /* GradientColour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientColour.swift; sourceTree = "<group>"; };
-		E1E458C1245D8490004C3C2D /* Curismed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curismed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458C1245D8490004C3C2D /* TherapyPMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TherapyPMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E458C4245D8490004C3C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E458C6245D8490004C3C2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1E458C8245D8490004C3C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,10 +134,10 @@
 		E1E458CD245D8499004C3C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E458D0245D8499004C3C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E458D2245D8499004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E458D7245D849A004C3C2D /* CurismedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurismedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458D7245D849A004C3C2D /* TherapyPMSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TherapyPMSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E458DB245D849A004C3C2D /* CurismedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurismedTests.swift; sourceTree = "<group>"; };
 		E1E458DD245D849A004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurismedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E458E2245D849A004C3C2D /* TherapyPMSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TherapyPMSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E458E6245D849A004C3C2D /* CurismedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurismedUITests.swift; sourceTree = "<group>"; };
 		E1E458E8245D849A004C3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E458F4245D876A004C3C2D /* Curismed_Logo_Animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Curismed_Logo_Animation.gif; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				E1B592CA247829EC00E31283 /* New Group */,
 				E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */,
 				E14C0890245F08590081F58E /* AppointmentViewController.swift */,
+				1886D9A42A532D6600888709 /* AddAppointmentVC.swift */,
 				E14C0898245F1E150081F58E /* AboutUsViewController.swift */,
 				E14C089A245F1E230081F58E /* HelpViewController.swift */,
 				E1F601F32461A6C900C0BA5E /* PickerViewController.swift */,
@@ -337,9 +340,9 @@
 		E1E458C2245D8490004C3C2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1E458C1245D8490004C3C2D /* Curismed.app */,
-				E1E458D7245D849A004C3C2D /* CurismedTests.xctest */,
-				E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */,
+				E1E458C1245D8490004C3C2D /* TherapyPMS.app */,
+				E1E458D7245D849A004C3C2D /* TherapyPMSTests.xctest */,
+				E1E458E2245D849A004C3C2D /* TherapyPMSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,9 +479,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1E458C0245D8490004C3C2D /* Curismed */ = {
+		E1E458C0245D8490004C3C2D /* TherapyPMS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "Curismed" */;
+			buildConfigurationList = E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMS" */;
 			buildPhases = (
 				23E5D820F9C3C450583EBC37 /* [CP] Check Pods Manifest.lock */,
 				E1E458BD245D8490004C3C2D /* Sources */,
@@ -491,14 +494,14 @@
 			);
 			dependencies = (
 			);
-			name = Curismed;
+			name = TherapyPMS;
 			productName = Curismed;
-			productReference = E1E458C1245D8490004C3C2D /* Curismed.app */;
+			productReference = E1E458C1245D8490004C3C2D /* TherapyPMS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E1E458D6245D849A004C3C2D /* CurismedTests */ = {
+		E1E458D6245D849A004C3C2D /* TherapyPMSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedTests" */;
+			buildConfigurationList = E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSTests" */;
 			buildPhases = (
 				21E5681C0A55287F29D0B09C /* [CP] Check Pods Manifest.lock */,
 				E1E458D3245D849A004C3C2D /* Sources */,
@@ -510,14 +513,14 @@
 			dependencies = (
 				E1E458D9245D849A004C3C2D /* PBXTargetDependency */,
 			);
-			name = CurismedTests;
+			name = TherapyPMSTests;
 			productName = CurismedTests;
-			productReference = E1E458D7245D849A004C3C2D /* CurismedTests.xctest */;
+			productReference = E1E458D7245D849A004C3C2D /* TherapyPMSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E1E458E1245D849A004C3C2D /* CurismedUITests */ = {
+		E1E458E1245D849A004C3C2D /* TherapyPMSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedUITests" */;
+			buildConfigurationList = E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSUITests" */;
 			buildPhases = (
 				07A1211E0F0BCAEC219F8A91 /* [CP] Check Pods Manifest.lock */,
 				E1E458DE245D849A004C3C2D /* Sources */,
@@ -531,9 +534,9 @@
 			dependencies = (
 				E1E458E4245D849A004C3C2D /* PBXTargetDependency */,
 			);
-			name = CurismedUITests;
+			name = TherapyPMSUITests;
 			productName = CurismedUITests;
-			productReference = E1E458E2245D849A004C3C2D /* CurismedUITests.xctest */;
+			productReference = E1E458E2245D849A004C3C2D /* TherapyPMSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -560,7 +563,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "Curismed" */;
+			buildConfigurationList = E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "TherapyPMS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -573,9 +576,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1E458C0245D8490004C3C2D /* Curismed */,
-				E1E458D6245D849A004C3C2D /* CurismedTests */,
-				E1E458E1245D849A004C3C2D /* CurismedUITests */,
+				E1E458C0245D8490004C3C2D /* TherapyPMS */,
+				E1E458D6245D849A004C3C2D /* TherapyPMSTests */,
+				E1E458E1245D849A004C3C2D /* TherapyPMSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -782,6 +785,7 @@
 				E1F601EA2461961E00C0BA5E /* Constants.swift in Sources */,
 				E1C54E83245FFDA900338359 /* GradientColour.swift in Sources */,
 				E14C088E245EFD360081F58E /* AddSessionTypeViewController.swift in Sources */,
+				1886D9A52A532D6600888709 /* AddAppointmentVC.swift in Sources */,
 				E1F602212461C29400C0BA5E /* AppointmentServiceHelper.swift in Sources */,
 				E1F601E82461952F00C0BA5E /* MBProgressHUD.m in Sources */,
 				E1F601F42461A6C900C0BA5E /* PickerViewController.swift in Sources */,
@@ -835,12 +839,12 @@
 /* Begin PBXTargetDependency section */
 		E1E458D9245D849A004C3C2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1E458C0245D8490004C3C2D /* Curismed */;
+			target = E1E458C0245D8490004C3C2D /* TherapyPMS */;
 			targetProxy = E1E458D8245D849A004C3C2D /* PBXContainerItemProxy */;
 		};
 		E1E458E4245D849A004C3C2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1E458C0245D8490004C3C2D /* Curismed */;
+			target = E1E458C0245D8490004C3C2D /* TherapyPMS */;
 			targetProxy = E1E458E3245D849A004C3C2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -990,6 +994,8 @@
 				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = A8SY5DGLFG;
 				INFOPLIST_FILE = Curismed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TherapyPMS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1017,6 +1023,8 @@
 				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = A8SY5DGLFG;
 				INFOPLIST_FILE = Curismed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TherapyPMS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1050,7 +1058,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curismed.app/Curismed";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TherapyPMS.app/TherapyPMS";
 			};
 			name = Debug;
 		};
@@ -1072,7 +1080,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curismed.app/Curismed";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TherapyPMS.app/TherapyPMS";
 			};
 			name = Release;
 		};
@@ -1119,7 +1127,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "Curismed" */ = {
+		E1E458BC245D8490004C3C2D /* Build configuration list for PBXProject "TherapyPMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1E458E9245D849A004C3C2D /* Debug */,
@@ -1128,7 +1136,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "Curismed" */ = {
+		E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1E458EC245D849A004C3C2D /* Debug */,
@@ -1137,7 +1145,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedTests" */ = {
+		E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1E458EF245D849A004C3C2D /* Debug */,
@@ -1146,7 +1154,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "CurismedUITests" */ = {
+		E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1E458F2245D849A004C3C2D /* Debug */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZe-TF-oZ5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZe-TF-oZ5">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,12 +11,12 @@
         <!--Login View Controller-->
         <scene sceneID="2bc-eG-Buz">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="B4Q-5l-bVp" customClass="LoginViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="B4Q-5l-bVp" customClass="LoginViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="W6e-u9-Aaa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYO-pS-AA5" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYO-pS-AA5" customClass="GradientView" customModule="TherapyPMS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <userDefinedRuntimeAttributes>
@@ -36,15 +36,15 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="l44-6L-KQ9">
-                                <rect key="frame" x="60" y="70" width="200" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="l44-6L-KQ9">
+                                <rect key="frame" x="60" y="90" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="uID-OD-G1c"/>
                                     <constraint firstAttribute="width" constant="200" id="xzc-Sd-qr4"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFK-lm-FEO" customClass="CTView" customModule="Curismed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="236.5" width="280" height="255"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFK-lm-FEO" customClass="CTView" customModule="TherapyPMS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="246.5" width="280" height="255"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-Ha-Foa">
                                         <rect key="frame" x="72" y="45" width="136" height="27.5"/>
@@ -52,7 +52,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-Qq-mwO" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin@admin.com" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-Qq-mwO" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="87.5" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3qe-Uu-o0M"/>
@@ -79,7 +79,7 @@
                                             <outlet property="delegate" destination="B4Q-5l-bVp" id="r8P-nh-XWb"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-jd-SFY" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Niyaz@1007" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-jd-SFY" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="142.5" width="240" height="40"/>
                                         <color key="tintColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -104,7 +104,7 @@
                                             <outlet property="delegate" destination="B4Q-5l-bVp" id="Ca6-iO-DgA"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-Lb-z57" customClass="CTButton" customModule="Curismed" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-Lb-z57" customClass="CTButton" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="117.5" y="200" width="45" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -143,7 +143,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L8F-Cq-ApW">
-                                <rect key="frame" x="120" y="189" width="80" height="80"/>
+                                <rect key="frame" x="120" y="199" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="aW5-4s-Ydh"/>
                                     <constraint firstAttribute="width" secondItem="L8F-Cq-ApW" secondAttribute="height" multiplier="1:1" id="wPn-6X-LQd"/>
@@ -157,7 +157,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwD-ej-zxw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwD-ej-zxw">
                                 <rect key="frame" x="79.5" y="500" width="161" height="38"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                 <state key="normal" title="Forgot Password ?">
@@ -168,6 +168,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ik9-Dr-b4X"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IFK-lm-FEO" firstAttribute="centerY" secondItem="Ik9-Dr-b4X" secondAttribute="centerY" constant="80" id="2Qr-as-oEl"/>
@@ -184,7 +185,6 @@
                             <constraint firstItem="IFK-lm-FEO" firstAttribute="leading" secondItem="Ik9-Dr-b4X" secondAttribute="leading" constant="20" id="gW9-02-MWT"/>
                             <constraint firstItem="IFK-lm-FEO" firstAttribute="top" secondItem="L8F-Cq-ApW" secondAttribute="bottom" constant="-32.333333333333371" id="v5k-Du-O0I"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ik9-Dr-b4X"/>
                     </view>
                     <navigationItem key="navigationItem" id="48q-66-Ch5"/>
                     <connections>
@@ -200,12 +200,12 @@
         <!--Forgot Password View Controller-->
         <scene sceneID="V6i-cx-yAp">
             <objects>
-                <viewController id="t1g-Zq-xhf" customClass="ForgotPasswordViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zSC-gp-wvw" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                <viewController id="t1g-Zq-xhf" customClass="ForgotPasswordViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSC-gp-wvw" customClass="GradientView" customModule="TherapyPMS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-AF-4dY" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-AF-4dY" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                 <rect key="frame" x="20" y="171.5" width="280" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -232,7 +232,7 @@
                                     <outlet property="delegate" destination="t1g-Zq-xhf" id="BUZ-rw-Wkx"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emw-lm-GJe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emw-lm-GJe">
                                 <rect key="frame" x="40" y="261.5" width="240" height="45"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -251,7 +251,7 @@
                                     <action selector="buttonSubmit:" destination="t1g-Zq-xhf" eventType="touchUpInside" id="xVT-oU-e4N"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KCH-g7-3XH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KCH-g7-3XH">
                                 <rect key="frame" x="60" y="71.5" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="WCp-Pa-cYq"/>
@@ -259,6 +259,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="x9P-xL-L1Y"/>
                         <constraints>
                             <constraint firstItem="emw-lm-GJe" firstAttribute="leading" secondItem="x9P-xL-L1Y" secondAttribute="leading" constant="40" id="GQ3-IK-JoS"/>
                             <constraint firstItem="x9P-xL-L1Y" firstAttribute="trailing" secondItem="emw-lm-GJe" secondAttribute="trailing" constant="40" id="IOw-VT-95f"/>
@@ -270,7 +271,6 @@
                             <constraint firstItem="emw-lm-GJe" firstAttribute="centerY" secondItem="zSC-gp-wvw" secondAttribute="centerY" id="iTd-2T-O0Y"/>
                             <constraint firstItem="x9P-xL-L1Y" firstAttribute="trailing" secondItem="gzK-AF-4dY" secondAttribute="trailing" constant="20" id="nKs-Fc-ciX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="x9P-xL-L1Y"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.83137254900000002" green="0.91372549020000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -307,11 +307,25 @@
             <point key="canvasLocation" x="-114.375" y="36.971830985915496"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="La0-Lb-z57">
+            <size key="intrinsicContentSize" width="21.5" height="22"/>
+        </designable>
+        <designable name="NZA-jd-SFY">
+            <size key="intrinsicContentSize" width="125" height="21"/>
+        </designable>
+        <designable name="Pdi-Qq-mwO">
+            <size key="intrinsicContentSize" width="170" height="22"/>
+        </designable>
+        <designable name="gzK-AF-4dY">
+            <size key="intrinsicContentSize" width="193" height="22"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Client" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="CurismedLogo" width="100" height="25"/>
+        <image name="CurismedLogo" width="960" height="540"/>
         <image name="LoginArrow" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="Logo" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="Logo" width="166.66667175292969" height="166.66667175292969"/>
         <image name="passwordIcon" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
 </document>

@@ -32,7 +32,7 @@ enum OnBoardingServiceManager {
   
   var path: String {
     switch self {
-    case .login: return "/login"
+    case .login: return "/api/v1/ios/login"
     case .forgotpassword: return "/user/forgotpassword"
     }
   }

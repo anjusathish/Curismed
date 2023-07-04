@@ -23,9 +23,9 @@ class ViewController: UIViewController {
         do {
             let gif = try UIImage(gifName: "Curismed_Logo_Animation.gif")
             let gif1 = try UIImage(gifName: "Amromed-logo_Final_2")
-            self.imageViewCurismedGif.setGifImage(gif)
+//            self.imageViewCurismedGif.setGifImage(gif)
             self.imageViewAmromedLogoGif.setGifImage(gif1)
-            imageViewCurismedGif.delegate = self
+//            imageViewCurismedGif.delegate = self
             imageViewAmromedLogoGif.delegate = self
             
         }catch{

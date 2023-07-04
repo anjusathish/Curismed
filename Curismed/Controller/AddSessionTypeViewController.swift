@@ -79,11 +79,11 @@ class AddSessionTypeViewController: BaseViewController {
         viewModel.delegate = self
         sessionType = "billable"
         
-        if let practiceID = UserProfile.shared.currentUser?.practiceID {
-            let request = ClientListRequest(token: "P6kqxOsEzVV2QxOkGR3HcqlKPlk1J5XaSV2hhLQp", practiceID: practiceID)
-            print(request)
-            viewModel.getClientNameList(info: request)
-        }
+//        if let practiceID = UserProfile.shared.currentUser?.practiceID {
+//            let request = ClientListRequest(token: "P6kqxOsEzVV2QxOkGR3HcqlKPlk1J5XaSV2hhLQp", practiceID: practiceID)
+//            print(request)
+//            viewModel.getClientNameList(info: request)
+//        }
         
         
     }
@@ -130,8 +130,8 @@ class AddSessionTypeViewController: BaseViewController {
                 
             }
             else{
-                let patientdata = arrayNonBillable[0].patientInfo
-                patientID = "\(String(describing: patientdata[0].id))"
+                let CommonData = arrayNonBillable[0].patientInfo
+                patientID = "\(String(describing: CommonData[0].id))"
                 self.performSegue(withIdentifier: "PushAddSession", sender: self)
             }
         }
@@ -158,10 +158,10 @@ class AddSessionTypeViewController: BaseViewController {
             
             sessionType = "non-billable"
             
-            if let practiceID = UserProfile.shared.currentUser?.practiceID {
-                let request = ClientListRequest(token: "P6kqxOsEzVV2QxOkGR3HcqlKPlk1J5XaSV2hhLQp", practiceID: practiceID)
-                viewModel.getNonBillableClientNameList(info: request)
-            }
+//            if let practiceID = UserProfile.shared.currentUser?.practiceID {
+//                let request = ClientListRequest(token: "P6kqxOsEzVV2QxOkGR3HcqlKPlk1J5XaSV2hhLQp", practiceID: practiceID)
+//                viewModel.getNonBillableClientNameList(info: request)
+//            }
             
         }
     }
@@ -360,6 +360,35 @@ extension AddSessionTypeViewController: UITextFieldDelegate{
 }
 
 extension AddSessionTypeViewController: AppointmentDelegate{
+    
+    func appointmentSuccess(message: String) {
+        
+    }
+   
+    func getAuthorization(data: [AuthorizationsDatum]) {
+        
+    }
+    
+    func getActivityData(data: [CommonData]) {
+        
+    }
+
+    func getPatientList(list: [CommonData]) {
+        
+    }
+    
+    func getProviderList(list: [CommonData]) {
+        
+    }
+    
+    func getPointOfService(data: [PointOfService]) {
+        
+    }
+    
+    func getAppointmentStatus(data: [String]) {
+        
+    }
+
     func updateClockSession(_ updateSuccess: AppointmentUpdateResponse) {
         
     }

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4640" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,8 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="yOy-4p-VKx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QTk-Ox-VQ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <segue destination="z34-Rx-APe" kind="show" identifier="SideMenu.Content" customClass="SideMenuSegue" customModule="SideMenuSwift" id="vee-sV-z60"/>
@@ -27,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-41" y="113"/>
         </scene>
-        <!--Data Source-->
+        <!--Dash Board View Controller-->
         <scene sceneID="sGG-Q6-Us9">
             <objects>
-                <viewController storyboardIdentifier="DashboardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qHv-4k-4ZN" customClass="DashBoardViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qHv-4k-4ZN" customClass="DashBoardViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QhY-Wc-XRc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +77,7 @@
                                 </constraints>
                                 <state key="normal" image="Add"/>
                                 <connections>
-                                    <segue destination="C8L-UZ-Ks8" kind="show" identifier="PushAddSessionVC" id="CPk-SW-LBh"/>
+                                    <action selector="addSessionAction:" destination="qHv-4k-4ZN" eventType="touchUpInside" id="67c-hf-q8V"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-7N-fLJ">
@@ -86,6 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="FyC-MZ-HQi"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="FyC-MZ-HQi" firstAttribute="trailing" secondItem="eMM-ch-QXb" secondAttribute="trailing" constant="10" id="6ro-yv-Zqk"/>
@@ -100,7 +102,6 @@
                             <constraint firstItem="rPy-tj-vKc" firstAttribute="top" secondItem="eMM-ch-QXb" secondAttribute="bottom" constant="15" id="mUh-Db-EtU"/>
                             <constraint firstItem="bhA-Tm-Els" firstAttribute="centerX" secondItem="FyC-MZ-HQi" secondAttribute="centerX" id="nrP-qd-fvw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FyC-MZ-HQi"/>
                     </view>
                     <navigationItem key="navigationItem" id="0rG-23-qxe"/>
                     <connections>
@@ -116,9 +117,9 @@
         <!--Add Session Type View Controller-->
         <scene sceneID="BFb-Sj-eUT">
             <objects>
-                <viewController storyboardIdentifier="AddSession" id="C8L-UZ-Ks8" customClass="AddSessionTypeViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="trI-js-8nf" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                <viewController storyboardIdentifier="AddSession" id="C8L-UZ-Ks8" customClass="AddSessionTypeViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="trI-js-8nf" customClass="GradientView" customModule="TherapyPMS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYj-4h-iIQ">
@@ -210,13 +211,13 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1c-Ox-8rY">
-                                <rect key="frame" x="0.0" y="92.5" width="320" height="410.5"/>
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="430.5"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwb-VR-AzL">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="410.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="430.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-h2-Wct">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="410.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="430.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DpS-c8-R8z">
                                                         <rect key="frame" x="30" y="20" width="260" height="155"/>
@@ -230,7 +231,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Client " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugf-cP-fPP" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Client " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugf-cP-fPP" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35.5" width="260" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="Kxb-7P-Tgw"/>
@@ -274,7 +275,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Activity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hz0-7k-bhL" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Activity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hz0-7k-bhL" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35" width="260" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="pTZ-KD-q7Y"/>
@@ -323,7 +324,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Q5-6Y-Mxc">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="410.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="430.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-mV-cu2">
                                                         <rect key="frame" x="30" y="15" width="260" height="325"/>
@@ -331,13 +332,13 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86Z-K9-psR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFR-LX-9Qm">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="25"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFR-LX-9Qm">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="25"/>
                                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-Zi-Nzb" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-Zi-Nzb" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35" width="260" height="40"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -389,7 +390,7 @@ UGxlYXNlIFNlbGVjdCAQQ2xpZW50IA
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y6-vH-1gZ" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y6-vH-1gZ" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35" width="260" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="14L-4f-ZIf"/>
@@ -437,7 +438,7 @@ UGxlYXNlIFNlbGVjdCAQQXV0aG9yaXphdGlvbiA
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-qc-a4p" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-qc-a4p" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35" width="260" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="fwc-mp-nBJ"/>
@@ -485,7 +486,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-vm-wyg" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-vm-wyg" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="35" width="260" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="1T0-w2-R4Q"/>
@@ -562,8 +563,8 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                     <constraint firstItem="nwb-VR-AzL" firstAttribute="top" secondItem="P1c-Ox-8rY" secondAttribute="top" id="mx8-Md-B0k"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-sD-DmG">
-                                <rect key="frame" x="0.0" y="503" width="320" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-sD-DmG">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="r7O-Dd-Fk3"/>
@@ -577,6 +578,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Udo-Yn-n0q"/>
                         <constraints>
                             <constraint firstItem="Udo-Yn-n0q" firstAttribute="trailing" secondItem="tOg-76-XQ0" secondAttribute="trailing" constant="20" id="044-Dy-DlF"/>
                             <constraint firstItem="X3U-sD-DmG" firstAttribute="top" secondItem="P1c-Ox-8rY" secondAttribute="bottom" id="0g1-rI-4vV"/>
@@ -591,7 +593,6 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                             <constraint firstItem="P1c-Ox-8rY" firstAttribute="leading" secondItem="Udo-Yn-n0q" secondAttribute="leading" id="lPh-SR-3vB"/>
                             <constraint firstItem="X3U-sD-DmG" firstAttribute="bottom" secondItem="Udo-Yn-n0q" secondAttribute="bottom" id="mf1-Cj-8yA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Udo-Yn-n0q"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.83137254900000002" green="0.91372549020000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -620,16 +621,31 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
             </objects>
             <point key="canvasLocation" x="3150" y="110.91549295774648"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NYk-aM-Ol8">
+            <objects>
+                <viewController id="gW9-dZ-2pa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vsO-c6-7xy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XQY-v4-kZ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkn-pR-ng1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="870"/>
+        </scene>
         <!--Picker View Controller-->
         <scene sceneID="3Rl-pn-TT9">
             <objects>
-                <viewController storyboardIdentifier="PickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSF-x5-d1J" customClass="PickerViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSF-x5-d1J" customClass="PickerViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1je-wI-zIX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-sM-1oU">
-                                <rect key="frame" x="0.0" y="308" width="320" height="260"/>
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-K7-z8J">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -648,7 +664,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                         </items>
                                     </toolbar>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5a5-cp-TCc">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="44" width="320" height="36"/>
                                     </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -664,13 +680,13 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1X0-Ak-BVs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mp9-sM-1oU" firstAttribute="trailing" secondItem="1X0-Ak-BVs" secondAttribute="trailing" id="Zhe-CS-kR1"/>
                             <constraint firstItem="Mp9-sM-1oU" firstAttribute="bottom" secondItem="1X0-Ak-BVs" secondAttribute="bottom" id="ndE-Qn-S3B"/>
                             <constraint firstItem="Mp9-sM-1oU" firstAttribute="leading" secondItem="1X0-Ak-BVs" secondAttribute="leading" id="xXV-38-eMT"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="1X0-Ak-BVs"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="size" keyPath="contentSizeInPopup">
@@ -689,20 +705,20 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
         <!--Add Signature View Controller-->
         <scene sceneID="8L9-gH-P9h">
             <objects>
-                <viewController storyboardIdentifier="AddSignature" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sub-2k-jHF" customClass="AddSignatureViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSignature" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sub-2k-jHF" customClass="AddSignatureViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iBb-dq-p5b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-vg-mKQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s93-zF-uo9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sf-Td-sRy">
-                                        <rect key="frame" x="270" y="71.5" width="40" height="40"/>
+                                        <rect key="frame" x="270" y="61.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="MQb-yW-XLG"/>
                                             <constraint firstAttribute="height" constant="40" id="pg0-ar-ibg"/>
@@ -712,10 +728,10 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                             <action selector="closeAction:" destination="Sub-2k-jHF" eventType="touchUpInside" id="p6V-AP-uiK"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttc-3V-VoZ" customClass="CTView" customModule="Curismed" customModuleProvider="target">
-                                        <rect key="frame" x="17.5" y="131.5" width="280" height="300"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttc-3V-VoZ" customClass="CTView" customModule="TherapyPMS" customModuleProvider="target">
+                                        <rect key="frame" x="17.5" y="121.5" width="280" height="300"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vs1-Nl-bfO" customClass="YPDrawSignatureView" customModule="Curismed" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vs1-Nl-bfO" customClass="YPDrawSignatureView" customModule="TherapyPMS" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="260" height="280"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -744,12 +760,12 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivz-Zc-k7E">
-                                        <rect key="frame" x="17.5" y="451.5" width="280" height="45"/>
+                                        <rect key="frame" x="17.5" y="441.5" width="280" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5rj-GE-i5Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-WB-2lp">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-WB-2lp">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="45"/>
                                                         <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
@@ -760,7 +776,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                             <action selector="clearSignature:" destination="Sub-2k-jHF" eventType="touchUpInside" id="r4B-ma-lUJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-gp-b84">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSQ-gp-b84">
                                                         <rect key="frame" x="140" y="0.0" width="140" height="45"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
@@ -785,7 +801,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-j3-gkM">
-                                        <rect key="frame" x="17.5" y="71.5" width="250.5" height="40"/>
+                                        <rect key="frame" x="17.5" y="61.5" width="250.5" height="40"/>
                                         <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qJY-83-Auw"/>
@@ -810,6 +826,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="qfo-Rc-Esx"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="s93-zF-uo9" secondAttribute="trailing" id="2g6-j6-QTB"/>
@@ -821,7 +838,6 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                             <constraint firstItem="qfo-Rc-Esx" firstAttribute="bottom" secondItem="JO9-vg-mKQ" secondAttribute="bottom" id="gy9-e3-MRE"/>
                             <constraint firstItem="qfo-Rc-Esx" firstAttribute="bottom" secondItem="s93-zF-uo9" secondAttribute="bottom" id="tKN-hy-8ow"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qfo-Rc-Esx"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="size" keyPath="contentSizeInPopup">
@@ -839,12 +855,12 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
         <!--Add Session View Controller-->
         <scene sceneID="HSe-EI-VBD">
             <objects>
-                <viewController id="zp0-wF-TJK" customClass="AddSessionViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J3O-j6-74i" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                <viewController id="zp0-wF-TJK" customClass="AddSessionViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3O-j6-74i" customClass="GradientView" customModule="TherapyPMS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-74-mt3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-74-mt3">
                                 <rect key="frame" x="0.0" y="503" width="320" height="45"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -873,7 +889,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1S-TX-XqB" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1S-TX-XqB" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="35.5" width="280" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -924,7 +940,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSo-Uk-YR1" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSo-Uk-YR1" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="35.5" width="130" height="40"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -969,7 +985,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuQ-sZ-ntv" customClass="CTTextField" customModule="Curismed" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuQ-sZ-ntv" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="35.5" width="130" height="40"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -1016,13 +1032,13 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCW-wk-ZbD" customClass="CTView" customModule="Curismed" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCW-wk-ZbD" customClass="CTView" customModule="TherapyPMS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="30" width="280" height="120"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pjq-W6-nQT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="120"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <connections>
@@ -1058,7 +1074,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-mB-cwX">
                                                 <rect key="frame" x="0.0" y="360" width="280" height="40"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M43-HE-LXL" customClass="CTView" customModule="Curismed" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M43-HE-LXL" customClass="CTView" customModule="TherapyPMS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmP-xj-6hY" customClass="BEMCheckBox">
@@ -1097,7 +1113,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-fm-zDd" customClass="CTView" customModule="Curismed" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-fm-zDd" customClass="CTView" customModule="TherapyPMS" customModuleProvider="target">
                                                         <rect key="frame" x="145" y="0.0" width="135" height="40"/>
                                                         <subviews>
                                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWd-kj-bCa" customClass="BEMCheckBox">
@@ -1152,6 +1168,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6y8-fi-NaZ"/>
                         <constraints>
                             <constraint firstItem="cDw-74-mt3" firstAttribute="trailing" secondItem="6y8-fi-NaZ" secondAttribute="trailing" id="DcK-jm-ucJ"/>
                             <constraint firstAttribute="bottom" secondItem="cDw-74-mt3" secondAttribute="bottom" id="M1J-gU-4WN"/>
@@ -1161,7 +1178,6 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                             <constraint firstItem="NjP-3j-JwV" firstAttribute="top" secondItem="J3O-j6-74i" secondAttribute="top" id="qqF-z0-XNA"/>
                             <constraint firstItem="cDw-74-mt3" firstAttribute="leading" secondItem="6y8-fi-NaZ" secondAttribute="leading" id="tIH-O9-6GB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6y8-fi-NaZ"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.63137254899999995" green="0.74117647060000003" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1207,16 +1223,16 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
         <!--Menu View Controller-->
         <scene sceneID="d5E-Uc-Ecv">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WAl-vi-OTz" customClass="MenuViewController" customModule="Curismed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WAl-vi-OTz" customClass="MenuViewController" customModule="TherapyPMS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U87-vu-jDy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="cqA-Tl-G8d" customClass="GradientView" customModule="Curismed" customModuleProvider="target">
+                            <view contentMode="scaleToFill" id="cqA-Tl-G8d" customClass="GradientView" customModule="TherapyPMS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-5M-qUb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurismedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-5M-qUb">
                                         <rect key="frame" x="32.5" y="60" width="175" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="Nal-qR-HYs"/>
@@ -1258,7 +1274,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 <rect key="frame" x="0.0" y="170" width="320" height="378"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="45" id="iGx-ek-hy4" customClass="MenuTableViewCell" customModule="Curismed" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="45" id="iGx-ek-hy4" customClass="MenuTableViewCell" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iGx-ek-hy4" id="JvH-B3-vJH">
@@ -1302,6 +1318,7 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nis-A6-Mej"/>
                         <color key="backgroundColor" red="0.63137254899999995" green="0.74117647060000003" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="y0E-B9-6W0" firstAttribute="trailing" secondItem="Nis-A6-Mej" secondAttribute="trailing" id="EPc-Bl-MFj"/>
@@ -1310,7 +1327,6 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
                             <constraint firstItem="y0E-B9-6W0" firstAttribute="leading" secondItem="Nis-A6-Mej" secondAttribute="leading" id="kA5-gW-b6x"/>
                             <constraint firstAttribute="bottom" secondItem="y0E-B9-6W0" secondAttribute="bottom" id="vGa-sI-mDw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Nis-A6-Mej"/>
                     </view>
                     <navigationItem key="navigationItem" id="0zC-bb-acW"/>
                     <connections>
@@ -1322,13 +1338,54 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
             <point key="canvasLocation" x="-41.25" y="979.22535211267609"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="2y6-vH-1gZ">
+            <size key="intrinsicContentSize" width="258.5" height="23.5"/>
+        </designable>
+        <designable name="JR1-qc-a4p">
+            <size key="intrinsicContentSize" width="210.5" height="23.5"/>
+        </designable>
+        <designable name="JuQ-sZ-ntv">
+            <size key="intrinsicContentSize" width="116.5" height="18.5"/>
+        </designable>
+        <designable name="W4L-vm-wyg">
+            <size key="intrinsicContentSize" width="100" height="23.5"/>
+        </designable>
+        <designable name="ZWd-kj-bCa">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="gj8-4S-cdt">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="gmP-xj-6hY">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="hSo-Uk-YR1">
+            <size key="intrinsicContentSize" width="123.5" height="18.5"/>
+        </designable>
+        <designable name="hz0-7k-bhL">
+            <size key="intrinsicContentSize" width="195" height="18.5"/>
+        </designable>
+        <designable name="jvU-Zi-Nzb">
+            <size key="intrinsicContentSize" width="203" height="23.5"/>
+        </designable>
+        <designable name="lmM-9q-Qmw">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="ugf-cP-fPP">
+            <size key="intrinsicContentSize" width="188" height="18.5"/>
+        </designable>
+        <designable name="v1S-TX-XqB">
+            <size key="intrinsicContentSize" width="177.5" height="18.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Activity" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Add" width="32" height="32"/>
         <image name="Authorization" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Client" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Clock" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="CurismedLogo" width="100" height="25"/>
+        <image name="CurismedLogo" width="960" height="540"/>
         <image name="Date" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Location" width="21.333333969116211" height="21.333333969116211"/>
         <image name="calendar" width="16" height="16"/>
@@ -1336,5 +1393,11 @@ UGxlYXNlIFNlbGVjdCAQQWN0aXZpdHk
         <image name="dropDown" width="15" height="15"/>
         <image name="leftArrow" width="7" height="12"/>
         <image name="rightArrow" width="7" height="12"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

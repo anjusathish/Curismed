@@ -83,12 +83,11 @@ class AddSessionViewController: BaseViewController {
                 return
             }
             
-            if let providerName = UserProfile.shared.currentUser?.providerName, let providerID = UserProfile.shared.currentUser?.providerID ,let practiceID = UserProfile.shared.currentUser?.practiceID{
+            if let providerName = UserProfile.shared.currentUser?.user?.name, let providerID = UserProfile.shared.currentUser?.user?.id ,let practiceID = UserProfile.shared.currentUser?.user?.id {
                 
                 let request = AddNewSessionRequest(appType: "non-billable", patientName: nonClientName, addNewSessionRequestDescription: txtViewNotes.text, statusApp: "Confirm", startDate: self.startDate + " " + self.startTime, endDate: self.startDate + " " + self.endTime, patientID: patientID, providerName: providerName, providerID: "\(providerID)", authNo: authNo, activity: nonActivity, pos: location, repeatSunday: 0, repeatMonday: 0, repeatTuesday: 0, repeatWednesday: 0, repeatThursday: 0, repeatFriday: 0, repeatSaturday: 0, repeatFrequency: "", repeatCountOccurrance: 0, practiceID: String(practiceID))
                 print(request)
                 
-                viewModel.addNewSessionAPI(info: request)
             }
             
             
@@ -114,119 +113,119 @@ class AddSessionViewController: BaseViewController {
     }
     
     func addSessionAPIcall(){
-        if let providerName = UserProfile.shared.currentUser?.providerName, let providerID = UserProfile.shared.currentUser?.providerID ,let practiceID = UserProfile.shared.currentUser?.practiceID{
-            
-            
-            let request = ["app_type": "billable",
-                           "patientName": patientName,
-                           "description": txtViewNotes.text ?? "",
-                           "statusApp": "Confirm",
-                           "start_date": self.startDate + " " + self.startTime,
-                           "end_date": self.startDate + " " + self.endTime,
-                           "patientID": patientID,
-                           "providerName": providerName,
-                           "providerID": "\(providerID)",
-                "authNo": authNo,
-                "activity": activityNo,
-                "POS": location,
-                "repeat_sunday": 0,
-                "repeat_monday": 0,
-                "repeat_tuesday": 0,
-                "repeat_wednesday": 0,
-                "repeat_thursday": 0,
-                "repeat_friday": 0,
-                "repeat_saturday": 0,
-                "repeat_frequency": "",
-                "repeat_count_occurrance": 0,
-                "practice_id": String(practiceID)
-                ] as [String : Any]
-            
-            print(request)
-            var urlReq = URLRequest(url: URL(string: "https://app.curismed.com/appointments/recurrence")!)
-            urlReq.httpMethod = "POST"
-            urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: [])
-            urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            let session = URLSession.shared
-            let task = session.dataTask(with: urlReq, completionHandler: { data, response, error -> Void in
-                
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                    print(json)
-                    
-                    let successMessage: String = json["message"] as! String
-                    
-                    DispatchQueue.main.async {
-                        self.displayServerSuccess(withMessage: successMessage)
-                        let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
-                        
-                        ConstantObj.Data.names.append(d1)
-                        ConstantObj.Data.clock.append(d1)
-                        
-                        let nc = NotificationCenter.default
-                        nc.post(name: Notification.Name("UserLoggedIn"), object: nil)
-                        
-                        for controller in self.navigationController!.viewControllers as Array {
-                            if controller.isKind(of: DashBoardViewController.self) {
-                                
-                                self.navigationController!.popToViewController(controller, animated: true)
-                                break
-                            }
-                        }
-                    }
-                    
-                } catch {
-                    if let returnData = String(data: data!, encoding: .utf8) {
-                        print(returnData)
-                        let splitDict = returnData.components(separatedBy: "}]}")
-                        if splitDict.last != nil {
-                            let response = splitDict.last
-                            
-                            if let split2Dict = response
-                            {
-                                let splitStatusFromDict = split2Dict.components(separatedBy: ",")
-                                if let status = splitStatusFromDict.first
-                                {
-                                    let stausValue = status.components(separatedBy: ":")
-                                    if let statusfinal = stausValue.last
-                                    {
-                                        DispatchQueue.main.async {
-                                            let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
-                                            
-                                            ConstantObj.Data.names.append(d1)
-                                            ConstantObj.Data.clock.append(d1)
-                                            
-                                            let nc = NotificationCenter.default
-                                            nc.post(name: Notification.Name("UserLoggedIn"), object: nil)
-                                            
-                                            for controller in self.navigationController!.viewControllers as Array {
-                                                if controller.isKind(of: DashBoardViewController.self) {
-                                                    
-                                                    self.navigationController!.popToViewController(controller, animated: true)
-                                                    break
-                                                }
-                                            }
-                                        }
-                                        if statusfinal == "1"{
-                                            print("Successh")
-                                        }else{
-                                            print("Failure")
-                                        }
-                                    }
-                                }
-                            }
-                            
-                        }else{
-                            print("Not Proper Response")
-                        }
-                        
-                    }
-                }
-            })
-            
-            task.resume()
-            
-        }
+//        if let providerName = UserProfile.shared.currentUser?.providerName, let providerID = UserProfile.shared.currentUser?.providerID ,let practiceID = UserProfile.shared.currentUser?.practiceID{
+//            
+//            
+//            let request = ["app_type": "billable",
+//                           "patientName": patientName,
+//                           "description": txtViewNotes.text ?? "",
+//                           "statusApp": "Confirm",
+//                           "start_date": self.startDate + " " + self.startTime,
+//                           "end_date": self.startDate + " " + self.endTime,
+//                           "patientID": patientID,
+//                           "providerName": providerName,
+//                           "providerID": "\(providerID)",
+//                "authNo": authNo,
+//                "activity": activityNo,
+//                "POS": location,
+//                "repeat_sunday": 0,
+//                "repeat_monday": 0,
+//                "repeat_tuesday": 0,
+//                "repeat_wednesday": 0,
+//                "repeat_thursday": 0,
+//                "repeat_friday": 0,
+//                "repeat_saturday": 0,
+//                "repeat_frequency": "",
+//                "repeat_count_occurrance": 0,
+//                "practice_id": String(practiceID)
+//                ] as [String : Any]
+//            
+//            print(request)
+//            var urlReq = URLRequest(url: URL(string: "https://app.curismed.com/appointments/recurrence")!)
+//            urlReq.httpMethod = "POST"
+//            urlReq.httpBody = try? JSONSerialization.data(withJSONObject: request, options: [])
+//            urlReq.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//            
+//            let session = URLSession.shared
+//            let task = session.dataTask(with: urlReq, completionHandler: { data, response, error -> Void in
+//                
+//                do {
+//                    let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+//                    print(json)
+//                    
+//                    let successMessage: String = json["message"] as! String
+//                    
+//                    DispatchQueue.main.async {
+//                        self.displayServerSuccess(withMessage: successMessage)
+//                        let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
+//                        
+//                        ConstantObj.Data.names.append(d1)
+//                        ConstantObj.Data.clock.append(d1)
+//                        
+//                        let nc = NotificationCenter.default
+//                        nc.post(name: Notification.Name("UserLoggedIn"), object: nil)
+//                        
+//                        for controller in self.navigationController!.viewControllers as Array {
+//                            if controller.isKind(of: DashBoardViewController.self) {
+//                                
+//                                self.navigationController!.popToViewController(controller, animated: true)
+//                                break
+//                            }
+//                        }
+//                    }
+//                    
+//                } catch {
+//                    if let returnData = String(data: data!, encoding: .utf8) {
+//                        print(returnData)
+//                        let splitDict = returnData.components(separatedBy: "}]}")
+//                        if splitDict.last != nil {
+//                            let response = splitDict.last
+//                            
+//                            if let split2Dict = response
+//                            {
+//                                let splitStatusFromDict = split2Dict.components(separatedBy: ",")
+//                                if let status = splitStatusFromDict.first
+//                                {
+//                                    let stausValue = status.components(separatedBy: ":")
+//                                    if let statusfinal = stausValue.last
+//                                    {
+//                                        DispatchQueue.main.async {
+//                                            let d1 = ["name": "hi", "isHidden" : true] as [String : AnyObject]
+//                                            
+//                                            ConstantObj.Data.names.append(d1)
+//                                            ConstantObj.Data.clock.append(d1)
+//                                            
+//                                            let nc = NotificationCenter.default
+//                                            nc.post(name: Notification.Name("UserLoggedIn"), object: nil)
+//                                            
+//                                            for controller in self.navigationController!.viewControllers as Array {
+//                                                if controller.isKind(of: DashBoardViewController.self) {
+//                                                    
+//                                                    self.navigationController!.popToViewController(controller, animated: true)
+//                                                    break
+//                                                }
+//                                            }
+//                                        }
+//                                        if statusfinal == "1"{
+//                                            print("Successh")
+//                                        }else{
+//                                            print("Failure")
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                            
+//                        }else{
+//                            print("Not Proper Response")
+//                        }
+//                        
+//                    }
+//                }
+//            })
+//            
+//            task.resume()
+//            
+//        }
         
         
     }
@@ -282,7 +281,36 @@ extension AddSessionViewController: UITextFieldDelegate{
     
 }
 
-extension AddSessionViewController: AppointmentDelegate{
+extension AddSessionViewController: AppointmentDelegate {
+    
+    func appointmentSuccess(message: String) {
+        
+    }
+   
+    func getAuthorization(data: [AuthorizationsDatum]) {
+        
+    }
+    
+    func getActivityData(data: [CommonData]) {
+        
+    }
+
+    func getPatientList(list: [CommonData]) {
+        
+    }
+    
+    func getProviderList(list: [CommonData]) {
+        
+    }
+    
+    func getPointOfService(data: [PointOfService]) {
+        
+    }
+    
+    func getAppointmentStatus(data: [String]) {
+        
+    }
+
     func updateClockSession(_ updateSuccess: AppointmentUpdateResponse) {
         
     }

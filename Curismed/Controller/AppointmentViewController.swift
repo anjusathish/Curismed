@@ -111,71 +111,71 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         
         let currentDate = Date().string(format: "MM-dd-yyyy")
         
-        if currentDate == convertDateFormater((appointmentDataList?.startDate)!){
-            if appointmentDataList?.appType == "non-billable"{
-                userInteration(isEnable: false)
-                addSignBtn.isUserInteractionEnabled = false
-                txtStatus.isUserInteractionEnabled = false
-                travelStartStackView.isHidden = true
-                updateBtn.isHidden = true
-                showCurrentLocationView.isUserInteractionEnabled = false
-                txtAddress.rightImage = nil
-            }
-            else
-            {
-                if status == "Confirm"{
-                    travelStartStackView.isHidden = false
-                    userInteration(isEnable: true)
-                    addSignBtn.isUserInteractionEnabled = true
-                    txtStatus.isUserInteractionEnabled = true
-                    showCurrentLocationView.isUserInteractionEnabled = true
-                    
-                }
-                else if status == "Rendered"{
-                    travelStartStackView.isHidden = true
-                    userInteration(isEnable: false)
-                    addSignBtn.isUserInteractionEnabled = true
-                    txtStatus.isUserInteractionEnabled = true
-                    showCurrentLocationView.isUserInteractionEnabled = false
-                    txtAddress.rightImage = nil
-                }else
-                {
-                    travelStartStackView.isHidden = true
-                    userInteration(isEnable: false)
-                    addSignBtn.isUserInteractionEnabled = false
-                    txtStatus.isUserInteractionEnabled = true
-                    showCurrentLocationView.isUserInteractionEnabled = false
-                    txtAddress.rightImage = nil
-                }
-            }
-        }else
-        {
-            travelStartStackView.isHidden = true
-            showCurrentLocationView.isUserInteractionEnabled = false
-            txtAddress.rightImage = nil
-            
-            if status == "Rendered"{
-                travelStartStackView.isHidden = true
-                userInteration(isEnable: false)
-                addSignBtn.isUserInteractionEnabled = true
-                txtStatus.isUserInteractionEnabled = true
-                showCurrentLocationView.isUserInteractionEnabled = false
-                txtAddress.rightImage = nil
-            }
-        }
+//        if currentDate == convertDateFormater((appointmentDataList?.startDate)!){
+//            if appointmentDataList?.appType == "non-billable"{
+//                userInteration(isEnable: false)
+//                addSignBtn.isUserInteractionEnabled = false
+//                txtStatus.isUserInteractionEnabled = false
+//                travelStartStackView.isHidden = true
+//                updateBtn.isHidden = true
+//                showCurrentLocationView.isUserInteractionEnabled = false
+//                txtAddress.rightImage = nil
+//            }
+//            else
+//            {
+//                if status == "Confirm"{
+//                    travelStartStackView.isHidden = false
+//                    userInteration(isEnable: true)
+//                    addSignBtn.isUserInteractionEnabled = true
+//                    txtStatus.isUserInteractionEnabled = true
+//                    showCurrentLocationView.isUserInteractionEnabled = true
+//
+//                }
+//                else if status == "Rendered"{
+//                    travelStartStackView.isHidden = true
+//                    userInteration(isEnable: false)
+//                    addSignBtn.isUserInteractionEnabled = true
+//                    txtStatus.isUserInteractionEnabled = true
+//                    showCurrentLocationView.isUserInteractionEnabled = false
+//                    txtAddress.rightImage = nil
+//                }else
+//                {
+//                    travelStartStackView.isHidden = true
+//                    userInteration(isEnable: false)
+//                    addSignBtn.isUserInteractionEnabled = false
+//                    txtStatus.isUserInteractionEnabled = true
+//                    showCurrentLocationView.isUserInteractionEnabled = false
+//                    txtAddress.rightImage = nil
+//                }
+//            }
+//        }else
+//        {
+//            travelStartStackView.isHidden = true
+//            showCurrentLocationView.isUserInteractionEnabled = false
+//            txtAddress.rightImage = nil
+//
+//            if status == "Rendered"{
+//                travelStartStackView.isHidden = true
+//                userInteration(isEnable: false)
+//                addSignBtn.isUserInteractionEnabled = true
+//                txtStatus.isUserInteractionEnabled = true
+//                showCurrentLocationView.isUserInteractionEnabled = false
+//                txtAddress.rightImage = nil
+//            }
+//        }
        
         
         self.txtMobileNumber.isUserInteractionEnabled = false
         txtClientName.text = appointmentDataList?.patientName
-        txtAddress.text = appointmentData?.address
-        txtMobileNumber.text = appointmentData?.phoneHome
+//        txtAddress.text = appointmentData?.address
+//        txtMobileNumber.text = appointmentData?.phoneHome
         
         txtService.text = activityLabel
         txtStatus.text = appointmentDataList?.status
         
         
-        let convertDateFormat = convertDateFormater((appointmentDataList?.startDate)!)
-        txrRenderDate.text = convertDateFormat
+//        let convertDateFormat = convertDateFormater((appointmentDataList?.startDate)!)
+//        txrRenderDate.text = convertDateFormat
         
         guard let dateAsString = appointmentDataList?.renderedStartDate else { return  }
         let dateFormatter = DateFormatter()
@@ -195,7 +195,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         let toTime = dateFormatter.string(from: date1)
         txtEndTime.text = toTime
         
-        txtDateAndTime.text = convertDateFormat + " " + fromTime + " to " + toTime
+//        txtDateAndTime.text = convertDateFormat + " " + fromTime + " to " + toTime
         
         txtNotes.text = appointmentDataList?.desc
         
@@ -294,7 +294,7 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
     @IBAction func showLocBtn(_ sender: Any) {
         let vc = UIStoryboard.appointmentStoryboard().instantiateViewController(withIdentifier: "CurrentLocationViewController") as! CurrentLocationViewController
         let navController = UINavigationController(rootViewController: vc)
-        vc.address = appointmentData?.address ?? "Current Location"
+//        vc.address = appointmentData?.address ?? "Current Location"
         self.present(navController, animated:true, completion: nil)
     }
     
@@ -535,16 +535,16 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         
         let convertStartDate = convertDateFormater2(_startDate)
         
-        if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID{
-            let costartTime = convertStartDate + " " + fromTime
-            let cotoTime = convertStartDate + " " + toTime
-            
-            let request = AppointmentUpdateClockRequest.init(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: (appointmentDataList?.activity)!, notes: txtNotes.text!, imgSign: base64String, clockIn: clockInTime, clockOut: clockOutTime , practiceID: "\(practiceID)", providerID: "\(providerID)",providerName: appointmentDataList?.provider ?? "",location: appointmentDataList?.location ?? "")
-            
-            print(request)
-            
-            viewModel.updateClockSessionAPI(request)
-        }
+//        if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID{
+//            let costartTime = convertStartDate + " " + fromTime
+//            let cotoTime = convertStartDate + " " + toTime
+//
+//            let request = AppointmentUpdateClockRequest.init(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: (appointmentDataList?.activity)!, notes: txtNotes.text!, imgSign: base64String, clockIn: clockInTime, clockOut: clockOutTime , practiceID: "\(practiceID)", providerID: "\(providerID)",providerName: appointmentDataList?.provider ?? "",location: appointmentDataList?.location ?? "")
+//
+//            print(request)
+//
+//            viewModel.updateClockSessionAPI(request)
+//        }
     }
     
     @IBAction func updateButtonAction(_ sender: Any) {
@@ -584,33 +584,33 @@ class AppointmentViewController: BaseViewController, CLLocationManagerDelegate {
         
         
         
-        if txtStatus.text == "Rendered" {
-            if base64String.isEmpty {
-                self.displayServerError(withMessage: "Please add signature")
-            }else{
-                
-                if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID,let providerName = appointmentDataList?.provider {
-                    
-                    let request = AppointmentUpdateRequest(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: self.activityID, notes: txtNotes.text!, imgSign: base64String, practiceID: practiceID, providerID: providerID, providerName: providerName,location: appointmentDataList?.location ?? "")
-                    
-                    print(request)
-                    
-                    viewModel.updateSessionAPI(request)
-                }
-                
-            }
-        }else{
-            
-            if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID,let providerName = appointmentDataList?.provider {
-                
-                let request = AppointmentUpdateRequest(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: self.activityID, notes: txtNotes.text!, imgSign: base64String, practiceID: practiceID, providerID: providerID,providerName: providerName,location: appointmentDataList?.location ?? "")
-                
-                print(request)
-                
-                viewModel.updateSessionAPI(request)
-            }
-            
-        }
+//        if txtStatus.text == "Rendered" {
+//            if base64String.isEmpty {
+//                self.displayServerError(withMessage: "Please add signature")
+//            }else{
+//
+//                if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID,let providerName = appointmentDataList?.provider {
+//
+//                    let request = AppointmentUpdateRequest(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: self.activityID, notes: txtNotes.text!, imgSign: base64String, practiceID: practiceID, providerID: providerID, providerName: providerName,location: appointmentDataList?.location ?? "")
+//
+//                    print(request)
+//                     
+//                    viewModel.updateSessionAPI(request)
+//                }
+//
+//            }
+//        }else{
+//
+//            if let practiceID = UserProfile.shared.currentUser?.practiceID,let providerID = UserProfile.shared.currentUser?.providerID,let providerName = appointmentDataList?.provider {
+//
+//                let request = AppointmentUpdateRequest(appType: appointmentDataList?.appType ?? "", appID: "\(appointmentDataList?.id ?? 0)", status: txtStatus.text!, fromTime: costartTime, toTime: cotoTime, breakTime: breakTime, activity: self.activityID, notes: txtNotes.text!, imgSign: base64String, practiceID: practiceID, providerID: providerID,providerName: providerName,location: appointmentDataList?.location ?? "")
+//
+//                print(request)
+//
+//                viewModel.updateSessionAPI(request)
+//            }
+//
+//        }
         
         
     }
@@ -710,6 +710,35 @@ extension Date {
 }
 
 extension AppointmentViewController: AppointmentDelegate{
+    
+    func appointmentSuccess(message: String) {
+        
+    }
+   
+    func getAuthorization(data: [AuthorizationsDatum]) {
+        
+    }
+    
+    func getActivityData(data: [CommonData]) {
+        
+    }
+
+    func getPatientList(list: [CommonData]) {
+        
+    }
+    
+    func getProviderList(list: [CommonData]) {
+        
+    }
+    
+    func getPointOfService(data: [PointOfService]) {
+        
+    }
+    
+    func getAppointmentStatus(data: [String]) {
+        
+    }
+    
     func updateClockSession(_ updateSuccess: AppointmentUpdateResponse) {
         
     }

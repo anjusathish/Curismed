@@ -26,12 +26,12 @@ class ServiceHelper : NSObject {
     static let instance = ServiceHelper()
     
     func requestFormData(withData data : Data, forRequest request : URLRequest, completion: @escaping (Result<Data, CustomError>) -> ()) {
+        var _urlRequest = request
         
-      let _urlRequest = request
+        if let token =  UserProfile.shared.currentUser?.accessToken, !token.isEmpty {
+            _urlRequest.addValue(token, forHTTPHeaderField: "Authorization")
+        }
         
-//        if let token =  UserManager.shared.token {
-//            _urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-//        }
         loadDataSession(forData: data, withURLRequest: _urlRequest, completionHandler: {
             data, response, error in
             self.processResponse(urlRequest: request, data: data, response: response, error: error, completion: completion)
@@ -40,11 +40,11 @@ class ServiceHelper : NSObject {
     
     func request(forUrlRequest urlRequest : URLRequest, includeToken : Bool = true, completion: @escaping (Result<Data, CustomError>) -> ()) {
         
-      let _urlRequest = urlRequest
+        var _urlRequest = urlRequest
         
-//        if let token =  UserManager.shared.token, includeToken {
-//            _urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-//        }
+        if let token =  UserProfile.shared.currentUser?.accessToken, !token.isEmpty {
+            _urlRequest.addValue(token, forHTTPHeaderField: "Authorization")
+        }
         
         loadURLSession(withURLRequest: _urlRequest, completionHandler: {
             data, response, error in

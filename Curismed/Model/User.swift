@@ -36,27 +36,29 @@ struct RegisterResponse: Codable {
 
 // MARK: - LoginResponse
 struct LoginResponse: Codable {
-    let status: Int?
-    let message: String?
-    let data: User?
-}
-
-// MARK: - DataClass
-struct User: Codable {
-    let providerID: Int?
-    let providerName, sessionToken, role: String?
-    let baseURL: String?
-    let practiceID: Int?
-    let practiceName: String?
+    let status, accountType, message, accessToken: String?
+    let tokenType: String?
+    let user: User?
 
     enum CodingKeys: String, CodingKey {
-        case providerID = "provider_id"
-        case providerName = "provider_name"
-        case sessionToken = "session_token"
-        case role
-        case baseURL = "base_url"
-        case practiceID = "practice_id"
-        case practiceName = "practice_name"
+        case status
+        case accountType = "account_type"
+        case message
+        case accessToken = "access_token"
+        case tokenType = "token_type"
+        case user
+    }
+}
+
+// MARK: - User
+struct User: Codable {
+    let id: Int?
+    let name, email: String?
+    let profilePhotoURL: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, email
+        case profilePhotoURL = "profile_photo_url"
     }
 }
 

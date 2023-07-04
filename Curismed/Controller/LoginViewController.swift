@@ -22,8 +22,6 @@ class LoginViewController: BaseViewController {
     //MARK:- ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        textName.text = "niyaz"
-//        textPassword.text = "54321"
         viewModel.delegate = self
     }
     
@@ -43,7 +41,7 @@ class LoginViewController: BaseViewController {
             return
         }
         
-        let request = LoginRequest(username: userName, password: password, _token: "kaYfoHVjbZKkd8uOs0Ddn9dXQv0CkZSO7Z7hWXUK")
+        let request = LoginRequest(email: userName, password: password)
         viewModel.loginUser(info: request)
         
     }

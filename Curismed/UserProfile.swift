@@ -10,9 +10,9 @@ import UIKit
 
 class UserProfile: NSObject {
   
-  private var _saveCurrentUser: User?
+  private var _saveCurrentUser: LoginResponse?
   
-  var currentUser : User? {
+  var currentUser : LoginResponse? {
     get {
       return _saveCurrentUser
     }
@@ -69,7 +69,7 @@ class UserProfile: NSObject {
     if let savedPerson = defaults.object(forKey: SerializationKeys.activeUser) as? Data {
       
       let decoder = JSONDecoder()
-      if let loadedPerson = try? decoder.decode(User.self, from: savedPerson) {
+      if let loadedPerson = try? decoder.decode(LoginResponse.self, from: savedPerson) {
         currentUser = loadedPerson
       }
     }

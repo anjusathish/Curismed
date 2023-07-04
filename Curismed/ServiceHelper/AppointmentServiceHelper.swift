@@ -19,7 +19,7 @@ class AppointmentServiceHelper{
       return
     }
     
-    MBProgressHUD.showAdded(to: window!, animated: true)
+//    MBProgressHUD.showAdded(to: window!, animated: true)
     
     var components = URLComponents()
     components.scheme = router.scheme
@@ -51,7 +51,7 @@ class AppointmentServiceHelper{
       DispatchQueue.main.async {
         
         MBProgressHUD.hide(for: window!, animated: true)
-        
+        print("================> Stoppped")
         switch result {
         case .success(let data):
           
@@ -62,8 +62,8 @@ class AppointmentServiceHelper{
               
               var status : Bool = false
               
-              if let _status = dict["status"] as? Bool {
-                status = _status
+              if let _status = dict["status"] as? String, _status == "success" {
+                status = true
               }
               
               if status {
