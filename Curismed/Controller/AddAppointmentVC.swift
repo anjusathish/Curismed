@@ -22,14 +22,15 @@ class AddAppointmentVC: BaseViewController {
     @IBOutlet weak var fromTimeTF: CTTextField!
     @IBOutlet weak var toTimeTF: CTTextField!
     @IBOutlet weak var statusTF: CTTextField!
+    @IBOutlet weak var serviceView: UIView!
     @IBOutlet weak var billableSessionBox: BEMCheckBox!{
         didSet{
-            billableSessionBox.boxType = .square
+            billableSessionBox.boxType = .circle
         }
     }
     @IBOutlet weak var nonBillableSessionBox: BEMCheckBox!{
         didSet{
-            nonBillableSessionBox.boxType = .square
+            nonBillableSessionBox.boxType = .circle
         }
     }
     
@@ -62,6 +63,8 @@ class AddAppointmentVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        billableSessionBox.on = true
+
         self.titleString = "Add Appointment"
         viewModel.delegate = self
         
@@ -156,35 +159,59 @@ class AddAppointmentVC: BaseViewController {
     }
     
     @IBAction func addSessionTypeButton(_ sender: BEMCheckBox) {
-        
-        billableSessionBox.on = sender.tag == 0
-        nonBillableSessionBox.on = sender.tag != 0
+
+        if sender.tag == 0 {
+            billableSessionBox.on = true
+            nonBillableSessionBox.on = false
+        } else {
+            billableSessionBox.on = false
+            nonBillableSessionBox.on = true
+            
+        }
         sessionType = sender.tag == 0 ? 1 : 2
+        patientNameTF.text = sessionType == 2 ? "Non-Billable Client" : ""
+        patientNameTF.isUserInteractionEnabled = sessionType == 1
         
+        authTF.text = sessionType == 2 ? "NONCLI01323_AUTH249" : ""
+        authTF.isUserInteractionEnabled = sessionType == 1
+
+        serviceView.isHidden = sender.tag == 1
+
     }
     
     @IBAction func addAppointmentBtn(_ sender: UIButton) {
-        
-        let addAppointment = AddBillableAppointmentRequest(billable: sessionType,
-                                                           clientID: clientID,
-                                                           authorizationID: authID,
-                                                           activityID: activityID,
-                                                           providerID: providertID,
-                                                           location: posID,
-                                                           daily: 1,
-                                                           fromTime: fromTimeTF.text,
-                                                           formTimeSession: fromTimeTF.text,
-                                                           toTimeSession: toTimeTF.text,
-                                                           status: status,
-                                                           endDate: toDateTF.text,
-                                                           chkrecurrence: 1)
-        
         if sessionType == 1 {
+            let addAppointment = AddBillableAppointmentRequest(billable: sessionType,
+                                                               clientID: clientID,
+                                                               authorizationID: authID,
+                                                               activityID: activityID,
+                                                               providerID: providertID,
+                                                               location: posID,
+                                                               daily: 1,
+                                                               fromTime: fromTimeTF.text,
+                                                               formTimeSession: fromTimeTF.text,
+                                                               toTimeSession: toTimeTF.text,
+                                                               status: status,
+                                                               endDate: toDateTF.text,
+                                                               chkrecurrence: 1)
+            
             viewModel.createAppointment(isBillable: true, info: addAppointment)
         } else {
-            viewModel.createAppointment(isBillable: false, info: addAppointment)
+            let nonBillableAppointment = AddNonBillableAppointmentRequest(billable: 2,
+                                                                          providerMulID: [19, 21],
+                                                                          location: posID,
+                                                                          fromTime: fromTimeTF.text,
+                                                                          formTimeSession: fromTimeTF.text,
+                                                                          toTimeSession: toTimeTF.text,
+                                                                          status: status,
+                                                                          chkrecurrence: 1,
+                                                                          daily: 1,
+                                                                            endDate: toDateTF.text,
+                                                                          dayName: ["Sunday", "Tuesday", "Saturday"])
+            
+
+            viewModel.createAppointment(isBillable: false, info: nonBillableAppointment)
         }
-        
     }
 }
 

@@ -88,7 +88,7 @@ class DashBoardViewController: BaseViewController {
         
         // For UITest
         self.calendarVw.accessibilityIdentifier = "calendar"
-        todayStr = dateFormatter.string(from: today)
+        selectedDate = dateFormatter.string(from: today)
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -126,7 +126,8 @@ class DashBoardViewController: BaseViewController {
             return
         }
         appointmentData.removeAll()
-        viewModel.getAppointmentListData("2023-05-09")
+//        viewModel.getAppointmentListData("2023-05-09")
+        viewModel.getAppointmentListData(date)
     }
     
     func convertDateFormater(_ date: String) -> String {
@@ -347,20 +348,25 @@ extension DashBoardViewController: AppointmentDelegate{
     func appointmentListData(_ appointmentData: [AppointmentsListData]) {
         
         self.appointmentData = appointmentData
-        for _ in 0..<appointmentData.count{
-            ConstantObj.Data.names.append(d1)
-            ConstantObj.Data.clock.append(d1)
-        }
-        if  UserDefaults.standard.value(forKey: "ConstantObj") as? [Dictionary<String, AnyObject>] != nil {
-            arrObjTravel = UserDefaults.standard.value(forKey: "ConstantObj") as! [Dictionary<String, AnyObject>]
-            ConstantObj.Data.names = arrObjTravel
-        }
-        if  UserDefaults.standard.value(forKey: "ConstantObjClock") as? [Dictionary<String, AnyObject>] != nil {
-            arrObjClock = UserDefaults.standard.value(forKey: "ConstantObjClock") as! [Dictionary<String, AnyObject>]
-            ConstantObj.Data.clock = arrObjClock
-        }
+//        for _ in 0..<appointmentData.count{
+//            ConstantObj.Data.names.append(d1)
+//            ConstantObj.Data.clock.append(d1)
+//        }
+//        if  UserDefaults.standard.value(forKey: "ConstantObj") as? [Dictionary<String, AnyObject>] != nil {
+//            arrObjTravel = UserDefaults.standard.value(forKey: "ConstantObj") as! [Dictionary<String, AnyObject>]
+//            ConstantObj.Data.names = arrObjTravel
+//        }
+//        if  UserDefaults.standard.value(forKey: "ConstantObjClock") as? [Dictionary<String, AnyObject>] != nil {
+//            arrObjClock = UserDefaults.standard.value(forKey: "ConstantObjClock") as! [Dictionary<String, AnyObject>]
+//            ConstantObj.Data.clock = arrObjClock
+//        }
         
         appointmentTableView.reloadData()
+        
+        if appointmentData.count == 0 {
+            displayServerError(withMessage: "Selected date doesn't have any appointment!")
+        }
+        
     }
     
     func appointmentFailure(message: String) {
