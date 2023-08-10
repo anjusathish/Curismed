@@ -42,7 +42,7 @@ class AddAppointmentVC: BaseViewController {
     private var providertID: Int?
     private var posID: Int?
     private var status: String?
-    private var sessionType: Int?
+    private var sessionType: Int = 1
     
     lazy var viewModel: AppointmentViewModel = {
         return AppointmentViewModel()
@@ -59,6 +59,9 @@ class AddAppointmentVC: BaseViewController {
     private var statusData: [String] = []
     
     let dispatchGroup = DispatchGroup()
+    
+    var isUpdateAppointment = false
+    var appointmentData: AppointmentsListData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +87,13 @@ class AddAppointmentVC: BaseViewController {
         dispatchGroup.notify(queue: .main) {
             print("All APIs are completed")
         }
+        
+        if isUpdateAppointment {
+            clientID = appointmentData?.patientID
+            authID = appointmentData?.authID
+            providertID = appointmentData?.providerID
+        }
+        
     }
     
     //MARK:- ShowDropDown
@@ -180,6 +190,59 @@ class AddAppointmentVC: BaseViewController {
     }
     
     @IBAction func addAppointmentBtn(_ sender: UIButton) {
+        
+        guard let patName = patientNameTF.text, !patName.isEmpty else {
+            self.displayServerError(withMessage: "Patient Name cannot be empty!")
+            return
+        }
+        
+        guard let auth = authTF.text, !auth.isEmpty else {
+            self.displayServerError(withMessage: "Auth cannot be empty!")
+            return
+        }
+
+        if sessionType == 1 {
+            guard let service = serviceTF.text, !service.isEmpty else {
+                self.displayServerError(withMessage: "Service cannot be empty!")
+                return
+            }
+        }
+
+        guard let providerName = providerNameTF.text, !providerName.isEmpty else {
+            self.displayServerError(withMessage: "Provider Name cannot be empty!")
+            return
+        }
+
+        guard let pos = posTF.text, !pos.isEmpty else {
+            self.displayServerError(withMessage: "POS cannot be empty!")
+            return
+        }
+
+        guard let fromDate = fromDateTF.text, !fromDate.isEmpty else {
+            self.displayServerError(withMessage: "From Date cannot be empty!")
+            return
+        }
+
+        guard let toDate = toDateTF.text, !toDate.isEmpty else {
+            self.displayServerError(withMessage: "To Date cannot be empty!")
+            return
+        }
+
+        guard let fromTime = fromTimeTF.text, !fromTime.isEmpty else {
+            self.displayServerError(withMessage: "From time cannot be empty!")
+            return
+        }
+
+        guard let toTime = toTimeTF.text, !toTime.isEmpty else {
+            self.displayServerError(withMessage: "End Time cannot be empty!")
+            return
+        }
+
+        guard let statusText = statusTF.text, !statusText.isEmpty else {
+            self.displayServerError(withMessage: "Status cannot be empty!")
+            return
+        }
+
         if sessionType == 1 {
             let addAppointment = AddBillableAppointmentRequest(billable: sessionType,
                                                                clientID: clientID,
@@ -188,25 +251,25 @@ class AddAppointmentVC: BaseViewController {
                                                                providerID: providertID,
                                                                location: posID,
                                                                daily: 1,
-                                                               fromTime: fromTimeTF.text,
-                                                               formTimeSession: fromTimeTF.text,
-                                                               toTimeSession: toTimeTF.text,
-                                                               status: status,
-                                                               endDate: toDateTF.text,
-                                                               chkrecurrence: 1)
+                                                               fromTime: fromDate,
+                                                               formTimeSession: fromTime,
+                                                               toTimeSession: toTime,
+                                                               status: statusText,
+                                                               endDate: toDate,
+                                                               chkrecurrence: 1, dayName: ["Sunday", "Tuesday", "Saturday"])
             
             viewModel.createAppointment(isBillable: true, info: addAppointment)
         } else {
             let nonBillableAppointment = AddNonBillableAppointmentRequest(billable: 2,
-                                                                          providerMulID: [19, 21],
+                                                                          providerMulID: [Int(providertID ?? 0)],
                                                                           location: posID,
-                                                                          fromTime: fromTimeTF.text,
-                                                                          formTimeSession: fromTimeTF.text,
-                                                                          toTimeSession: toTimeTF.text,
+                                                                          fromTime: fromDate,
+                                                                          formTimeSession: fromTime,
+                                                                          toTimeSession: toTime,
                                                                           status: status,
                                                                           chkrecurrence: 1,
                                                                           daily: 1,
-                                                                            endDate: toDateTF.text,
+                                                                          endDate: toDate,
                                                                           dayName: ["Sunday", "Tuesday", "Saturday"])
             
 
@@ -245,14 +308,14 @@ extension AddAppointmentVC: UITextFieldDelegate {
             let picker = self.showDateTimePicker(mode: .date, selectedDate: selectedDate)
             picker.dismissBlock = { date in
                 self.selectedDate = date
-                self.fromDateTF.text = date.asString(withFormat: "MM-dd-yyyy")
+                self.fromDateTF.text = date.asString(withFormat: "MM/dd/yyyy")
             }
             
         } else if textField == toDateTF {
             let picker = self.showDateTimePicker(mode: .date, selectedDate: selectedDate)
             picker.dismissBlock = { date in
                 self.selectedDate = date
-                self.toDateTF.text = date.asString(withFormat: "MM-dd-yyyy")
+                self.toDateTF.text = date.asString(withFormat: "MM/dd/yyyy")
             }
             
         } else if textField == fromTimeTF {
@@ -342,6 +405,12 @@ extension AddAppointmentVC: AppointmentDelegate {
     
     func appointmentFailure(message: String) {
         
+        if message == "unKnown" {
+            self.displayServerError(withMessage: "Appointment created successfully!")
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.displayServerError(withMessage: message)
+        }
     }
     
     func getCurrentLocationSuccess(_ appointmentMobileMapAddData: AppointmentMobileMapAddResponse) {

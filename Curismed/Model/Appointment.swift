@@ -60,6 +60,7 @@ struct AddBillableAppointmentRequest: Codable {
     let providerID, location, daily: Int?
     let fromTime, formTimeSession, toTimeSession, status, endDate: String?
     let chkrecurrence: Int?
+    let dayName: [String]?
 
     enum CodingKeys: String, CodingKey {
         case billable
@@ -73,6 +74,7 @@ struct AddBillableAppointmentRequest: Codable {
         case toTimeSession = "to_time_session"
         case status, chkrecurrence, daily
         case endDate = "end_date"
+        case dayName = "day_name"
     }
 }
 
@@ -309,7 +311,7 @@ struct AppointmentsListData: Codable {
     let patientID, authID, serviceID, insuranceID: Int?
     let providerID, sessionTimeDuration: Int?
     let sessionStartDateTimeUTC, sessionEndDateTimeUTC, cptCode, sessionStatus: String?
-    let sessionCreatedDateTimeUTC, sessionLastUpdatedDateTimeUTC: String?
+    let sessionCreatedDateTimeUTC, sessionLastUpdatedDateTimeUTC, patientName, serviceName: String?
 
     enum CodingKeys: String, CodingKey {
         case sessionID = "session_id"
@@ -326,6 +328,8 @@ struct AppointmentsListData: Codable {
         case sessionStatus = "session_status"
         case sessionCreatedDateTimeUTC = "session_created_date_time_UTC"
         case sessionLastUpdatedDateTimeUTC = "session_last_updated_date_time_UTC"
+        case patientName = "patient_name"
+        case serviceName = "service_name"
     }
 }
 

@@ -156,13 +156,15 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell", for: indexPath) as! DashboardTableViewCell
         let appData = appointmentData[indexPath.row]
-        
-        cell.labelActivity.text = appData.cptCode // needs to be changed
-        cell.labelAppType.text = appData.billable // needs to be changed
-        
+                
         if appData.billable != "billable" {
             cell.imageViewMotorCycle.isHidden = true
             cell.imageViewClockGif.isHidden = true
+            cell.labelActivity.text = appData.billable
+            cell.labelAppType.text = appData.sessionStatus
+        } else {
+            cell.labelActivity.text = appData.patientName
+            cell.labelAppType.text = appData.serviceName
         }
         
         if let startDate = appData.sessionStartDateTimeUTC,
@@ -171,100 +173,17 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
             let convertedEndTime = convertDateFormater(endDate)
             cell.labelSessionHours.text = convertedStartTime + " to " + convertedEndTime
         }
-        
-        let currentDate = Date().string(format: "MM-dd-yyyy")
-        
-        if currentDate == convertDateFormater2(appData.sessionStartDateTimeUTC ?? currentDate) {
-            if arrObjTravel.count != 0 {
-                if (ConstantObj.Data.names[indexPath.row]["isHidden"] as? Bool) == true {
-                    cell.imageViewMotorCycle.isHidden = true
-                }
-                else {
-                    do {
-                        let gif = try UIImage(gifName: "motorcycle.gif")
-                        cell.imageViewMotorCycle.isHidden = false
-                        cell.imageViewMotorCycle.setGifImage(gif)
-                        cell.imageViewMotorCycle.delegate = self
-                    }
-                    catch
-                    {
-                        
-                    }
-                }
-            }
-            else{
                 
-                if (ConstantObj.Data.names[indexPath.row]["isHidden"] as? Bool) == true {
-                    cell.imageViewMotorCycle.isHidden = true
-                }
-                else {
-                    do {
-                        let gif = try UIImage(gifName: "motorcycle.gif")
-                        cell.imageViewMotorCycle.isHidden = false
-                        cell.imageViewMotorCycle.setGifImage(gif)
-                        cell.imageViewMotorCycle.delegate = self
-                    }
-                    catch
-                    {
-                        
-                    }
-                }
-            }
-            
-            if arrObjClock.count != 0 {
-                if (ConstantObj.Data.clock[indexPath.row]["isHidden"] as! Bool) == true {
-                    cell.imageViewClockGif.isHidden = true
-                }
-                else {
-                    do {
-                        let gif = try UIImage(gifName: "ClickAnimation.gif")
-                        cell.imageViewClockGif.isHidden = false
-                        cell.imageViewClockGif.setGifImage(gif)
-                        cell.imageViewClockGif.delegate = self
-                    }
-                    catch
-                    {
-                    }
-                }
-            }
-            else{
-                
-                if (ConstantObj.Data.clock[indexPath.row]["isHidden"] as! Bool) == true {
-                    cell.imageViewClockGif.isHidden = true
-                }
-                else {
-                    do {
-                        let gif = try UIImage(gifName: "ClickAnimation.gif")
-                        cell.imageViewClockGif.isHidden = false
-                        cell.imageViewClockGif.setGifImage(gif)
-                        cell.imageViewClockGif.delegate = self
-                    }
-                    catch
-                    {
-                    }
-                }
-            }
-        }
-        else
-        {
-            cell.imageViewClockGif.isHidden = true
-            cell.imageViewMotorCycle.isHidden = true
-        }
-        
         if let status = appData.sessionStatus,
            let appStatus = AppStatus(rawValue: status) {
             switch appStatus {
-            case .rendered: cell.viewSessionStatus.backgroundColor = UIColor.curismedRendered
+            case .rendered:  cell.viewSessionStatus.backgroundColor = UIColor.curismedRendered
             case .confirmed: cell.viewSessionStatus.backgroundColor = UIColor.curismedConfirmed
             case .others:    cell.viewSessionStatus.backgroundColor = UIColor.curismedOthers
             case .hold:      cell.viewSessionStatus.backgroundColor = UIColor.curismedOthers
             case .noShow:    cell.viewSessionStatus.backgroundColor = UIColor.curismedOthers
             case .cancelledByProvide: cell.viewSessionStatus.backgroundColor = UIColor.curismedCancelled
-            case .cancelledByClient: cell.viewSessionStatus.backgroundColor = UIColor.curismedCancelled
-            }
-            if appStatus != .confirmed {
-                cell.imageViewMotorCycle.isHidden = true
-                cell.imageViewClockGif.isHidden = true
+            case .cancelledByClient:  cell.viewSessionStatus.backgroundColor = UIColor.curismedCancelled
             }
         }
         return cell
@@ -275,16 +194,9 @@ extension DashBoardViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard.appointmentStoryboard().instantiateViewController(withIdentifier: "Appointment") as! AppointmentViewController
-        let modelAppointment = appointmentData[indexPath.row]
-        let appInfo = modelAppointment
-        let appData = appInfo
-        vc.appointmentData = modelAppointment
-        vc.status = appData.sessionStatus
-        vc.delegate = self
-        vc.indexx = indexPath.row
-        vc.arrObj = arrObjTravel
-        vc.arrObjClock = arrObjClock
+        let vc = UIStoryboard.appointmentStoryboard().instantiateViewController(withIdentifier: "AddAppointmentVC") as! AddAppointmentVC
+        vc.isUpdateAppointment = true
+        vc.appointmentData = appointmentData[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
