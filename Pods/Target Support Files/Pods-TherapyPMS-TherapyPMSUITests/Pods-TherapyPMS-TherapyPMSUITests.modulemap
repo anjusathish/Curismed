@@ -1,0 +1,6 @@
+framework module Pods_TherapyPMS_TherapyPMSUITests {
+  umbrella header "Pods-TherapyPMS-TherapyPMSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

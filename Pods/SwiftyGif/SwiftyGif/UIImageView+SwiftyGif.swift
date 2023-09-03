@@ -2,6 +2,8 @@
 //  UIImageView+SwiftyGif.swift
 //
 
+#if !os(macOS)
+
 import ImageIO
 import UIKit
 
@@ -100,14 +102,28 @@ public extension UIImageView {
                        manager: SwiftyGifManager = .defaultManager,
                        loopCount: Int = -1,
                        levelOfIntegrity: GifLevelOfIntegrity = .default,
-                       showLoader: Bool = true) -> URLSessionDataTask {
-        stopAnimatingGif()
-        let loader: UIActivityIndicatorView? = showLoader ? createLoader() : nil
+                       session: URLSession = URLSession.shared,
+                       showLoader: Bool = true,
+                       customLoader: UIView? = nil) -> URLSessionDataTask? {
         
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+        if let data =  manager.remoteCache[url] {
+            self.parseDownloadedGif(url: url,
+                    data: data,
+                    error: nil,
+                    manager: manager,
+                    loopCount: loopCount,
+                    levelOfIntegrity: levelOfIntegrity)
+            return nil
+        }
+        
+        stopAnimatingGif()
+        
+        let loader: UIView? = showLoader ? createLoader(from: customLoader) : nil
+        
+        let task = session.dataTask(with: url) { [weak self] data, _, error in
             DispatchQueue.main.async {
                 loader?.removeFromSuperview()
-                self.parseDownloadedGif(url: url,
+                self?.parseDownloadedGif(url: url,
                                         data: data,
                                         error: error,
                                         manager: manager,
@@ -121,24 +137,30 @@ public extension UIImageView {
         return task
     }
     
-    private func createLoader() -> UIActivityIndicatorView {
-        let loader = UIActivityIndicatorView()
+    private func createLoader(from view: UIView? = nil) -> UIView {
+        let loader = view ?? UIActivityIndicatorView()
         addSubview(loader)
         loader.translatesAutoresizingMaskIntoConstraints = false
         
-        addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-0-[subview]-0-|",
-            options: .directionLeadingToTrailing,
-            metrics: nil,
-            views: ["subview": loader]))
+        addConstraint(NSLayoutConstraint(
+            item: loader,
+            attribute: .centerX,
+            relatedBy: .equal,
+            toItem: self,
+            attribute: .centerX,
+            multiplier: 1,
+            constant: 0))
         
-        addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-0-[subview]-0-|",
-            options: .directionLeadingToTrailing,
-            metrics: nil,
-            views: ["subview": loader]))
+        addConstraint(NSLayoutConstraint(
+            item: loader,
+            attribute: .centerY,
+            relatedBy: .equal,
+            toItem: self,
+            attribute: .centerY,
+            multiplier: 1,
+            constant: 0))
         
-        loader.startAnimating()
+        (loader as? UIActivityIndicatorView)?.startAnimating()
         
         return loader
     }
@@ -156,6 +178,7 @@ public extension UIImageView {
         
         do {
             let image = try UIImage(gifData: data, levelOfIntegrity: levelOfIntegrity)
+            manager.remoteCache[url] = data
             setGifImage(image, manager: manager, loopCount: loopCount)
             startAnimatingGif()
             delegate?.gifURLDidFinish?(sender: self)
@@ -413,8 +436,8 @@ public extension UIImageView {
     }
     
     var delegate: SwiftyGifDelegate? {
-        get { return (objc_getAssociatedObject(self, _delegateKey!) as? SwiftyGifDelegate) }
-        set { objc_setAssociatedObject(self, _delegateKey!, newValue, .OBJC_ASSOCIATION_ASSIGN) }
+        get { return (objc_getAssociatedWeakObject(self, _delegateKey!) as? SwiftyGifDelegate) }
+        set { objc_setAssociatedWeakObject(self, _delegateKey!, newValue) }
     }
     
     private var haveCache: Bool {
@@ -436,8 +459,6 @@ public extension UIImageView {
             
             if newValue {
                 delegate?.gifDidStart?(sender: self)
-            } else {
-                delegate?.gifDidStop?(sender: self)
             }
         }
     }
@@ -461,3 +482,5 @@ public extension UIImageView {
         return (result as? T)
     }
 }
+
+#endif

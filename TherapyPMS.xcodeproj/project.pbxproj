@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1886D9A52A532D6600888709 /* AddAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886D9A42A532D6600888709 /* AddAppointmentVC.swift */; };
-		92A8A220714D8FC299481BBE /* Pods_Curismed_CurismedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */; };
-		A60456C4D61EA65DAB99D7A5 /* Pods_Curismed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */; };
+		18E493CA2AA4729700AD8B30 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A38D713AA6590C76A2D72855 /* Pods_TherapyPMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */; };
 		BAC6A4A72482B99700FC6DEC /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */; };
 		BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD923DA2481783A00AC4D24 /* CoreLocation.framework */; };
-		CAED5115B9FEEEAAA88286D2 /* Pods_CurismedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */; };
+		C7A552ACE40548128C26CD92 /* Pods_TherapyPMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */; };
+		D8A39B7A0F8C573584FE5462 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */; };
 		E14C088D245EFCCE0081F58E /* AddSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */; };
 		E14C088E245EFD360081F58E /* AddSessionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4591A245EE546004C3C2D /* AddSessionTypeViewController.swift */; };
 		E14C088F245EFDB50081F58E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45912245E9EE7004C3C2D /* BaseViewController.swift */; };
@@ -98,19 +99,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18E493CB2AA4729800AD8B30 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18E493CA2AA4729700AD8B30 /* (null) in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed-CurismedUITests.debug.xcconfig"; path = "Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1886D9A42A532D6600888709 /* AddAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentVC.swift; sourceTree = "<group>"; };
-		1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurismedTests.debug.xcconfig"; path = "Target Support Files/Pods-CurismedTests/Pods-CurismedTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curismed_CurismedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed.release.xcconfig"; path = "Target Support Files/Pods-Curismed/Pods-Curismed.release.xcconfig"; sourceTree = "<group>"; };
-		7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurismedTests.release.xcconfig"; path = "Target Support Files/Pods-CurismedTests/Pods-CurismedTests.release.xcconfig"; sourceTree = "<group>"; };
-		7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed-CurismedUITests.release.xcconfig"; path = "Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests.release.xcconfig"; sourceTree = "<group>"; };
-		900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurismedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E493BA2AA4692D00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E493BE2AA46F0E00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E493C22AA4722C00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E493C62AA4723000AD8B30 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.debug.xcconfig"; sourceTree = "<group>"; };
+		78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS_TherapyPMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		BAD923DA2481783A00AC4D24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curismed.debug.xcconfig"; path = "Target Support Files/Pods-Curismed/Pods-Curismed.debug.xcconfig"; sourceTree = "<group>"; };
+		BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.release.xcconfig"; sourceTree = "<group>"; };
+		DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionViewController.swift; sourceTree = "<group>"; };
 		E14C0890245F08590081F58E /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		E14C0892245F08B00081F58E /* Appointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
@@ -201,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */,
-				A60456C4D61EA65DAB99D7A5 /* Pods_Curismed.framework in Frameworks */,
+				A38D713AA6590C76A2D72855 /* Pods_TherapyPMS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAED5115B9FEEEAAA88286D2 /* Pods_CurismedTests.framework in Frameworks */,
+				C7A552ACE40548128C26CD92 /* Pods_TherapyPMSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A8A220714D8FC299481BBE /* Pods_Curismed_CurismedUITests.framework in Frameworks */,
+				D8A39B7A0F8C573584FE5462 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,10 +246,14 @@
 		8F3ABA5CCAB5E87562D37583 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E493C62AA4723000AD8B30 /* DropDown.framework */,
+				18E493C22AA4722C00AD8B30 /* BEMCheckBox.framework */,
+				18E493BE2AA46F0E00AD8B30 /* BEMCheckBox.framework */,
+				18E493BA2AA4692D00AD8B30 /* BEMCheckBox.framework */,
 				BAD923DA2481783A00AC4D24 /* CoreLocation.framework */,
-				2E3961DDB0A997A4B702538B /* Pods_Curismed.framework */,
-				2F1891204016CBD97F24A2B1 /* Pods_Curismed_CurismedUITests.framework */,
-				900622A6EC1492668C8A7345 /* Pods_CurismedTests.framework */,
+				DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */,
+				B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */,
+				1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,12 +261,12 @@
 		D00BEDDEB6D674C66D275163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */,
-				4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */,
-				053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */,
-				7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */,
-				1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */,
-				7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */,
+				65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */,
+				BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */,
+				78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */,
+				194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */,
+				2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */,
+				23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -483,12 +506,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMS" */;
 			buildPhases = (
-				23E5D820F9C3C450583EBC37 /* [CP] Check Pods Manifest.lock */,
+				40B57A7E3001ACF6FD660C29 /* [CP] Check Pods Manifest.lock */,
 				E1E458BD245D8490004C3C2D /* Sources */,
 				E1E458BE245D8490004C3C2D /* Frameworks */,
 				E1E458BF245D8490004C3C2D /* Resources */,
-				7C72D8031603D489FDB476B6 /* [CP] Embed Pods Frameworks */,
-				0DFE097CAB79A15F632BF2C9 /* [CP] Copy Pods Resources */,
+				18E493CB2AA4729800AD8B30 /* Embed Frameworks */,
+				B86FEDB4D535C69BFACA06BE /* [CP] Embed Pods Frameworks */,
+				6B379DEA5F5C35E590CD0BC6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -503,7 +527,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSTests" */;
 			buildPhases = (
-				21E5681C0A55287F29D0B09C /* [CP] Check Pods Manifest.lock */,
+				73222DF69EE853512744EC5F /* [CP] Check Pods Manifest.lock */,
 				E1E458D3245D849A004C3C2D /* Sources */,
 				E1E458D4245D849A004C3C2D /* Frameworks */,
 				E1E458D5245D849A004C3C2D /* Resources */,
@@ -522,12 +546,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSUITests" */;
 			buildPhases = (
-				07A1211E0F0BCAEC219F8A91 /* [CP] Check Pods Manifest.lock */,
+				6C59816E7F12736493C0B784 /* [CP] Check Pods Manifest.lock */,
 				E1E458DE245D849A004C3C2D /* Sources */,
 				E1E458DF245D849A004C3C2D /* Frameworks */,
 				E1E458E0245D849A004C3C2D /* Resources */,
-				7E3C58190CF5FD9C0E483288 /* [CP] Embed Pods Frameworks */,
-				A4F6A6ED596B39707BFAC04D /* [CP] Copy Pods Resources */,
+				B18B86C11FBA2C3618F35997 /* [CP] Embed Pods Frameworks */,
+				7250ABB5A48EE35588AA920A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,7 +647,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07A1211E0F0BCAEC219F8A91 /* [CP] Check Pods Manifest.lock */ = {
+		40B57A7E3001ACF6FD660C29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -638,31 +662,31 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Curismed-CurismedUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TherapyPMS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0DFE097CAB79A15F632BF2C9 /* [CP] Copy Pods Resources */ = {
+		6B379DEA5F5C35E590CD0BC6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21E5681C0A55287F29D0B09C /* [CP] Check Pods Manifest.lock */ = {
+		6C59816E7F12736493C0B784 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -677,84 +701,84 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CurismedTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TherapyPMS-TherapyPMSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		23E5D820F9C3C450583EBC37 /* [CP] Check Pods Manifest.lock */ = {
+		7250ABB5A48EE35588AA920A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Curismed-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C72D8031603D489FDB476B6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed/Pods-Curismed-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E3C58190CF5FD9C0E483288 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4F6A6ED596B39707BFAC04D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curismed-CurismedUITests/Pods-Curismed-CurismedUITests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73222DF69EE853512744EC5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TherapyPMSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B18B86C11FBA2C3618F35997 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B86FEDB4D535C69BFACA06BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -905,6 +929,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -965,6 +990,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -985,26 +1011,37 @@
 		};
 		E1E458EC245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C49A7B95F3B149E3FB64AD4E /* Pods-Curismed.debug.xcconfig */;
+			baseConfigurationReference = 65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.7;
-				DEVELOPMENT_TEAM = A8SY5DGLFG;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = FF2826HBN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BEMCheckBox\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DropDown\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FSCalendar\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SideMenuSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftGifOrigin\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftKeychainWrapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyGif\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TTGSnackbar\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				INFOPLIST_FILE = Curismed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TherapyPMS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = net.sts.demo4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TherapyPMS.llc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "STS Demo 4";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Curismed/Curismed-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1014,26 +1051,37 @@
 		};
 		E1E458ED245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4957E37F6CD1B1E73927ADE4 /* Pods-Curismed.release.xcconfig */;
+			baseConfigurationReference = BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.7;
-				DEVELOPMENT_TEAM = A8SY5DGLFG;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = FF2826HBN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"$(SRCROOT)/BEMCheckBox\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DropDown\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FSCalendar\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SideMenuSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftGifOrigin\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftKeychainWrapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyGif\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TTGSnackbar\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
 				INFOPLIST_FILE = Curismed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TherapyPMS;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = net.sts.demo4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TherapyPMS.llc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "STS Demo 4";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Curismed/Curismed-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1042,7 +1090,7 @@
 		};
 		E1E458EF245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FF2304DD22706C3186EE5B1 /* Pods-CurismedTests.debug.xcconfig */;
+			baseConfigurationReference = 2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1064,7 +1112,7 @@
 		};
 		E1E458F0245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7226871C14F4E16BA63902BE /* Pods-CurismedTests.release.xcconfig */;
+			baseConfigurationReference = 23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1086,7 +1134,7 @@
 		};
 		E1E458F2245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053638EF7D89D45C027E3C79 /* Pods-Curismed-CurismedUITests.debug.xcconfig */;
+			baseConfigurationReference = 78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1106,7 +1154,7 @@
 		};
 		E1E458F3245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D85B951005895A4C4FE5750 /* Pods-Curismed-CurismedUITests.release.xcconfig */;
+			baseConfigurationReference = 194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -5,7 +5,7 @@ A Swift based implementation of the Android Snackbar for iOS
 [![Version](https://img.shields.io/cocoapods/v/TTGSnackbar.svg?style=flat)](https://github.com/zekunyan/TTGSnackbar)
 [![License](https://img.shields.io/cocoapods/l/TTGSnackbar.svg?style=flat)](https://github.com/zekunyan/TTGSnackbar)
 [![Platform](https://img.shields.io/cocoapods/p/TTGSnackbar.svg?style=flat)](https://github.com/zekunyan/TTGSnackbar)
-[![Swift4](https://img.shields.io/badge/Swift-4-orange.svg)](https://developer.apple.com/swift)
+[![Swift5](https://img.shields.io/badge/Swift-5-orange.svg)](https://developer.apple.com/swift)
 [![Apps Using](https://img.shields.io/badge/Apps%20Using-%3E%20787-blue.svg)](https://github.com/zekunyan/TTGSnackbar)
 [![Total Download](https://img.shields.io/badge/Total%20Download-%3E%2036,840-blue.svg)](https://github.com/zekunyan/TTGSnackbar)
 
@@ -23,8 +23,8 @@ It disappears after a timeout or after user click the action button.
 # Installation
 
 ### Swift 5
-Version 1.9.0
-Xcode 9  
+Version 1.9.0+
+Xcode 9+
 iOS 8+
 
 ### Swift 4
@@ -168,26 +168,30 @@ snackbar.onSwipeBlock = { (snackbar, direction) in
 
 snackbar.show()
 ```
-
 ## [New!] Automatic handling of Showing one Snackbar at a time 
 
 `TTGSnackbarManager` can handle automatically showing and replacing the presented Snackbars at your screen.
 
-**Note**: This is an experimental feature that works only for *message only* snackbars at the moment.
+### **Usage**:
 
+**Swift**
 ```swift 
 let snackbar = TTGSnackbar(message: "TTGSnackbar !", duration: .long)
 TTGSnackbarManager.show(snackbar)
 ```
 
-`TTGSnackbarManager` uses the `dismissBlock` property of a snackbar, if you still need to use it you can use the `dismissBlock` parameter of `TTGSnackbarManager.show(_: TTGSnackbar, dismissBlock: @escaping TTGDismissBlock)` Example:
-
-```swift 
-let snackbar = TTGSnackbar(message: "TTGSnackbar !", duration: .long)
-TTGSnackbarManager.show(snackbar) {
-    // Some dismiss block here
-}
+**Objective-c**
+```objective-c
+TTGSnackbar *bar = [[TTGSnackbar alloc] initWithMessage:@"Bar1" duration:TTGSnackbarDurationMiddle];
+[bar setDismissBlock:^(TTGSnackbar * snackBar) {
+	//whatever you want for dismiss
+}];
+[[TTGSnackbarManager shared] showSnackbar: bar];
 ```
+
+
+`TTGSnackbarManager` uses the `dismissBlock` property of a snackbar, it does not replace any functionality that you add to the snackbar, rather it just adds its own code to the existing block.
+
 
 # Customization
 
@@ -234,6 +238,9 @@ secondActionTextColor: UIColor
 secondActionTextFont: UIFont  
 secondActionBlock: TTGActionBlock?
 ```
+
+### Snackbar MaxWidth
+`snackbarMaxWidth: CGFloat` will set the max width of the snackbar if on larger devices you don not want it full width. Default is -1 which is denotes full-width.
 
 ### Dismiss callback
 `dismissBlock: TTGDismissBlock?` will be called when snackbar  dismiss automatically or when user click action button to dismiss the snackbar.

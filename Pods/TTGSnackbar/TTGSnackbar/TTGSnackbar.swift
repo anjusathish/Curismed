@@ -86,7 +86,7 @@ open class TTGSnackbar: UIView {
     
     /// Snackbar min height
     @objc public static var snackbarMinHeight: CGFloat = 44
-    
+        
     // MARK: - Typealias.
     
     /// Action callback closure definition.
@@ -111,6 +111,11 @@ open class TTGSnackbar: UIView {
     
     /// A property to enable left and right margin when using customContentView
     @objc open dynamic var shouldActivateLeftAndRightMarginOnCustomContentView: Bool = false
+    
+    /// A property to allow for disabling the use of "Safe Area Layout Guides" on newer OS devices.
+    /// The purpose of this is to allow the a snackbar to extend under the "Swipe Up for Home" area
+    /// on iPhone X and newer devices.
+    @objc open dynamic var shouldHonorSafeAreaLayoutGuides: Bool = true
     
     /// Action callback.
     @objc open dynamic var actionBlock: TTGActionBlock? = nil
@@ -138,6 +143,9 @@ open class TTGSnackbar: UIView {
             layer.masksToBounds = true
         }
     }
+    
+    /// Snackbar max width, default full width
+    @objc open dynamic var snackbarMaxWidth: CGFloat = -1 // Less than 0 is unused
     
     /// Border color of snackbar. Default is clear.
     @objc open dynamic var borderColor: UIColor? = .clear {
@@ -197,8 +205,15 @@ open class TTGSnackbar: UIView {
         }
     }
     
+    /// Label content inset. Default is (0, 0, 0, 0)
+    @objc open dynamic var messageContentInset: UIEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0) {
+        didSet {
+            messageLabel.contentInset = messageContentInset
+        }
+    }
+    
     /// Main text label
-    @objc fileprivate(set) open dynamic var messageLabel: UILabel!
+    @objc fileprivate(set) open dynamic var messageLabel: TTGSnackbarLabel!
     
     /// Main text shown on the snackbar.
     @objc open dynamic var message: String = "" {
@@ -576,56 +591,42 @@ public extension TTGSnackbar {
         addConstraints([contentViewTopConstraint!, contentViewBottomConstraint!, contentViewLeftConstraint!, contentViewRightConstraint!])
         
         // Get current window
-        let currentWindow: UIWindow? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        var currentWindow: UIWindow? = UIApplication.shared.keyWindow
+        currentWindow = currentWindow ?? UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        currentWindow = currentWindow ?? UIApplication.shared.windows.first
         
         // Get super view to show
         if let superView = containerView ?? currentWindow {
             superView.addSubview(self)
             
+            var relativeToItem:Any = superView as Any;
+            if #available(iOS 11.0, *) {
+                if shouldHonorSafeAreaLayoutGuides {
+                    relativeToItem = superView.safeAreaLayoutGuide as Any
+                }
+            }
+            
             // Left margin constraint
-            if #available(iOS 11.0, *) {
-                leftMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .leading, relatedBy: .equal,
-                    toItem: superView.safeAreaLayoutGuide, attribute: .leading, multiplier: 1, constant: leftMargin)
-            } else {
-                leftMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .leading, relatedBy: .equal,
-                    toItem: superView, attribute: .leading, multiplier: 1, constant: leftMargin)
-            }
-            
+            leftMarginConstraint = NSLayoutConstraint.init(
+                item: self, attribute: .leading, relatedBy: .equal,
+                toItem: relativeToItem, attribute: .leading, multiplier: 1, constant: leftMargin)
+
             // Right margin constraint
-            if #available(iOS 11.0, *) {
-                rightMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .trailing, relatedBy: .equal,
-                    toItem: superView.safeAreaLayoutGuide, attribute: .trailing, multiplier: 1, constant: -rightMargin)
-            } else {
-                rightMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .trailing, relatedBy: .equal,
-                    toItem: superView, attribute: .trailing, multiplier: 1, constant: -rightMargin)
-            }
+            rightMarginConstraint = NSLayoutConstraint.init(
+                item: self, attribute: .trailing, relatedBy: .equal,
+                toItem: relativeToItem, attribute: .trailing, multiplier: 1, constant: -rightMargin)
             
+
             // Bottom margin constraint
-            if #available(iOS 11.0, *) {
-                bottomMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .bottom, relatedBy: .equal,
-                    toItem: superView.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: -bottomMargin)
-            } else {
-                bottomMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .bottom, relatedBy: .equal,
-                    toItem: superView, attribute: .bottom, multiplier: 1, constant: -bottomMargin)
-            }
-            
+            bottomMarginConstraint = NSLayoutConstraint.init(
+                item: self, attribute: .bottom, relatedBy: .equal,
+                toItem: relativeToItem, attribute: .bottom, multiplier: 1, constant: -bottomMargin)
+
             // Top margin constraint
-            if #available(iOS 11.0, *) {
-                topMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .top, relatedBy: .equal,
-                    toItem: superView.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: topMargin)
-            } else {
-                topMarginConstraint = NSLayoutConstraint.init(
-                    item: self, attribute: .top, relatedBy: .equal,
-                    toItem: superView, attribute: .top, multiplier: 1, constant: topMargin)
-            }
-            
+            topMarginConstraint = NSLayoutConstraint.init(
+                item: self, attribute: .top, relatedBy: .equal,
+                toItem: relativeToItem, attribute: .top, multiplier: 1, constant: topMargin)
+
             // Center X constraint
             centerXConstraint = NSLayoutConstraint.init(
                 item: self, attribute: .centerX, relatedBy: .equal,
@@ -645,8 +646,17 @@ public extension TTGSnackbar {
             centerXConstraint?.priority = UILayoutPriority(999)
             
             // Add constraints
-            superView.addConstraint(leftMarginConstraint!)
-            superView.addConstraint(rightMarginConstraint!)
+            if snackbarMaxWidth > 0{
+                centerXConstraint?.isActive = true
+
+            } else {
+                superView.addConstraint(leftMarginConstraint!)
+                superView.addConstraint(rightMarginConstraint!)
+                leftMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
+                rightMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
+                centerXConstraint?.isActive = customContentView != nil
+            }
+            
             superView.addConstraint(bottomMarginConstraint!)
             superView.addConstraint(topMarginConstraint!)
             superView.addConstraint(centerXConstraint!)
@@ -654,9 +664,6 @@ public extension TTGSnackbar {
             
             // Active or deactive
             topMarginConstraint?.isActive = false // For top animation
-            leftMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
-            rightMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
-            centerXConstraint?.isActive = customContentView != nil
             
             // Show
             showWithAnimation()
@@ -675,7 +682,11 @@ public extension TTGSnackbar {
      */
     fileprivate func showWithAnimation() {
         var animationBlock: (() -> Void)? = nil
-        let superViewWidth = (superview?.frame)!.width
+        let currentSuperViewWidth = (superview?.frame)!.width
+        var superViewWidth = snackbarMaxWidth <= 0 ? currentSuperViewWidth : snackbarMaxWidth
+        if superViewWidth > currentSuperViewWidth{
+            superViewWidth = currentSuperViewWidth
+        }
         let snackbarHeight = systemLayoutSizeFitting(.init(width: superViewWidth - leftMargin - rightMargin, height: TTGSnackbar.snackbarMinHeight)).height
         
         switch animationType {
@@ -876,7 +887,7 @@ private extension TTGSnackbar {
         iconImageView.contentMode = iconContentMode
         contentView.addSubview(iconImageView)
         
-        let messageLabel = UILabel()
+        let messageLabel = TTGSnackbarLabel()
         self.messageLabel = messageLabel
         messageLabel.accessibilityIdentifier = "messageLabel"
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -1128,3 +1139,101 @@ private extension TTGSnackbar {
     }
 }
 
+open class TTGSnackbarLabel: UILabel {
+    
+    @objc open dynamic var contentInset: UIEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0) {
+        didSet {
+            invalidateIntrinsicContentSize()
+        }
+    }
+    
+    open override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+        let insetRect = bounds.inset(by: contentInset)
+        let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
+        let invertedInsets = UIEdgeInsets(
+            top: -contentInset.top,
+            left: -contentInset.left,
+            bottom: -contentInset.bottom,
+            right: -contentInset.right)
+        return textRect.inset(by: invertedInsets)
+    }
+
+    override open func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: contentInset))
+    }
+    
+}
+
+// MARK: TTGSnackbarManager
+open class TTGSnackbarManager : NSObject {
+    @objc public static let shared = TTGSnackbarManager()
+    private override init() {}
+    
+    /// Queue to hold stacked snackBars
+    private var queuedSnackbars: [TTGSnackbar] = []
+        
+    /// Shows and queues for showing (if necesarrry) passed snackbars
+    @objc(showSnackbar:) public func show(snackbar: TTGSnackbar) {
+        
+        // Inline function to add the queuing and management of snackbars
+        // ****************************************************************
+        // Key to the SnackbarManager is queue management for that we make use of the existing snackbar
+        // dismissBlock. We don't overwrite the incoming snackbar.dismissBlock we harvest it and add to it.
+        func addDismissBlock() {
+            // grab the incoming snackbar.dismissBlock for reuse later
+            let existingSnackbarDismiss = snackbar.dismissBlock
+            snackbar.dismissBlock = { ( _ : TTGSnackbar) -> Void in
+                // variable to hold the nextSnackbar that will be called as soon as the currently active snackbar dismisses
+                var nextSnackbar: TTGSnackbar?
+                
+                // queue management
+                // all we care about here is if there at least 2 snackbars in queue, the currently active one is popped below, so we need the second in queue here.
+                if self.queuedSnackbars.count > 1 {
+                    // pop the queue ... FIFO
+                    nextSnackbar = self.queuedSnackbars[1]
+                }
+                
+                // if the incoming snackbar has a dismissBlock we execute it here
+                existingSnackbarDismiss?(snackbar)
+                                
+                // Currently active snackbar has displayed and dismissed, and we have popped the queuedSnackbars to the activeSnackbar, we show the next in queue
+                nextSnackbar?.show()
+                
+                // currently active snackbar is always self.queuedSnackbars[0] so pop it
+                _ = self.queuedSnackbars.removeFirst()
+            }
+        }
+        // Inline function - END
+        // ****************************************************************
+                
+        // append this snackbar request to the queue
+        self.queuedSnackbars.append(snackbar)
+        
+        if (self.queuedSnackbars.count <= 1) {
+            // we have no active snackbar this is the first in the queue
+            // self.queuedSnackbars[0] is always the current
+            
+            addDismissBlock() // add dismiss block
+            snackbar.show() // show snackbar
+            
+        } else {
+            // we have an active snackbar, active snackbar is always self.queuedSnackbars[0]
+            
+            // convenience variable grab currently active
+            let activeSnackbar = self.queuedSnackbars[0]
+                                    
+            // grab the dismiss code for the currently active snackbar, because we need to add the next snackbar.show to this one dismiss block
+            let activeSnackbarDismissBlock = activeSnackbar.dismissBlock
+            
+            // create a new dismissblock so we can show the newly queued snackbar once the currently active one has completed
+            activeSnackbar.dismissBlock = { ( _ : TTGSnackbar) -> Void in
+                
+                // add our dismiss code to incoming snackbar this is where queue management happens
+                addDismissBlock()
+                
+                // call the dismissBlock that was active prior to us replacing it with func above
+                activeSnackbarDismissBlock?(activeSnackbar)
+            }
+        }
+    }
+}

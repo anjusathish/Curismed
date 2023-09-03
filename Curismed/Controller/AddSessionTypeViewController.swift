@@ -188,7 +188,7 @@ class AddSessionTypeViewController: BaseViewController {
                     autocompleteController.delegate = self
                     
                     let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-                        UInt(GMSPlaceField.placeID.rawValue))!
+                                                              UInt(GMSPlaceField.placeID.rawValue))
                     autocompleteController.placeFields = fields
                     
                     let filter = GMSAutocompleteFilter()

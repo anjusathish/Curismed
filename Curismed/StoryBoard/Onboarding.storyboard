@@ -52,7 +52,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin@admin.com" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-Qq-mwO" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-Qq-mwO" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="87.5" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3qe-Uu-o0M"/>
@@ -79,7 +79,7 @@
                                             <outlet property="delegate" destination="B4Q-5l-bVp" id="r8P-nh-XWb"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Niyaz@1007" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-jd-SFY" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZA-jd-SFY" customClass="CTTextField" customModule="TherapyPMS" customModuleProvider="target">
                                         <rect key="frame" x="20" y="142.5" width="240" height="40"/>
                                         <color key="tintColor" red="0.2156862745" green="0.4941176471" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -312,10 +312,10 @@
             <size key="intrinsicContentSize" width="21.5" height="22"/>
         </designable>
         <designable name="NZA-jd-SFY">
-            <size key="intrinsicContentSize" width="125" height="21"/>
+            <size key="intrinsicContentSize" width="106" height="21"/>
         </designable>
         <designable name="Pdi-Qq-mwO">
-            <size key="intrinsicContentSize" width="170" height="22"/>
+            <size key="intrinsicContentSize" width="82" height="22"/>
         </designable>
         <designable name="gzK-AF-4dY">
             <size key="intrinsicContentSize" width="193" height="22"/>
