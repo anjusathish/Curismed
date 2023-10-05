@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		1886D9A52A532D6600888709 /* AddAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886D9A42A532D6600888709 /* AddAppointmentVC.swift */; };
 		18E493CA2AA4729700AD8B30 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A38D713AA6590C76A2D72855 /* Pods_TherapyPMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */; };
+		31F0B0B5B24074697BDF9E64 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A911646148090CC6E995DF4B /* Pods_TherapyPMS_TherapyPMSUITests.framework */; };
 		BAC6A4A72482B99700FC6DEC /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */; };
 		BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD923DA2481783A00AC4D24 /* CoreLocation.framework */; };
-		C7A552ACE40548128C26CD92 /* Pods_TherapyPMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */; };
-		D8A39B7A0F8C573584FE5462 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */; };
+		D181F6A738776648584AC509 /* Pods_TherapyPMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7332F98617D666071627D5D7 /* Pods_TherapyPMSTests.framework */; };
 		E14C088D245EFCCE0081F58E /* AddSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */; };
 		E14C088E245EFD360081F58E /* AddSessionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E4591A245EE546004C3C2D /* AddSessionTypeViewController.swift */; };
 		E14C088F245EFDB50081F58E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E45912245E9EE7004C3C2D /* BaseViewController.swift */; };
@@ -80,6 +79,7 @@
 		E1F6021C2461C1AD00C0BA5E /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6021B2461C1AD00C0BA5E /* AppointmentViewModel.swift */; };
 		E1F602212461C29400C0BA5E /* AppointmentServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F602202461C29400C0BA5E /* AppointmentServiceHelper.swift */; };
 		E1F602232461C2CE00C0BA5E /* AppointmentServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F602222461C2CE00C0BA5E /* AppointmentServiceManager.swift */; };
+		E7FB3A32B2F864B6F9201621 /* Pods_TherapyPMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6477A09AD0C5005EF2F5C1FA /* Pods_TherapyPMS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,22 +114,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0033461218739B78D0DF5000 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18323E5F64CD04C3E4FA2F16 /* Pods-TherapyPMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.debug.xcconfig"; sourceTree = "<group>"; };
 		1886D9A42A532D6600888709 /* AddAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentVC.swift; sourceTree = "<group>"; };
 		18E493BA2AA4692D00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E493BE2AA46F0E00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E493C22AA4722C00AD8B30 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E493C62AA4723000AD8B30 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.release.xcconfig"; sourceTree = "<group>"; };
-		2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.debug.xcconfig"; sourceTree = "<group>"; };
-		78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS_TherapyPMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB13C7CD2013763D1F78A77 /* Pods-TherapyPMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.release.xcconfig"; sourceTree = "<group>"; };
+		3F0C00AB4DB3688E602FA74A /* Pods-TherapyPMSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.release.xcconfig"; sourceTree = "<group>"; };
+		569946902F0524A680873F18 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6477A09AD0C5005EF2F5C1FA /* Pods_TherapyPMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7332F98617D666071627D5D7 /* Pods_TherapyPMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A911646148090CC6E995DF4B /* Pods_TherapyPMS_TherapyPMSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS_TherapyPMSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC6A4A62482B99700FC6DEC /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		BAD923DA2481783A00AC4D24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMS.release.xcconfig"; path = "Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS.release.xcconfig"; sourceTree = "<group>"; };
-		DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TherapyPMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14C088C245EFCCE0081F58E /* AddSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionViewController.swift; sourceTree = "<group>"; };
 		E14C0890245F08590081F58E /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		E14C0892245F08B00081F58E /* Appointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Appointment.storyboard; sourceTree = "<group>"; };
@@ -212,6 +211,7 @@
 		E1F6021B2461C1AD00C0BA5E /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
 		E1F602202461C29400C0BA5E /* AppointmentServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceHelper.swift; sourceTree = "<group>"; };
 		E1F602222461C2CE00C0BA5E /* AppointmentServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentServiceManager.swift; sourceTree = "<group>"; };
+		EBEEDC7695C598A52F12BD2C /* Pods-TherapyPMSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TherapyPMSTests.debug.xcconfig"; path = "Target Support Files/Pods-TherapyPMSTests/Pods-TherapyPMSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD923DB2481783A00AC4D24 /* CoreLocation.framework in Frameworks */,
-				A38D713AA6590C76A2D72855 /* Pods_TherapyPMS.framework in Frameworks */,
+				E7FB3A32B2F864B6F9201621 /* Pods_TherapyPMS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A552ACE40548128C26CD92 /* Pods_TherapyPMSTests.framework in Frameworks */,
+				D181F6A738776648584AC509 /* Pods_TherapyPMSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8A39B7A0F8C573584FE5462 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */,
+				31F0B0B5B24074697BDF9E64 /* Pods_TherapyPMS_TherapyPMSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +251,9 @@
 				18E493BE2AA46F0E00AD8B30 /* BEMCheckBox.framework */,
 				18E493BA2AA4692D00AD8B30 /* BEMCheckBox.framework */,
 				BAD923DA2481783A00AC4D24 /* CoreLocation.framework */,
-				DF3AB94CE00B198E194A7E9E /* Pods_TherapyPMS.framework */,
-				B8746FEEE558173D274D56ED /* Pods_TherapyPMS_TherapyPMSUITests.framework */,
-				1BC60F281C8E3B125A3720B4 /* Pods_TherapyPMSTests.framework */,
+				6477A09AD0C5005EF2F5C1FA /* Pods_TherapyPMS.framework */,
+				A911646148090CC6E995DF4B /* Pods_TherapyPMS_TherapyPMSUITests.framework */,
+				7332F98617D666071627D5D7 /* Pods_TherapyPMSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,12 +261,12 @@
 		D00BEDDEB6D674C66D275163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */,
-				BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */,
-				78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */,
-				194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */,
-				2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */,
-				23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */,
+				18323E5F64CD04C3E4FA2F16 /* Pods-TherapyPMS.debug.xcconfig */,
+				1BB13C7CD2013763D1F78A77 /* Pods-TherapyPMS.release.xcconfig */,
+				0033461218739B78D0DF5000 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */,
+				569946902F0524A680873F18 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */,
+				EBEEDC7695C598A52F12BD2C /* Pods-TherapyPMSTests.debug.xcconfig */,
+				3F0C00AB4DB3688E602FA74A /* Pods-TherapyPMSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -506,13 +506,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458EB245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMS" */;
 			buildPhases = (
-				40B57A7E3001ACF6FD660C29 /* [CP] Check Pods Manifest.lock */,
+				B56F0028EA8D8CA9715A7E08 /* [CP] Check Pods Manifest.lock */,
 				E1E458BD245D8490004C3C2D /* Sources */,
 				E1E458BE245D8490004C3C2D /* Frameworks */,
 				E1E458BF245D8490004C3C2D /* Resources */,
 				18E493CB2AA4729800AD8B30 /* Embed Frameworks */,
-				B86FEDB4D535C69BFACA06BE /* [CP] Embed Pods Frameworks */,
-				6B379DEA5F5C35E590CD0BC6 /* [CP] Copy Pods Resources */,
+				3014911744CCEF54837C62CF /* [CP] Embed Pods Frameworks */,
+				A2715D9FBA3BA20C413C9A98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -527,7 +527,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458EE245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSTests" */;
 			buildPhases = (
-				73222DF69EE853512744EC5F /* [CP] Check Pods Manifest.lock */,
+				B82C7987132551B0DEEFE464 /* [CP] Check Pods Manifest.lock */,
 				E1E458D3245D849A004C3C2D /* Sources */,
 				E1E458D4245D849A004C3C2D /* Frameworks */,
 				E1E458D5245D849A004C3C2D /* Resources */,
@@ -546,12 +546,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E458F1245D849A004C3C2D /* Build configuration list for PBXNativeTarget "TherapyPMSUITests" */;
 			buildPhases = (
-				6C59816E7F12736493C0B784 /* [CP] Check Pods Manifest.lock */,
+				E53672CCA44E7AD7E7D0AB1E /* [CP] Check Pods Manifest.lock */,
 				E1E458DE245D849A004C3C2D /* Sources */,
 				E1E458DF245D849A004C3C2D /* Frameworks */,
 				E1E458E0245D849A004C3C2D /* Resources */,
-				B18B86C11FBA2C3618F35997 /* [CP] Embed Pods Frameworks */,
-				7250ABB5A48EE35588AA920A /* [CP] Copy Pods Resources */,
+				070F1E1D4E54FAEE80717C42 /* [CP] Embed Pods Frameworks */,
+				34EE7ED4963F7CD238EB4BCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -647,7 +647,75 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40B57A7E3001ACF6FD660C29 /* [CP] Check Pods Manifest.lock */ = {
+		070F1E1D4E54FAEE80717C42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3014911744CCEF54837C62CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34EE7ED4963F7CD238EB4BCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2715D9FBA3BA20C413C9A98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B56F0028EA8D8CA9715A7E08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -669,63 +737,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6B379DEA5F5C35E590CD0BC6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C59816E7F12736493C0B784 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TherapyPMS-TherapyPMSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7250ABB5A48EE35588AA920A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73222DF69EE853512744EC5F /* [CP] Check Pods Manifest.lock */ = {
+		B82C7987132551B0DEEFE464 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -747,38 +759,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B18B86C11FBA2C3618F35997 /* [CP] Embed Pods Frameworks */ = {
+		E53672CCA44E7AD7E7D0AB1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TherapyPMS-TherapyPMSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS-TherapyPMSUITests/Pods-TherapyPMS-TherapyPMSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B86FEDB4D535C69BFACA06BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TherapyPMS/Pods-TherapyPMS-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1011,18 +1011,18 @@
 		};
 		E1E458EC245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65FBC549EF566506C8883319 /* Pods-TherapyPMS.debug.xcconfig */;
+			baseConfigurationReference = 18323E5F64CD04C3E4FA2F16 /* Pods-TherapyPMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = FF2826HBN6;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/BEMCheckBox\"",
+					"\"$(PODS_CONFIGURATION_BUILD_DIR)/BEMCheckBox\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/DropDown\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FSCalendar\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
@@ -1052,18 +1052,18 @@
 		};
 		E1E458ED245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCB4051B82E35727B1617612 /* Pods-TherapyPMS.release.xcconfig */;
+			baseConfigurationReference = 1BB13C7CD2013763D1F78A77 /* Pods-TherapyPMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = FF2826HBN6;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
-					"\"$(SRCROOT)/BEMCheckBox\"/**",
+					"\"$(PODS_CONFIGURATION_BUILD_DIR)/BEMCheckBox\"/**",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/DropDown\"/**",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FSCalendar\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
@@ -1092,7 +1092,7 @@
 		};
 		E1E458EF245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B4A4969588DF2171153D3F6 /* Pods-TherapyPMSTests.debug.xcconfig */;
+			baseConfigurationReference = EBEEDC7695C598A52F12BD2C /* Pods-TherapyPMSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1114,7 +1114,7 @@
 		};
 		E1E458F0245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23477A3516BA3D1D5AE3E398 /* Pods-TherapyPMSTests.release.xcconfig */;
+			baseConfigurationReference = 3F0C00AB4DB3688E602FA74A /* Pods-TherapyPMSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1136,7 +1136,7 @@
 		};
 		E1E458F2245D849A004C3C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78284320D1FF978B677C3804 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */;
+			baseConfigurationReference = 0033461218739B78D0DF5000 /* Pods-TherapyPMS-TherapyPMSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1156,7 +1156,7 @@
 		};
 		E1E458F3245D849A004C3C2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 194621DF2C3A66BB70E03390 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */;
+			baseConfigurationReference = 569946902F0524A680873F18 /* Pods-TherapyPMS-TherapyPMSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

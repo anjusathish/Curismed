@@ -39,7 +39,7 @@ install_framework()
 
   local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
-if [ -L "${source}" ]; then
+  if [ -L "${source}" ]; then
     echo "Symlinked..."
     source="$(readlink -f "${source}")"
   fi
